@@ -6,6 +6,19 @@
 (function () {
     'use strict';
 
+    /* ---------- Quitar bloqueo de transiciones tras la carga ---------- */
+    function unpreload() {
+        document.body.classList.remove('preload');
+    }
+
+    if (document.readyState === 'complete') {
+        unpreload();
+    } else {
+        window.addEventListener('load', unpreload);
+        // Respaldo por si 'load' tarda (fuentes externas)
+        setTimeout(unpreload, 2500);
+    }
+
     /* ---------- Navbar: fondo al hacer scroll ---------- */
     var navbar = document.getElementById('navbar');
 
@@ -49,12 +62,39 @@
     // Cerrar menú al hacer clic en un enlace
     navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
-            navLinks.classList.remove('open');
-            navToggle.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
+            closeMenu();
         });
     });
+
+    // Cerrar menú al tocar fuera de él
+    document.addEventListener('click', function (e) {
+        if (navLinks.classList.contains('open') &&
+            !navLinks.contains(e.target) &&
+            !navToggle.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    // Cerrar menú con tecla Escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+            closeMenu();
+        }
+    });
+
+    // Cerrar menú al volver a vista escritorio
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+            closeMenu();
+        }
+    });
+
+    function closeMenu() {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
 
     /* ---------- FAQ accordion ---------- */
     document.querySelectorAll('.faq-item').forEach(function (item) {
