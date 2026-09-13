@@ -263,6 +263,25 @@ section { padding: 90px 0; }
     z-index: 0;
 }
 
+/* Fondo fotográfico con zoom lento (patrón azconsulting) */
+.hero-photo-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(246, 249, 246, 0.80), rgba(246, 249, 246, 0.62)),
+        url('../img/hero-crecepe.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: heroZoom 20s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+@keyframes heroZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -342,7 +361,7 @@ section { padding: 90px 0; }
 
 /* --- Tarjeta del especialista (glass, estilo team-card) --- */
 .hero-ceo-card {
-    background: var(--glass-bg);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-radius: 24px;

@@ -34,6 +34,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- Preload imagen hero (LCP) -->
+    <link rel="preload" as="image" href="assets/img/hero-crecepe.avif" fetchpriority="high">
+
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
 
@@ -223,6 +226,7 @@
 
     <section id="inicio" class="hero">
 
+        <div class="hero-photo-bg" aria-hidden="true"></div>
         <div class="hero-grid-bg" aria-hidden="true"></div>
 
         <div class="container hero-content">
