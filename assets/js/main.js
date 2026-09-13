@@ -19,6 +19,30 @@
         setTimeout(unpreload, 2500);
     }
 
+    /* ---------- Tema claro / oscuro ---------- */
+    var themeToggle = document.getElementById('themeToggle');
+
+    function setTheme(dark) {
+        document.body.classList.toggle('dark-mode', dark);
+        try {
+            localStorage.setItem('crecepe-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+    }
+
+    // Sincroniza con lo aplicado por el script anti-destello
+    try {
+        var stored = localStorage.getItem('crecepe-theme');
+        if (stored === 'dark' || stored === 'light') {
+            setTheme(stored === 'dark');
+        }
+    } catch (e) {}
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            setTheme(!document.body.classList.contains('dark-mode'));
+        });
+    }
+
     /* ---------- Navbar: fondo al hacer scroll ---------- */
     var navbar = document.getElementById('navbar');
 

@@ -6,10 +6,10 @@
 :root {
     --primary: #0A1F44;
     --secondary: #123264;
-    --accent: #16A34A;
-    --accent-light: #4ADE80;
-    --accent-dark: #15803D;
-    --light: #F6F9F6;
+    --accent: #0B2FD4;
+    --accent-light: #00C2FF;
+    --accent-dark: #08218F;
+    --light: #F4F7FE;
     --white: #ffffff;
     --text: #1E293B;
     --text-light: #64748B;
@@ -55,7 +55,7 @@ section { padding: 90px 0; }
 /* ============ Tipografía de sección ============ */
 .section-badge {
     display: inline-block;
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(11, 47, 212, 0.1);
     color: var(--accent-dark);
     padding: 6px 16px;
     border-radius: 50px;
@@ -102,12 +102,12 @@ section { padding: 90px 0; }
 .btn-primary {
     background: linear-gradient(135deg, var(--accent), var(--accent-dark));
     color: #fff;
-    box-shadow: 0 8px 24px rgba(22, 163, 74, 0.35);
+    box-shadow: 0 8px 24px rgba(11, 47, 212, 0.35);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(22, 163, 74, 0.45);
+    box-shadow: 0 14px 34px rgba(11, 47, 212, 0.45);
     color: #fff;
 }
 
@@ -162,7 +162,7 @@ section { padding: 90px 0; }
     width: 12px; height: 12px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.15);
+    box-shadow: 0 0 0 4px rgba(11, 47, 212, 0.15);
 }
 
 .logo span { color: var(--accent); }
@@ -200,12 +200,12 @@ section { padding: 90px 0; }
     padding: 10px 22px;
     border-radius: 50px;
     font-weight: 700;
-    box-shadow: 0 6px 18px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 6px 18px rgba(11, 47, 212, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-cta::after { display: none; }
-.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(22, 163, 74, 0.4); color: #fff !important; }
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(11, 47, 212, 0.4); color: #fff !important; }
 
 .nav-toggle {
     display: none;
@@ -245,9 +245,9 @@ section { padding: 90px 0; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 60% 50% at 85% 15%, rgba(74, 222, 128, 0.18), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 15%, rgba(0, 194, 255, 0.18), transparent 60%),
         radial-gradient(ellipse 50% 45% at 10% 85%, rgba(18, 50, 100, 0.10), transparent 60%),
-        linear-gradient(160deg, #F6F9F6 0%, #EAF4EC 55%, #E2EFE6 100%);
+        linear-gradient(160deg, #F4F7FE 0%, #E8EEFC 55%, #DCE6FA 100%);
     z-index: 0;
 }
 
@@ -268,7 +268,7 @@ section { padding: 90px 0; }
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(rgba(246, 249, 246, 0.80), rgba(246, 249, 246, 0.62)),
+        linear-gradient(rgba(238, 243, 255, 0.80), rgba(238, 243, 255, 0.62)),
         url('../img/hero-crecepe.avif');
     background-size: cover;
     background-position: center;
@@ -380,7 +380,7 @@ section { padding: 90px 0; }
     position: absolute;
     top: -50%; right: -50%;
     width: 100%; height: 100%;
-    background: radial-gradient(circle, rgba(22, 163, 74, 0.06) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(11, 47, 212, 0.06) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -418,7 +418,7 @@ section { padding: 90px 0; }
     background: linear-gradient(135deg, var(--accent), var(--accent-light));
     background-size: 200% 200%;
     animation: gradientRotate 4s ease infinite;
-    box-shadow: 0 10px 30px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 10px 30px rgba(11, 47, 212, 0.3);
 }
 
 .ceo-img-wrap img {
@@ -469,13 +469,13 @@ section { padding: 90px 0; }
     margin-bottom: 14px;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #22c55e;
+    color: var(--accent-dark);
 }
 
 .avail-dot {
     width: 8px; height: 8px;
     border-radius: 50%;
-    background: #22c55e;
+    background: var(--accent-light);
     animation: pulse 2s infinite;
 }
 
@@ -578,7 +578,7 @@ section { padding: 90px 0; }
 .service-icon {
     width: 62px; height: 62px;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(22, 163, 74, 0.12), rgba(74, 222, 128, 0.12));
+    background: linear-gradient(135deg, rgba(11, 47, 212, 0.12), rgba(0, 194, 255, 0.12));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -650,8 +650,8 @@ section { padding: 90px 0; }
 }
 
 .geo-card.highlight {
-    background: linear-gradient(135deg, rgba(22, 163, 74, 0.25), rgba(74, 222, 128, 0.12));
-    border-color: rgba(74, 222, 128, 0.4);
+    background: linear-gradient(135deg, rgba(11, 47, 212, 0.25), rgba(0, 194, 255, 0.12));
+    border-color: rgba(0, 194, 255, 0.4);
 }
 
 .geo-card h3 {
@@ -734,7 +734,7 @@ section { padding: 90px 0; }
 
 .pricing-card.popular {
     border: 2px solid var(--accent);
-    box-shadow: 0 16px 48px rgba(22, 163, 74, 0.18);
+    box-shadow: 0 16px 48px rgba(11, 47, 212, 0.18);
 }
 
 .pricing-badge {
@@ -821,7 +821,7 @@ section { padding: 90px 0; }
     padding: 14px;
     border-radius: 14px;
     font-weight: 700;
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(11, 47, 212, 0.1);
     color: var(--accent-dark);
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
@@ -870,7 +870,7 @@ section { padding: 90px 0; }
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.35);
+    box-shadow: 0 6px 16px rgba(11, 47, 212, 0.35);
 }
 
 .process-card h4 {
@@ -884,7 +884,7 @@ section { padding: 90px 0; }
 
 .process-card .free-tag {
     display: inline-block;
-    background: rgba(22, 163, 74, 0.12);
+    background: rgba(11, 47, 212, 0.12);
     color: var(--accent-dark);
     font-size: 0.72rem;
     font-weight: 700;
@@ -953,7 +953,7 @@ section { padding: 90px 0; }
     padding: 4px 12px;
     border-radius: 20px;
     margin-bottom: 12px;
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(11, 47, 212, 0.1);
     color: var(--accent-dark);
 }
 
@@ -1035,7 +1035,7 @@ section { padding: 90px 0; }
     flex-shrink: 0;
     width: 30px; height: 30px;
     border-radius: 50%;
-    background: rgba(22, 163, 74, 0.12);
+    background: rgba(11, 47, 212, 0.12);
     color: var(--accent-dark);
     display: flex;
     align-items: center;
@@ -1074,7 +1074,7 @@ section { padding: 90px 0; }
     position: absolute;
     top: -30%; right: -10%;
     width: 50%; height: 80%;
-    background: radial-gradient(circle, rgba(74, 222, 128, 0.12), transparent 65%);
+    background: radial-gradient(circle, rgba(0, 194, 255, 0.12), transparent 65%);
     pointer-events: none;
 }
 
@@ -1265,9 +1265,9 @@ section { padding: 90px 0; }
 
 /* ============ Animaciones ============ */
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
-    70% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(0, 194, 255, 0.5); }
+    70% { box-shadow: 0 0 0 9px rgba(0, 194, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 194, 255, 0); }
 }
 
 @keyframes cardFloat {
@@ -1359,4 +1359,125 @@ section { padding: 90px 0; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
     .whatsapp-float { width: 52px; height: 52px; bottom: 18px; right: 18px; }
     .to-top { width: 44px; height: 44px; bottom: 82px; right: 18px; }
+}
+
+/* ============ Botón tema claro/oscuro ============ */
+.theme-toggle {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(10, 31, 68, 0.15);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1001;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover { transform: scale(1.08); }
+
+.theme-toggle svg { width: 19px; height: 19px; }
+.theme-toggle .icon-sun { display: none; }
+
+body.dark-mode .theme-toggle {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+body.dark-mode .theme-toggle .icon-sun { display: block; }
+body.dark-mode .theme-toggle .icon-moon { display: none; }
+
+/* ============ Dark mode ============ */
+body.dark-mode {
+    --light: #0A1428;
+    --white: #0F1D3A;
+    --text: #E8EDF6;
+    --text-light: #9FB0CC;
+    --primary: #FFFFFF;
+    --secondary: #1B3A7A;
+    --glass-bg: rgba(15, 29, 58, 0.82);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.12);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
+    --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.5);
+    background: var(--light);
+    color: var(--text);
+}
+
+/* Fondos que usan --primary como color de superficie */
+body.dark-mode .geo-section { background: #060D1F; }
+body.dark-mode .contact-section { background: linear-gradient(160deg, #060D1F, #0A1836); }
+body.dark-mode .specialties-bar { background: #060D1F; }
+body.dark-mode .footer { background: #04091A; }
+
+/* Hero en oscuro */
+body.dark-mode .hero::before {
+    background:
+        radial-gradient(ellipse 60% 50% at 85% 15%, rgba(0, 194, 255, 0.10), transparent 60%),
+        radial-gradient(ellipse 50% 45% at 10% 85%, rgba(11, 47, 212, 0.25), transparent 60%),
+        linear-gradient(160deg, #0A1428 0%, #0C1834 55%, #0A1428 100%);
+}
+
+body.dark-mode .hero-photo-bg {
+    background:
+        linear-gradient(rgba(8, 15, 35, 0.86), rgba(8, 15, 35, 0.74)),
+        url('../img/hero-crecepe.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.dark-mode .hero-grid-bg {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+body.dark-mode .hero-badge { background: rgba(255, 255, 255, 0.12); }
+
+/* Card del especialista sólida en oscuro (no glass claro sobre foto) */
+body.dark-mode .hero-ceo-card { background: rgba(15, 29, 58, 0.92); }
+
+/* Navbar en oscuro */
+body.dark-mode .navbar.scrolled { background: rgba(10, 20, 40, 0.92); }
+body.dark-mode .nav-toggle span { background: #fff; }
+
+/* Cards y bordes sutiles */
+body.dark-mode .service-card,
+body.dark-mode .pricing-card,
+body.dark-mode .case-card { border-color: rgba(255, 255, 255, 0.08); }
+
+body.dark-mode .faq-item { border-color: rgba(255, 255, 255, 0.08); }
+body.dark-mode .process-card { border-color: rgba(255, 255, 255, 0.06); }
+body.dark-mode .pricing-price { border-color: rgba(255, 255, 255, 0.1); }
+
+/* Acento legible sobre superficies oscuras */
+body.dark-mode .section-badge { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
+body.dark-mode .service-icon { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
+body.dark-mode .service-list svg,
+body.dark-mode .pricing-features svg,
+body.dark-mode .hero-trust svg { color: var(--accent-light); }
+body.dark-mode .service-link,
+body.dark-mode .case-link,
+body.dark-mode .ceo-role { color: var(--accent-light); }
+body.dark-mode .ceo-availability { color: var(--accent-light); }
+body.dark-mode .pricing-cta { background: rgba(0, 194, 255, 0.12); color: var(--accent-light); }
+body.dark-mode .pricing-cta:hover { background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #fff; }
+body.dark-mode .free-tag,
+body.dark-mode .case-role { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
+body.dark-mode .faq-icon { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
+body.dark-mode .ceo-tags span,
+body.dark-mode .case-stack span { background: rgba(255, 255, 255, 0.1); color: #DCE6FA; }
+body.dark-mode .process-number { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); }
+body.dark-mode .btn-outline { border-color: rgba(255, 255, 255, 0.5); color: #fff; }
+body.dark-mode .btn-outline:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
+body.dark-mode .to-top { background: var(--accent); box-shadow: 0 8px 24px rgba(11, 47, 212, 0.45); }
+
+@media (max-width: 768px) {
+    body.dark-mode .nav-links { background: rgba(10, 20, 40, 0.98); }
 }
