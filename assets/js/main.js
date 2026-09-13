@@ -20,6 +20,21 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
+    /* ---------- Botón volver arriba (desvanecido) ---------- */
+    var toTop = document.getElementById('to-top');
+
+    function syncToTop() {
+        var y = window.pageYOffset || document.documentElement.scrollTop;
+        toTop.classList.toggle('is-visible', y > 300);
+    }
+
+    window.addEventListener('scroll', syncToTop, { passive: true });
+    syncToTop();
+
+    toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     /* ---------- Menú móvil ---------- */
     var navToggle = document.getElementById('navToggle');
     var navLinks = document.getElementById('navLinks');
