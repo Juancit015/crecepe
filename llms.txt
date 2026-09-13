@@ -1,0 +1,42 @@
+# CrecePE
+
+> CrecePE es un servicio independiente de desarrollo web, e-commerce e inteligencia artificial para negocios en Perú, dirigido por Juan David (CEO & Founder) desde Trujillo, La Libertad. Construye sitios web, tiendas online con Bagisto y automatización con IA, con SEO + GEO integrados para que los negocios aparezcan en Google y sean recomendados por sistemas de IA.
+
+## Servicios
+
+- **Presencia Digital Inteligente** (desde S/ 990): sitio web profesional de hasta 7 secciones, responsive y rápido, con SEO técnico, GEO base (llms.txt, Schema.org), WhatsApp, Analytics y Search Console. Entrega en 2-3 semanas.
+- **Tienda Online Bagisto + IA** (desde S/ 2,990): tienda e-commerce con Bagisto (catálogo, categorías, colecciones), hasta 50 productos cargados (20 con IA), pagos Yape/Plin, pedidos por WhatsApp, envíos coordinados (Shalom u otro courier), Schema Store + Product. Entrega en 4-6 semanas.
+- **Automatización con IA** (desde S/ 1,490): auditoría SEO + GEO, chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA, optimización de fichas para Google e IA. Funciona sobre Bagisto, WooCommerce o web a medida. Entrega en 2-4 semanas.
+- **Mantenimiento mensual** (desde S/ 149/mes): actualizaciones, backups, SEO y mejoras de IA continuas.
+
+## Diferenciador
+
+- SEO + GEO incluidos en cada proyecto: los sitios se optimizan tanto para buscadores tradicionales (Google) como para motores generativos (ChatGPT, Gemini, Perplexity, Claude, AI Overviews).
+- Especialización técnica en Bagisto (Laravel) para e-commerce.
+- Automatización real con agentes de IA para carga de productos y atención al cliente.
+
+## Proceso
+
+1. Diagnóstico virtual gratuito (30 minutos por videollamada).
+2. Planificación (sesión de 60-90 minutos con cronograma y entregables).
+3. Diseño y desarrollo con avances por WhatsApp y vistas previas.
+4. Optimización SEO + GEO.
+5. Lanzamiento con capacitación en video.
+6. Soporte post-lanzamiento de 30 días.
+
+## Casos
+
+- **azconsultingperu.com** (colaboración): desarrollo de secciones de servicios y stack tecnológico, carga responsiva y rápida, SEO técnico con Schema LocalBusiness + FAQ.
+- **novedadeschavez.azconsultingperu.com** (proyecto propio desde cero): tienda Bagisto completa con catálogo, colecciones, envíos por Shalom, pedidos por WhatsApp y carga de productos automatizada con agentes de IA.
+
+## Pagos
+
+50% al inicio y 50% contra entrega. Yape, Plin o transferencia bancaria.
+
+## Contacto
+
+- WhatsApp: +51 970 771 835
+- Email: crecepe@azconsultingperu.com
+- Horario: lunes a viernes, 8:00 am - 6:00 pm (hora de Perú)
+- Ubicación: Trujillo, La Libertad, Perú. Atención remota a todo el país.
+- Web: https://crecepe.pe/
