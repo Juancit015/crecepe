@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-14 — Hero optimizado
+
+### Cambiado
+
+- Titular principal en dos líneas con solo "Google" (colores oficiales) e "IA"
+  resaltados.
+- Subtítulo más corto, en dos líneas: propuesta de valor directa sin tecnicismos.
+- Tarjeta del especialista más compacta, con descripción de una línea.
+- Fondo del hero ligeramente más tenue en modo claro para dar contraste al texto.
+- Descripción en buscadores sincronizada con el nuevo subtítulo.
+
 ## 2026-09-13 — Sitio principal e identidad
 
 ### Agregado
