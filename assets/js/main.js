@@ -72,6 +72,50 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    /* ---------- Dial de contacto (abanico táctil, patrón iestpaijan) ---------- */
+    var dial = document.getElementById('contact-dial');
+
+    if (dial) {
+        var dialMain = dial.querySelector('.contact-dial__main');
+        var isTouch = (window.matchMedia && window.matchMedia('(hover: none)').matches) ||
+            ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+        function closeDial() {
+            dial.classList.remove('is-open');
+        }
+
+        if (isTouch) {
+            // En táctil: primer toque abre el abanico, segundo toque sigue el enlace
+            if (dialMain) {
+                dialMain.addEventListener('click', function (e) {
+                    if (!dial.classList.contains('is-open')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dial.classList.add('is-open');
+                    }
+                });
+            }
+
+            document.addEventListener('click', function (e) {
+                if (!dial.contains(e.target)) {
+                    closeDial();
+                }
+            });
+
+            dial.querySelectorAll('.contact-dial__btn').forEach(function (b) {
+                b.addEventListener('click', function () {
+                    setTimeout(closeDial, 180);
+                });
+            });
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeDial();
+            }
+        });
+    }
+
     /* ---------- Menú móvil ---------- */
     var navToggle = document.getElementById('navToggle');
     var navLinks = document.getElementById('navLinks');
