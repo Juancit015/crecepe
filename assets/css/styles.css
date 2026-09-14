@@ -1228,7 +1228,7 @@ section { padding: 90px 0; }
     visibility: hidden;
     pointer-events: none;
     box-shadow: 0 8px 24px rgba(10, 31, 68, 0.3);
-    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.25s ease, box-shadow 0.25s ease, bottom 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .to-top svg {
@@ -1379,7 +1379,13 @@ section { padding: 90px 0; }
 /* El botón volver-arriba sube cuando el abanico está abierto */
 .contact-dial:hover + #to-top,
 .contact-dial:focus-within + #to-top,
-.contact-dial.is-open + #to-top { bottom: 184px; }
+.contact-dial.is-open + #to-top,
+#to-top.to-top--dial-open { bottom: 184px; }
+
+/* Fallback CSS puro sin JS — si el navegador soporta :has */
+body:has(.contact-dial:hover) #to-top,
+body:has(.contact-dial.is-open) #to-top,
+body:has(.contact-dial:focus-within) #to-top { bottom: 184px; }
 
 /* ============ Animaciones ============ */
 @keyframes pulse {
@@ -1484,7 +1490,11 @@ section { padding: 90px 0; }
     .contact-dial__btn:nth-child(3) { --x: -9px; --y: -70px; }
     .contact-dial:hover + #to-top,
     .contact-dial:focus-within + #to-top,
-    .contact-dial.is-open + #to-top { bottom: 158px; }
+    .contact-dial.is-open + #to-top,
+    #to-top.to-top--dial-open { bottom: 158px; }
+    body:has(.contact-dial:hover) #to-top,
+    body:has(.contact-dial.is-open) #to-top,
+    body:has(.contact-dial:focus-within) #to-top { bottom: 158px; }
     .to-top { width: 44px; height: 44px; bottom: 82px; right: 18px; }
 }
 

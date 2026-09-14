@@ -72,46 +72,72 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    /* ---------- Dial de contacto (abanico táctil, patrón iestpaijan) ---------- */
+    /* ---------- Dial de contacto (abanico, patrón iestpaijan) ---------- */
     var dial = document.getElementById('contact-dial');
 
-    if (dial) {
+    if (dial && !dial.dataset.initialized) {
+        dial.dataset.initialized = '1';
         var dialMain = dial.querySelector('.contact-dial__main');
-        var isTouch = (window.matchMedia && window.matchMedia('(hover: none)').matches) ||
-            ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
 
-        function closeDial() {
-            dial.classList.remove('is-open');
+        function syncDialToTop() {
+            if (!toTop) return;
+            toTop.classList.toggle('to-top--dial-open', dial.classList.contains('is-open'));
         }
 
-        if (isTouch) {
+        // Observa cambios de clase para sincronizar to-top (cubre hover CSS y touch)
+        if (window.MutationObserver) {
+            new MutationObserver(syncDialToTop).observe(dial, { attributes: true, attributeFilter: ['class'] });
+        }
+
+        var isTouchDial = (window.matchMedia && window.matchMedia('(hover: none)').matches) ||
+            ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+        if (!isTouchDial) {
+            // Escritorio: is-open por JS con retardo de cierre para cruzar el hueco
+            // entre el botón principal y los satélites sin que el abanico colapse
+            var hideTimer;
+            function dialEnter() { clearTimeout(hideTimer); dial.classList.add('is-open'); syncDialToTop(); }
+            function dialLeave() { hideTimer = setTimeout(function () { dial.classList.remove('is-open'); syncDialToTop(); }, 280); }
+            dial.addEventListener('mouseenter', dialEnter);
+            dial.addEventListener('mouseleave', dialLeave);
+            var dialActions = dial.querySelector('.contact-dial__actions');
+            if (dialActions) { dialActions.addEventListener('mouseenter', dialEnter); dialActions.addEventListener('mouseleave', dialLeave); }
+            dial.querySelectorAll('.contact-dial__btn').forEach(function (b) { b.addEventListener('mouseenter', dialEnter); });
+            dial.addEventListener('focusin', dialEnter);
+            dial.addEventListener('focusout', function () {
+                setTimeout(function () {
+                    if (!dial.contains(document.activeElement)) { dial.classList.remove('is-open'); syncDialToTop(); }
+                }, 100);
+            });
+        } else if (dialMain) {
             // En táctil: primer toque abre el abanico, segundo toque sigue el enlace
-            if (dialMain) {
-                dialMain.addEventListener('click', function (e) {
-                    if (!dial.classList.contains('is-open')) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        dial.classList.add('is-open');
-                    }
-                });
-            }
+            dialMain.addEventListener('click', function (e) {
+                if (!dial.classList.contains('is-open')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dial.classList.add('is-open');
+                    syncDialToTop();
+                }
+            });
 
             document.addEventListener('click', function (e) {
                 if (!dial.contains(e.target)) {
-                    closeDial();
+                    dial.classList.remove('is-open');
+                    syncDialToTop();
                 }
             });
 
             dial.querySelectorAll('.contact-dial__btn').forEach(function (b) {
                 b.addEventListener('click', function () {
-                    setTimeout(closeDial, 180);
+                    setTimeout(function () { dial.classList.remove('is-open'); syncDialToTop(); }, 180);
                 });
             });
         }
 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
-                closeDial();
+                dial.classList.remove('is-open');
+                syncDialToTop();
             }
         });
     }
