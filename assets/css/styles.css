@@ -1276,6 +1276,23 @@ section { padding: 90px 0; }
 .contact-dial__main:active { transform: scale(0.96); }
 .contact-dial__main svg { width: 30px; height: 30px; }
 
+/* Hitbox invisible: puente de hover sobre el área del abanico para que el cursor
+   nunca "salga" del dial al viajar del botón principal a los satélites.
+   Solo en puntero fino; en táctil el abanico se abre por toque. */
+@media (hover: hover) {
+    .contact-dial__hitbox {
+        display: none;
+        position: absolute;
+        bottom: 0; right: 0;
+        width: 160px; height: 160px;
+        z-index: 0;
+    }
+    .contact-dial:hover .contact-dial__hitbox,
+    .contact-dial:focus-within .contact-dial__hitbox,
+    .contact-dial.is-open .contact-dial__hitbox { display: block; }
+    .contact-dial__actions { z-index: 1; }
+}
+
 /* Contenedor ancla para abanico */
 .contact-dial__actions {
     position: absolute;
