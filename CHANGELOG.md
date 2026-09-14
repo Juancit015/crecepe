@@ -22,3 +22,11 @@
 - Paleta de acento de verde a azul eléctrico con detalles en cian.
 - Textos resaltados y botones a color sólido.
 - Botones de la tarjeta de contacto a un tamaño más compacto.
+
+### Corregido
+
+- El abanico de contacto se mantiene abierto al mover el cursor del botón de
+  WhatsApp hacia Llamar, Email o Agendar (ya no se cierra al cruzar el espacio
+  entre botones).
+- El botón volver-arriba se desplaza con animación suave al abrirse y cerrarse
+  el abanico.
