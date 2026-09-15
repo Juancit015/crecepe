@@ -1405,6 +1405,76 @@ body:has(.contact-dial:hover) #to-top,
 body:has(.contact-dial.is-open) #to-top,
 body:has(.contact-dial:focus-within) #to-top { bottom: 184px; }
 
+/* ============ Opiniones ============ */
+.opiniones-section { position: relative; overflow: hidden; }
+/* Fondo fotográfico: se activa con .has-bg cuando Antigravity entregue opiniones-fondo.avif */
+/* .opiniones-section.has-bg { background: linear-gradient(rgba(244, 247, 254, 0.88), rgba(244, 247, 254, 0.78)), url('../img/opiniones-fondo.avif'); background-size: cover; background-position: center; } */
+.opiniones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.opinion-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(10, 31, 68, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.opinion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(10, 31, 68, 0.10);
+    border-color: rgba(11, 47, 212, 0.25);
+}
+.opinion-quote {
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    background: rgba(11, 47, 212, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    transition: background 0.35s ease, color 0.35s ease;
+}
+.opinion-card:hover .opinion-quote { background: var(--primary); color: #fff; }
+.opinion-quote svg { width: 20px; height: 20px; }
+.opinion-text {
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+.opinion-stars { display: flex; gap: 3px; color: #f59e0b; }
+.opinion-stars svg { width: 15px; height: 15px; }
+.opinion-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.opinion-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    padding: 2px;
+    background: var(--primary);
+    flex-shrink: 0;
+}
+.opinion-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+.opinion-info strong { display: block; font-size: 0.95rem; color: var(--primary); }
+.opinion-info span { font-size: 0.82rem; color: var(--text-light); }
+body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
+
 /* ============ Animaciones ============ */
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(0, 194, 255, 0.5); }
@@ -1494,7 +1564,7 @@ body:has(.contact-dial:focus-within) #to-top { bottom: 184px; }
     }
     .nav-links a { font-size: 1.2rem; }
     .nav-toggle { display: block; }
-    .services-grid, .pricing-grid, .process-grid, .cases-grid, .geo-grid { grid-template-columns: 1fr; }
+    .services-grid, .pricing-grid, .process-grid, .cases-grid, .opiniones-grid, .geo-grid { grid-template-columns: 1fr; }
     .pricing-card.popular { order: -1; }
     .scroll-mouse { display: none; }
     .hero { padding: 110px 0 60px; min-height: auto; }

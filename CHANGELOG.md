@@ -1,5 +1,14 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-14 — Sección Opiniones
+
+### Agregado
+
+- Sección Opiniones entre Casos y FAQ, con enlace en el menú: tres testimonios
+  de proyectos de AZ Consulting donde participé como colaborador, con foto,
+  cargo, empresa y 5 estrellas, más datos estructurados Review.
+- Fotos de perfil en AVIF optimizado (~3 KB cada una).
+
 ## 2026-09-14 — Hero optimizado
 
 ### Cambiado

@@ -50,6 +50,9 @@ post-lanzamiento de 30 días.
   - *novedadeschavez.azconsultingperu.com* — proyecto propio construido desde
     cero con Bagisto: catálogo, colecciones, envíos y pedidos por WhatsApp, con
     carga de productos automatizada con agentes de IA.
+- **Opiniones:** tres testimonios de proyectos de AZ Consulting donde participé
+  como colaborador (María García — TechCorp, Carlos Rivera — DataSys,
+  Ana López — InnovaGroup), con foto, cargo y calificación de 5 estrellas.
 - **FAQ:** preguntas frecuentes sobre costos, tiempos, GEO, cobertura, pagos y el
   diagnóstico gratuito.
 - **Contacto:** datos directos y tarjeta de diagnóstico gratuito por videollamada

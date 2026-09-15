@@ -29,6 +29,10 @@
 - **azconsultingperu.com** (colaboración): desarrollo de secciones de servicios y stack tecnológico, carga responsiva y rápida, SEO técnico con Schema LocalBusiness + FAQ.
 - **novedadeschavez.azconsultingperu.com** (proyecto propio desde cero): tienda Bagisto completa con catálogo, colecciones, envíos por Shalom, pedidos por WhatsApp y carga de productos automatizada con agentes de IA.
 
+## Opiniones
+
+- Testimonios de proyectos de AZ Consulting donde Juan David participó como colaborador: María García (Gerente General, TechCorp), Carlos Rivera (Director TI, DataSys) y Ana López (CEO, InnovaGroup), todos con calificación de 5 estrellas.
+
 ## Pagos
 
 50% al inicio y 50% contra entrega. Yape, Plin o transferencia bancaria.
