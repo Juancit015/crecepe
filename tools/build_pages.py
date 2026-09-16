@@ -7,22 +7,27 @@ index = open(os.path.join(ROOT, 'index.html')).read()
 
 # ---- Componentes compartidos extraidos del index ----
 theme_script = re.search(r'    <!-- Aplica el tema guardado.*?</script>\n', index, re.S).group(0)
-dial = re.search(r'    <!-- =+ -->\n    <!-- DIAL DE CONTACTO ABANICO -->.*?</div>\n(?=\n    <!-- =+ -->\n    <!-- VOLVER ARRIBA)', index, re.S).group(0)
+dial_raw = re.search(r'    <!-- =+ -->\n    <!-- DIAL DE CONTACTO ABANICO -->.*?</div>\n(?=\n    <!-- =+ -->\n    <!-- VOLVER ARRIBA)', index, re.S).group(0)
 totop = re.search(r'    <!-- =+ -->\n    <!-- VOLVER ARRIBA -->.*?</button>\n', index, re.S).group(0)
-navbar = re.search(r'    <nav class="navbar".*?</nav>\n', index, re.S).group(0)
-footer = re.search(r'    <!-- =+ -->\n    <!-- FOOTER -->.*?</footer>\n', index, re.S).group(0)
+navbar_raw = re.search(r'    <nav class="navbar".*?</nav>\n', index, re.S).group(0)
+footer_raw = re.search(r'    <!-- =+ -->\n    <!-- FOOTER -->.*?</footer>\n', index, re.S).group(0)
 
-# Enlaces internos del index -> absolutos desde subpaginas
-navbar = navbar.replace('href="#', 'href="index.html#')
-navbar = navbar.replace('src="assets/', 'src="../assets/')
-footer = footer.replace('href="#', 'href="index.html#')
-footer = footer.replace('src="assets/', 'src="../assets/')
-# Footer: servicios apuntan a las paginas dedicadas
-footer = footer.replace('href="index.html#servicios">Presencia Digital', 'href="../servicios/presencia-digital.html">Presencia Digital')
-footer = footer.replace('href="index.html#servicios">Tienda Bagisto + IA', 'href="../servicios/tienda-online-bagisto.html">Tienda Bagisto + IA')
-footer = footer.replace('href="index.html#servicios">Automatización con IA', 'href="../servicios/automatizacion-ia.html">Automatización con IA')
-footer = footer.replace('href="index.html#planes">Ver planes y precios', 'href="index.html#planes">Ver planes y precios')
-dial = dial.replace('href="#contacto"', 'href="index.html#contacto"')
+def adapt(prefix):
+    """Devuelve (navbar, footer, dial) con rutas correctas segun la profundidad.
+    prefix: '' para paginas en raiz, '../' para un nivel abajo."""
+    nav = navbar_raw.replace('href="#', 'href="{p}index.html#'.format(p=prefix))
+    nav = nav.replace('src="assets/', 'src="{p}assets/'.format(p=prefix))
+    foot = footer_raw.replace('href="#', 'href="{p}index.html#'.format(p=prefix))
+    foot = foot.replace('src="assets/', 'src="{p}assets/'.format(p=prefix))
+    # Footer: servicios apuntan a las paginas dedicadas
+    foot = foot.replace('href="{p}index.html#servicios">Presencia Digital'.format(p=prefix), 'href="{p}servicios/presencia-digital.html">Presencia Digital'.format(p=prefix))
+    foot = foot.replace('href="{p}index.html#servicios">Tienda Bagisto + IA'.format(p=prefix), 'href="{p}servicios/tienda-online-bagisto.html">Tienda Bagisto + IA'.format(p=prefix))
+    foot = foot.replace('href="{p}index.html#servicios">Automatización con IA'.format(p=prefix), 'href="{p}servicios/automatizacion-ia.html">Automatización con IA'.format(p=prefix))
+    # Footer: legales con prefijo correcto
+    foot = foot.replace('href="privacidad.html"', 'href="{p}privacidad.html"'.format(p=prefix))
+    foot = foot.replace('href="terminos.html"', 'href="{p}terminos.html"'.format(p=prefix))
+    d = dial_raw.replace('href="#contacto"', 'href="{p}index.html#contacto"'.format(p=prefix))
+    return nav, foot, d
 
 HEAD = '''<!DOCTYPE html>
 <html lang="es">
@@ -58,16 +63,16 @@ HEAD = '''<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="{p}assets/css/styles.css">
 
     <!-- PWA -->
-    <link rel="manifest" href="../manifest.json">
+    <link rel="manifest" href="{p}manifest.json">
 
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/favicon/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" href="{p}assets/img/favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{p}assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{p}assets/img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="{p}assets/img/favicon/apple-touch-icon.png">
 
 {schemas}
 </head>
@@ -90,7 +95,7 @@ HEAD = '''<!DOCTYPE html>
 
 {footer}
 
-    <script src="../assets/js/main.js" defer></script>
+    <script src="{p}assets/js/main.js" defer></script>
 
 </body>
 
@@ -506,9 +511,14 @@ pages['terminos.html'] = dict(
 # ============================================================
 for path, p in pages.items():
     full = os.path.join(ROOT, path)
-    os.makedirs(os.path.dirname(full), exist_ok=True)
+    os.makedirs(os.path.dirname(full) or ROOT, exist_ok=True)
+    # Profundidad: raiz -> '', un nivel -> '../'
+    depth = path.count('/')
+    prefix = '../' * depth
+    navbar, footer, dial = adapt(prefix)
     schemas = '\n'.join(schema_json(s) for s in p['schemas'])
     html = HEAD.format(
+        p=prefix,
         title=p['title'], desc=p['desc'], canonical=p['canonical'],
         schemas=schemas, theme=theme_script, dial=dial, totop=totop,
         navbar=navbar, content=p['content'], footer=footer)

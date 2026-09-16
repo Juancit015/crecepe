@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-16 — Fix: rutas relativas en páginas legales
+
+### Corregido
+
+- `privacidad.html` y `terminos.html` (en raíz) cargaban el CSS/JS/logo
+  con `../assets/`, que apuntaba fuera del proyecto: se veían sin estilos.
+  El generador ahora calcula el prefijo según la profundidad de cada
+  página (`''` en raíz, `../` un nivel abajo).
+- Enlaces a Privacidad/Términos en el footer de las subpáginas resolvían
+  a `/servicios/privacidad.html` (404); ahora usan el prefijo correcto.
+
 ## 2026-09-16 — Subpáginas de servicio, casos y legales
 
 ### Agregado
