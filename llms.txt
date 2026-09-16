@@ -45,6 +45,15 @@
 
 50% al inicio y 50% contra entrega. Yape, Plin o transferencia bancaria.
 
+## Páginas del sitio
+
+- `/` — landing principal con todos los servicios, planes, proceso, casos, opiniones y FAQ.
+- `/servicios/presencia-digital.html` — diseño de páginas web en Trujillo y Perú desde S/ 990.
+- `/servicios/tienda-online-bagisto.html` — crear tienda online en Perú con Bagisto desde S/ 2,990.
+- `/servicios/automatizacion-ia.html` — automatización con IA para negocios desde S/ 1,490.
+- `/casos/az-consulting.html` y `/casos/novedades-chavez.html` — casos reales con detalle.
+- `/privacidad.html` y `/terminos.html` — política de privacidad y términos del servicio.
+
 ## Contacto
 
 - WhatsApp: +51 970 771 835

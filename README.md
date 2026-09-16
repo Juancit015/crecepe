@@ -38,7 +38,8 @@ post-lanzamiento de 30 días.
 ## Secciones del sitio
 
 - **Inicio:** presentación, propuesta de valor y tarjeta del especialista.
-- **Servicios:** las tres soluciones con su contenido y enlaces a planes.
+- **Servicios:** las tres soluciones con su contenido y enlaces a sus páginas
+  dedicadas.
 - **SEO + GEO:** explicación del diferenciador (posicionar en buscadores y ser
   recomendado por ChatGPT, Gemini, Perplexity, Claude y AI Overviews).
 - **Planes:** detalle, precios de referencia y contacto directo por WhatsApp.
@@ -53,9 +54,34 @@ post-lanzamiento de 30 días.
 - **Opiniones:** tres testimonios de proyectos de AZ Consulting donde participé
   como colaborador (María García — TechCorp, Carlos Rivera — DataSys,
   Ana López — InnovaGroup), con foto, cargo y calificación de 5 estrellas.
-- **FAQ:** preguntas frecuentes sobre costos, tiempos, GEO, cobertura, pagos y el
-  diagnóstico gratuito.
+- **FAQ:** 11 preguntas frecuentes (costos, tiempos, GEO, cobertura, pagos,
+  diagnóstico y 5 long-tail locales), con botón para expandir todas a la vez.
 - **Contacto:** datos directos y tarjeta de diagnóstico gratuito por videollamada
   de 30 minutos, con propuesta personalizada en menos de 24 horas.
 - **Elementos flotantes:** dial de contacto en abanico (WhatsApp, llamar, email,
   agendar) y botón para volver arriba.
+
+## Páginas del sitio
+
+Además de la página inicial, el sitio es multipágina para SEO:
+
+- **Servicios** (`/servicios/`): una página por servicio con H1 orientado a
+  búsqueda, qué incluye, FAQ propio con schema, precio, CTA a WhatsApp y
+  breadcrumbs: `presencia-digital.html`, `tienda-online-bagisto.html`,
+  `automatizacion-ia.html`.
+- **Casos** (`/casos/`): `az-consulting.html` y `novedades-chavez.html` con
+  punto de partida, trabajo realizado y resultado.
+- **Legales** (raíz): `privacidad.html` (Ley N.° 29733) y `terminos.html`,
+  enlazadas desde el footer de todas las páginas.
+- Las subpáginas se regeneran con `tools/build_pages.py`, que reutiliza
+  navbar, dial, botón "volver arriba" y footer del index y ajusta las rutas
+  relativas según la profundidad de cada página.
+
+## Identidad y tema
+
+- Logo oficial en AVIF en navbar y footer: azul en tema claro, blanco en tema
+  oscuro y en el footer (que siempre es oscuro).
+- Favicon oficial (ICO + PNG 16/32 + apple-touch + iconos PWA 192/512).
+- Tema claro/oscuro con botón en la navbar; preferencia guardada en el navegador.
+- Imágenes del sitio en AVIF optimizado (hero, servicios, fondos de secciones
+  SEO+GEO y Opiniones, avatares de testimonios).
