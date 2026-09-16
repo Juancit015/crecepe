@@ -1,11 +1,1 @@
-{
-  "name": "CrecePE - Webs y Tiendas con IA",
-  "short_name": "CrecePE",
-  "description": "Webs y tiendas que Google encuentra y la IA recomienda. Web + E-commerce Bagisto + IA + SEO + GEO para negocios en Perú.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#F4F7FE",
-  "theme_color": "#0B2FD4",
-  "lang": "es",
-  "icons": []
-}
+{"background_color": "#F4F7FE", "description": "Webs y tiendas que Google encuentra y la IA recomienda. Web + E-commerce Bagisto + IA + SEO + GEO para negocios en Perú.", "display": "standalone", "icons": [{"sizes": "192x192", "src": "assets/img/favicon/android-chrome-192x192.png", "type": "image/png"}, {"sizes": "512x512", "src": "assets/img/favicon/android-chrome-512x512.png", "type": "image/png"}], "lang": "es", "name": "CrecePE - Webs y Tiendas con IA", "short_name": "CrecePE", "start_url": "/", "theme_color": "#0B2FD4"}

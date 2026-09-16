@@ -214,6 +214,32 @@
         });
     });
 
+    /* ---------- FAQ: expandir / contraer todo ---------- */
+    var faqToggleAll = document.getElementById('faqToggleAll');
+    if (faqToggleAll) {
+        faqToggleAll.addEventListener('click', function () {
+            var items = document.querySelectorAll('.faq-item');
+            var allOpen = document.querySelectorAll('.faq-item.open').length === items.length;
+
+            items.forEach(function (item) {
+                var answer = item.querySelector('.faq-answer');
+                var question = item.querySelector('.faq-question');
+                if (allOpen) {
+                    item.classList.remove('open');
+                    answer.style.maxHeight = null;
+                    question.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            faqToggleAll.textContent = allOpen ? 'Ver todas las preguntas' : 'Ocultar todas las preguntas';
+            faqToggleAll.setAttribute('aria-expanded', String(!allOpen));
+        });
+    }
+
     /* ---------- Reveal on scroll ---------- */
     var revealEls = document.querySelectorAll('.reveal');
 

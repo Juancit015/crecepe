@@ -1,5 +1,17 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-16 — Logo, favicon y expandir FAQ
+
+### Agregado
+
+- Logo oficial `logo-crecepe.avif` (recortado de la imagen generada, 71 KB)
+  en navbar y footer: azul en tema claro, blanco en tema oscuro y footer
+  (técnica `brightness(0) invert(1)` como AZ Consulting).
+- Favicon oficial (`favicon.ico` + PNG 16/32 + apple-touch + iconos PWA
+  192/512) con enlaces en el head y manifest actualizado.
+- Botón "Ver todas las preguntas" en la mitad del FAQ que expande o
+  contrae las 11 preguntas de una vez.
+
 ## 2026-09-16 — Compactación móvil de cards
 
 ### Cambiado

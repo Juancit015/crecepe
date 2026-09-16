@@ -168,6 +168,16 @@ section { padding: 90px 0; }
 
 .logo span { color: var(--accent); }
 
+/* Logo imagen: azul en claro, blanco en oscuro (patrón azconsulting) */
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+body.dark-mode .logo-img { filter: brightness(0) invert(1); }
+/* El footer siempre es oscuro: logo siempre en blanco */
+.footer .logo-img { filter: brightness(0) invert(1); }
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -1058,6 +1068,22 @@ section { padding: 90px 0; }
     color: #fff;
 }
 
+/* Botón expandir/contraer todo el FAQ */
+.faq-more-wrap { text-align: center; margin: 2px 0 14px; }
+.faq-more {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    background: rgba(11, 47, 212, 0.08);
+    border: 1px solid rgba(11, 47, 212, 0.2);
+    border-radius: 999px;
+    padding: 12px 26px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.faq-more:hover { background: var(--accent); color: #fff; }
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -1727,6 +1753,8 @@ body.dark-mode .pricing-card,
 body.dark-mode .case-card { border-color: rgba(255, 255, 255, 0.08); }
 
 body.dark-mode .faq-item { border-color: rgba(255, 255, 255, 0.08); }
+body.dark-mode .faq-more { color: var(--accent-light); background: rgba(0, 194, 255, 0.12); border-color: transparent; }
+body.dark-mode .faq-more:hover { background: var(--accent); color: #fff; }
 body.dark-mode .process-card { border-color: rgba(255, 255, 255, 0.06); }
 body.dark-mode .pricing-price { border-color: rgba(255, 255, 255, 0.1); }
 
