@@ -1,5 +1,22 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-16 — Subpáginas de servicio, casos y legales
+
+### Agregado
+
+- 3 páginas de servicio con SEO propio (`/servicios/`): Presencia Digital,
+  Tienda Online Bagisto y Automatización con IA. Cada una con H1
+  optimizado, qué incluye, FAQ propio con schema, aside de precio con CTA
+  a WhatsApp, breadcrumbs con schema y relacionados.
+- 2 páginas de caso (`/casos/`): AZ Consulting y Novedades Chavez con
+  punto de partida, trabajo realizado, resultado y enlace al sitio en vivo.
+- Páginas legales: `/privacidad.html` (Ley 29733) y `/terminos.html`
+  (alcance, pagos, plazos, propiedad, soporte, honestidad SEO/GEO).
+- Enlaces del index actualizados: cards de servicio llevan a su página,
+  casos tienen "Ver caso completo", footer con Privacidad y Términos.
+- Sitemap con las 8 URLs. Generador `tools/build_pages.py` que reutiliza
+  navbar, dial, to-top y footer del index.
+
 ## 2026-09-16 — Logo, favicon y expandir FAQ
 
 ### Agregado
