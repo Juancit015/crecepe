@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-16 — FAQ long-tail local
+
+### Agregado
+
+- 5 preguntas long-tail en el FAQ visible, el schema FAQPage y `llms.txt`:
+  precio web en Trujillo, vender online con tienda física, invisibilidad
+  ante ChatGPT/Gemini, Google Maps para bodegas/restaurantes y
+  marketplace vs. tienda propia.
+- El FAQ crece de 6 a 11 preguntas para captar búsquedas locales con
+  intención de compra.
+
 ## 2026-09-15 — Fotografías del sitio
 
 ### Agregado
