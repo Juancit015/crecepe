@@ -1602,6 +1602,27 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     body:has(.contact-dial.is-open) #to-top,
     body:has(.contact-dial:focus-within) #to-top { bottom: 158px; }
     .to-top { width: 44px; height: 44px; bottom: 82px; right: 18px; }
+    /* Compactación móvil: menos scroll, misma información */
+    section { padding: 48px 0; }
+    .section-header { margin-bottom: 36px; }
+    .services-grid, .pricing-grid, .process-grid, .cases-grid, .opiniones-grid, .geo-grid { gap: 20px; }
+    .service-card { padding: 24px 20px; }
+    .service-photo { margin: -24px -20px 18px; height: 140px; }
+    .service-icon { width: 52px; height: 52px; margin-bottom: 16px; }
+    .service-card h3 { font-size: 1.15rem; }
+    .geo-card { padding: 24px 20px; }
+    .geo-card ul li { font-size: 0.88rem; padding: 4px 0; }
+    .pricing-card { padding: 26px 22px; }
+    .pricing-price { padding: 12px 0; margin-bottom: 16px; }
+    .pricing-price .amount { font-size: 1.7rem; }
+    .pricing-features { margin-bottom: 20px; }
+    .pricing-features li { font-size: 0.88rem; padding: 5px 0; gap: 8px; }
+    .case-preview { height: 150px; }
+    .case-body { padding: 22px 20px; }
+    .process-card { padding: 24px 20px; }
+    .opinion-card { padding: 24px 20px; gap: 12px; }
+    .faq-item { margin-bottom: 10px; }
+    .faq-question { padding: 16px 18px; font-size: 0.93rem; }
 }
 
 /* ============ Botón tema claro/oscuro ============ */

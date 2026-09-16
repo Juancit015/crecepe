@@ -1,5 +1,14 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-16 — Compactación móvil de cards
+
+### Cambiado
+
+- Solo en móvil (`max-width: 768px`, desktop intacto): secciones con menos
+  aire (48px), fotos de servicios a 140px, previews de casos a 150px,
+  cards de planes/proceso/opiniones/GEO/FAQ con menos padding y texto
+  ligeramente menor. Menos scroll, misma información.
+
 ## 2026-09-16 — FAQ long-tail local
 
 ### Agregado
