@@ -1,5 +1,15 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-15 — Fotografías del sitio
+
+### Agregado
+
+- Fotos en las tres cards de servicios (web, tienda e IA) con texto
+  alternativo descriptivo.
+- Fondo fotográfico nocturno de Trujillo en la sección SEO + GEO.
+- Fondo fotográfico de empresarios en la sección Opiniones.
+- Las 5 imágenes están en AVIF optimizado (~100-270 KB cada una).
+
 ## 2026-09-14 — Sección Opiniones
 
 ### Agregado

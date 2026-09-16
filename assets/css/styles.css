@@ -632,7 +632,12 @@ section { padding: 90px 0; }
 .service-link:hover { gap: 13px; }
 
 /* ============ SEO vs GEO ============ */
-.geo-section { background: var(--primary); color: #fff; }
+.geo-section {
+    background: linear-gradient(rgba(8, 15, 35, 0.88), rgba(8, 15, 35, 0.80)), url('../img/geo-fondo.avif');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
 
 .geo-section .section-title { color: #fff; }
 .geo-section .section-subtitle { color: rgba(255, 255, 255, 0.7); }
@@ -1405,10 +1410,23 @@ body:has(.contact-dial:hover) #to-top,
 body:has(.contact-dial.is-open) #to-top,
 body:has(.contact-dial:focus-within) #to-top { bottom: 184px; }
 
+/* Foto superior full-bleed en cards de servicios */
+.service-photo { margin: -36px -30px 24px; height: 200px; overflow: hidden; }
+.service-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 /* ============ Opiniones ============ */
 .opiniones-section { position: relative; overflow: hidden; }
 /* Fondo fotográfico: se activa con .has-bg cuando Antigravity entregue opiniones-fondo.avif */
-/* .opiniones-section.has-bg { background: linear-gradient(rgba(244, 247, 254, 0.88), rgba(244, 247, 254, 0.78)), url('../img/opiniones-fondo.avif'); background-size: cover; background-position: center; } */
+.opiniones-section.has-bg {
+    background: linear-gradient(rgba(244, 247, 254, 0.90), rgba(244, 247, 254, 0.80)), url('../img/opiniones-fondo.avif');
+    background-size: cover;
+    background-position: center;
+}
+body.dark-mode .opiniones-section.has-bg {
+    background: linear-gradient(rgba(6, 13, 31, 0.90), rgba(6, 13, 31, 0.84)), url('../img/opiniones-fondo.avif');
+    background-size: cover;
+    background-position: center;
+}
 .opiniones-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1635,7 +1653,11 @@ body.dark-mode {
 }
 
 /* Fondos que usan --primary como color de superficie */
-body.dark-mode .geo-section { background: #060D1F; }
+body.dark-mode .geo-section {
+    background: linear-gradient(rgba(6, 13, 31, 0.92), rgba(6, 13, 31, 0.86)), url('../img/geo-fondo.avif');
+    background-size: cover;
+    background-position: center;
+}
 body.dark-mode .contact-section { background: linear-gradient(160deg, #060D1F, #0A1836); }
 body.dark-mode .specialties-bar { background: #060D1F; }
 body.dark-mode .footer { background: #04091A; }
