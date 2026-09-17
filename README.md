@@ -55,7 +55,9 @@ post-lanzamiento de 30 días.
   como colaborador (María García — TechCorp, Carlos Rivera — DataSys,
   Ana López — InnovaGroup), con foto, cargo y calificación de 5 estrellas.
 - **FAQ:** 11 preguntas frecuentes (costos, tiempos, GEO, cobertura, pagos,
-  diagnóstico y 5 long-tail locales), con botón para expandir todas a la vez.
+  diagnóstico y 5 long-tail locales): se muestran 6 y el botón "Ver todas
+  las preguntas" revela las 5 restantes (viaja al final y alterna a
+  "Ver menos preguntas").
 - **Contacto:** datos directos y tarjeta de diagnóstico gratuito por videollamada
   de 30 minutos, con propuesta personalizada en menos de 24 horas.
 - **Elementos flotantes:** dial de contacto en abanico (WhatsApp, llamar, email,
@@ -88,5 +90,7 @@ Además de la página inicial, el sitio es multipágina para SEO:
 - Botones del hero (Agendar diagnóstico y Ver servicios) con estilo vidrio y
   hover de relleno; en Opiniones las comillas se mantienen visibles al hover
   en ambos temas.
+- Nombres de sección (Servicios, Planes, Proceso, Casos reales, Opiniones,
+  FAQ y Diferenciador) con borde cyan en modo claro y oscuro.
 - Imágenes del sitio en AVIF optimizado (hero, servicios, fondos de secciones
   SEO+GEO y Opiniones, avatares de testimonios).

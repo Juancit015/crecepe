@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-18 — Badges cyan y FAQ progresivo
+
+### Cambiado
+
+- Nombres de sección con borde cyan uniforme en modo claro y oscuro
+  (antes solo el badge Diferenciador lo tenía en claro).
+- FAQ con despliegue progresivo: muestra 6 preguntas y el botón "Ver todas
+  las preguntas" revela las 5 restantes; el botón viaja al final de la
+  lista y alterna a "Ver menos preguntas" para ocultarlas. Cada pregunta
+  conserva su acordeón individual.
+
 ## 2026-09-17 — Fondos visibles, hero vidrio y comillas en oscuro
 
 ### Cambiado

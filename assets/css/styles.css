@@ -56,6 +56,7 @@ section { padding: 90px 0; }
 .section-badge {
     display: inline-block;
     background: rgba(11, 47, 212, 0.1);
+    border: 1px solid rgba(0, 194, 255, 0.4);
     color: var(--accent-dark);
     padding: 6px 16px;
     border-radius: 50px;
@@ -1083,6 +1084,7 @@ body.dark-mode .logo-img { filter: brightness(0) invert(1); }
     transition: background 0.3s ease, color 0.3s ease;
 }
 .faq-more:hover { background: var(--accent); color: #fff; }
+.faq-item.faq-extra.faq-hidden { display: none; }
 
 .faq-answer {
     max-height: 0;
@@ -1823,7 +1825,7 @@ body.dark-mode .hero-actions .btn-primary { background: rgba(0, 194, 255, 0.12);
 body.dark-mode .hero-actions .btn-primary:hover { background: var(--accent-light); border-color: var(--accent-light); color: #fff; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 194, 255, 0.25); }
 body.dark-mode .hero-actions .btn-outline { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 255, 255, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 body.dark-mode .hero-actions .btn-outline:hover { background: #fff; border-color: #fff; color: #0A1F44; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2); }
-body:not(.dark-mode) .geo-section .section-badge { color: #fff; background: rgba(8, 15, 35, 0.55); border: 1px solid rgba(0, 194, 255, 0.4); }
+body:not(.dark-mode) .geo-section .section-badge { color: #fff; background: rgba(8, 15, 35, 0.55); }
 body:not(.dark-mode) .geo-section .section-title span { color: var(--accent-light); }
 
 /* ============ Dark mode ============ */
@@ -1910,7 +1912,7 @@ body.dark-mode .process-card { border-color: rgba(255, 255, 255, 0.06); }
 body.dark-mode .pricing-price { border-color: rgba(255, 255, 255, 0.1); }
 
 /* Acento legible sobre superficies oscuras */
-body.dark-mode .section-badge { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
+body.dark-mode .section-badge { background: rgba(0, 194, 255, 0.14); border: 1px solid rgba(0, 194, 255, 0.4); color: var(--accent-light); }
 body.dark-mode .service-icon { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
 body.dark-mode .service-list svg,
 body.dark-mode .pricing-features svg,

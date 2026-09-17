@@ -214,29 +214,43 @@
         });
     });
 
-    /* ---------- FAQ: expandir / contraer todo ---------- */
+    /* ---------- FAQ: revelado progresivo ---------- */
     var faqToggleAll = document.getElementById('faqToggleAll');
-    if (faqToggleAll) {
-        faqToggleAll.addEventListener('click', function () {
-            var items = document.querySelectorAll('.faq-item');
-            var allOpen = document.querySelectorAll('.faq-item.open').length === items.length;
+    var faqExtra = document.querySelectorAll('.faq-item.faq-extra');
+    if (faqToggleAll && faqExtra.length) {
+        // Oculto inicial vía JS: sin JS las 11 preguntas quedan visibles
+        faqExtra.forEach(function (item) {
+            item.classList.add('faq-hidden');
+        });
 
-            items.forEach(function (item) {
-                var answer = item.querySelector('.faq-answer');
-                var question = item.querySelector('.faq-question');
-                if (allOpen) {
+        faqToggleAll.addEventListener('click', function () {
+            var expanded = faqToggleAll.getAttribute('aria-expanded') === 'true';
+            var moreWrap = faqToggleAll.closest('.faq-more-wrap');
+            var faqList = faqToggleAll.closest('.faq-list');
+
+            faqExtra.forEach(function (item) {
+                if (expanded) {
+                    // Al ocultar: cerrar su respuesta para que no reaparezca abierta
                     item.classList.remove('open');
-                    answer.style.maxHeight = null;
-                    question.setAttribute('aria-expanded', 'false');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    item.classList.add('faq-hidden');
                 } else {
-                    item.classList.add('open');
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    question.setAttribute('aria-expanded', 'true');
+                    item.classList.remove('faq-hidden');
                 }
             });
 
-            faqToggleAll.textContent = allOpen ? 'Ver todas las preguntas' : 'Ocultar todas las preguntas';
-            faqToggleAll.setAttribute('aria-expanded', String(!allOpen));
+            // El botón viaja: al final al revelar, de vuelta al medio al ocultar
+            if (moreWrap && faqList) {
+                if (expanded) {
+                    faqList.insertBefore(moreWrap, faqExtra[0]);
+                } else {
+                    faqList.appendChild(moreWrap);
+                }
+            }
+
+            faqToggleAll.textContent = expanded ? 'Ver todas las preguntas' : 'Ver menos preguntas';
+            faqToggleAll.setAttribute('aria-expanded', String(!expanded));
         });
     }
 
