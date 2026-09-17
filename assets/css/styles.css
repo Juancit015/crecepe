@@ -279,7 +279,7 @@ body.dark-mode .logo-img { filter: brightness(0) invert(1); }
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(rgba(238, 243, 255, 0.88), rgba(238, 243, 255, 0.74)),
+        linear-gradient(rgba(238, 243, 255, 0.35), rgba(238, 243, 255, 0.25)),
         url('../img/hero-crecepe.avif');
     background-size: cover;
     background-position: center;
@@ -643,7 +643,7 @@ body.dark-mode .logo-img { filter: brightness(0) invert(1); }
 
 /* ============ SEO vs GEO ============ */
 .geo-section {
-    background: linear-gradient(rgba(8, 15, 35, 0.88), rgba(8, 15, 35, 0.80)), url('../img/geo-fondo.avif');
+    background: linear-gradient(rgba(8, 15, 35, 0.35), rgba(8, 15, 35, 0.25)), url('../img/geo-fondo.avif');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -1444,12 +1444,12 @@ body:has(.contact-dial:focus-within) #to-top { bottom: 184px; }
 .opiniones-section { position: relative; overflow: hidden; }
 /* Fondo fotográfico: se activa con .has-bg cuando Antigravity entregue opiniones-fondo.avif */
 .opiniones-section.has-bg {
-    background: linear-gradient(rgba(244, 247, 254, 0.90), rgba(244, 247, 254, 0.80)), url('../img/opiniones-fondo.avif');
+    background: linear-gradient(rgba(244, 247, 254, 0.35), rgba(244, 247, 254, 0.25)), url('../img/opiniones-fondo.avif');
     background-size: cover;
     background-position: center;
 }
 body.dark-mode .opiniones-section.has-bg {
-    background: linear-gradient(rgba(6, 13, 31, 0.90), rgba(6, 13, 31, 0.84)), url('../img/opiniones-fondo.avif');
+    background: linear-gradient(rgba(6, 13, 31, 0.60), rgba(6, 13, 31, 0.50)), url('../img/opiniones-fondo.avif');
     background-size: cover;
     background-position: center;
 }
@@ -1485,6 +1485,7 @@ body.dark-mode .opiniones-section.has-bg {
     transition: background 0.35s ease, color 0.35s ease;
 }
 .opinion-card:hover .opinion-quote { background: var(--primary); color: #fff; }
+body.dark-mode .opinion-card:hover .opinion-quote { background: #fff; color: #0A1F44; }
 .opinion-quote svg { width: 20px; height: 20px; }
 .opinion-text {
     font-style: italic;
@@ -1807,6 +1808,24 @@ body.dark-mode .legal a { color: var(--accent-light); }
     .svc-price { font-size: 1.9rem; }
 }
 
+/* ============ Modo claro: texto claro sobre foto oscura (hero + GEO) ============ */
+body:not(.dark-mode) .hero h1 { color: #fff; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+body:not(.dark-mode) .hero h1 .hl { color: var(--accent-light); }
+body:not(.dark-mode) .hero-description,
+body:not(.dark-mode) .hero-trust div { color: rgba(255, 255, 255, 0.85); text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+body:not(.dark-mode) .hero-trust svg { color: var(--accent-light); }
+/* Hero: sistema glass réplica AZ (claro: ambos iguales; oscuro: Agendar cyan, Ver blanquecino) */
+body:not(.dark-mode) .hero-actions .btn-primary,
+body:not(.dark-mode) .hero-actions .btn-outline { background: rgba(10, 31, 68, 0.08); border: 2px solid rgba(10, 31, 68, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(10, 31, 68, 0.1); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+body:not(.dark-mode) .hero-actions .btn-primary:hover,
+body:not(.dark-mode) .hero-actions .btn-outline:hover { background: var(--primary); border-color: var(--primary); color: #fff; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(10, 31, 68, 0.25); }
+body.dark-mode .hero-actions .btn-primary { background: rgba(0, 194, 255, 0.12); border: 2px solid rgba(0, 194, 255, 0.4); color: var(--accent-light); box-shadow: 0 8px 25px rgba(0, 194, 255, 0.1); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+body.dark-mode .hero-actions .btn-primary:hover { background: var(--accent-light); border-color: var(--accent-light); color: #fff; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 194, 255, 0.25); }
+body.dark-mode .hero-actions .btn-outline { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 255, 255, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+body.dark-mode .hero-actions .btn-outline:hover { background: #fff; border-color: #fff; color: #0A1F44; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2); }
+body:not(.dark-mode) .geo-section .section-badge { color: #fff; background: rgba(8, 15, 35, 0.55); border: 1px solid rgba(0, 194, 255, 0.4); }
+body:not(.dark-mode) .geo-section .section-title span { color: var(--accent-light); }
+
 /* ============ Dark mode ============ */
 body.dark-mode {
     --light: #0A1428;
@@ -1826,7 +1845,7 @@ body.dark-mode {
 
 /* Fondos que usan --primary como color de superficie */
 body.dark-mode .geo-section {
-    background: linear-gradient(rgba(6, 13, 31, 0.92), rgba(6, 13, 31, 0.86)), url('../img/geo-fondo.avif');
+    background: linear-gradient(rgba(6, 13, 31, 0.60), rgba(6, 13, 31, 0.50)), url('../img/geo-fondo.avif');
     background-size: cover;
     background-position: center;
 }
@@ -1850,7 +1869,7 @@ body.dark-mode .hero::before {
 
 body.dark-mode .hero-photo-bg {
     background:
-        linear-gradient(rgba(8, 15, 35, 0.86), rgba(8, 15, 35, 0.74)),
+        linear-gradient(rgba(8, 15, 35, 0.60), rgba(8, 15, 35, 0.50)),
         url('../img/hero-crecepe.avif');
     background-size: cover;
     background-position: center;
@@ -1864,6 +1883,13 @@ body.dark-mode .hero-grid-bg {
 }
 
 body.dark-mode .hero-badge { background: rgba(255, 255, 255, 0.12); }
+
+/* Texto sobre foto en oscuro: sombra sutil para legibilidad (velo 0.60 como base) */
+body.dark-mode .hero h1,
+body.dark-mode .geo-section .section-title,
+body.dark-mode .geo-section .section-subtitle,
+body.dark-mode .opiniones-section .section-title,
+body.dark-mode .opiniones-section .section-subtitle { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
 
 /* Card del especialista sólida en oscuro (no glass claro sobre foto) */
 body.dark-mode .hero-ceo-card { background: rgba(15, 29, 58, 0.92); }

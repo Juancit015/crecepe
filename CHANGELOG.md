@@ -1,5 +1,22 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-17 — Fondos visibles, hero vidrio y comillas en oscuro
+
+### Cambiado
+
+- Fondos fotográficos del hero, SEO + GEO y Opiniones más visibles (velo más
+  ligero) en modo claro y oscuro.
+- Textos del hero y SEO + GEO en modo claro ahora en blanco legible sobre la
+  foto, con sombra sutil también en modo oscuro.
+- Botones del hero (Agendar diagnóstico y Ver servicios) con estilo vidrio:
+  en claro ambos iguales, en oscuro Agendar en cian y Ver servicios
+  blanquecino, con hover de relleno y elevación.
+
+### Corregido
+
+- Comillas de Opiniones invisibles al hover en modo oscuro (blanco sobre
+  blanco): ahora pastilla blanca con comillas azules; modo claro intacto.
+
 ## 2026-09-16 — Fix: rutas relativas en páginas legales
 
 ### Corregido

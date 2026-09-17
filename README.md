@@ -83,5 +83,10 @@ Además de la página inicial, el sitio es multipágina para SEO:
   oscuro y en el footer (que siempre es oscuro).
 - Favicon oficial (ICO + PNG 16/32 + apple-touch + iconos PWA 192/512).
 - Tema claro/oscuro con botón en la navbar; preferencia guardada en el navegador.
+- Fondos fotográficos visibles en hero, SEO + GEO y Opiniones; en modo claro
+  los titulares van en blanco legible sobre la foto.
+- Botones del hero (Agendar diagnóstico y Ver servicios) con estilo vidrio y
+  hover de relleno; en Opiniones las comillas se mantienen visibles al hover
+  en ambos temas.
 - Imágenes del sitio en AVIF optimizado (hero, servicios, fondos de secciones
   SEO+GEO y Opiniones, avatares de testimonios).
