@@ -92,5 +92,12 @@ Además de la página inicial, el sitio es multipágina para SEO:
   en ambos temas.
 - Nombres de sección (Servicios, Planes, Proceso, Casos reales, Opiniones,
   FAQ y Diferenciador) con borde cyan en modo claro y oscuro.
+- Navbar adaptativa en modo claro: blanca sobre la foto al inicio, azul con
+  el fondo blanco al hacer scroll (logo a juego).
+- Diferenciador con cards blancas de SEO/GEO y píldoras blancas de
+  plataformas con marca (Google, ChatGPT, Gemini, Perplexity, Claude,
+  AI Overviews).
+- Cada página de servicios con su foto de fondo y texto del héroe en blanco.
 - Imágenes del sitio en AVIF optimizado (hero, servicios, fondos de secciones
-  SEO+GEO y Opiniones, avatares de testimonios).
+  SEO+GEO y Opiniones, fondos de las 3 páginas de servicios, avatares de
+  testimonios).

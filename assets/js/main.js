@@ -216,35 +216,40 @@
 
     /* ---------- FAQ: revelado progresivo ---------- */
     var faqToggleAll = document.getElementById('faqToggleAll');
+    var faqExtraWrap = document.querySelector('.faq-extra-wrap');
     var faqExtra = document.querySelectorAll('.faq-item.faq-extra');
-    if (faqToggleAll && faqExtra.length) {
-        // Oculto inicial vía JS: sin JS las 11 preguntas quedan visibles
-        faqExtra.forEach(function (item) {
-            item.classList.add('faq-hidden');
-        });
+    if (faqToggleAll && faqExtraWrap && faqExtra.length) {
+        // Colapso inicial vía JS: sin JS las 11 preguntas quedan visibles.
+        // Sin transición para que no se anime al cargar la página.
+        faqExtraWrap.style.transition = 'none';
+        faqExtraWrap.classList.add('faq-collapsed');
+        void faqExtraWrap.offsetHeight;
+        faqExtraWrap.style.transition = '';
 
         faqToggleAll.addEventListener('click', function () {
             var expanded = faqToggleAll.getAttribute('aria-expanded') === 'true';
             var moreWrap = faqToggleAll.closest('.faq-more-wrap');
             var faqList = faqToggleAll.closest('.faq-list');
 
-            faqExtra.forEach(function (item) {
-                if (expanded) {
+            if (expanded) {
+                faqExtra.forEach(function (item) {
                     // Al ocultar: cerrar su respuesta para que no reaparezca abierta
                     item.classList.remove('open');
                     item.querySelector('.faq-answer').style.maxHeight = null;
                     item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                    item.classList.add('faq-hidden');
-                } else {
-                    item.classList.remove('faq-hidden');
-                }
-            });
+                });
+                faqExtraWrap.classList.add('faq-collapsed');
 
-            // El botón viaja: al final al revelar, de vuelta al medio al ocultar
-            if (moreWrap && faqList) {
-                if (expanded) {
-                    faqList.insertBefore(moreWrap, faqExtra[0]);
-                } else {
+                // Botón de vuelta al medio y a la vista: sin salto a Contacto
+                if (moreWrap && faqList) {
+                    faqList.insertBefore(moreWrap, faqExtraWrap);
+                    moreWrap.scrollIntoView({ block: 'nearest' });
+                }
+            } else {
+                faqExtraWrap.classList.remove('faq-collapsed');
+
+                // El botón viaja al final al revelar
+                if (moreWrap && faqList) {
                     faqList.appendChild(moreWrap);
                 }
             }

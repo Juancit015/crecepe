@@ -1,5 +1,23 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-18 — GEO legible, nav adaptativa y fotos de servicios
+
+### Agregado
+
+- Fotos de fondo propias en las 3 páginas de servicios (emprendedor con
+  laptop, vendedora con celular y negociante con IA) con texto del héroe
+  en blanco legible sobre la foto.
+
+### Cambiado
+
+- Sección Diferenciador: cards en blanco sólido con texto marino (borde
+  cyan en GEO) y píldoras de plataformas blancas con marca (Google,
+  ChatGPT, Gemini, Perplexity, Claude, AI Overviews).
+- Navbar adaptativa en modo claro: texto blanco sobre la foto al inicio y
+  azul al aparecer el fondo blanco con scroll; logo y hamburguesa a juego.
+- FAQ extra con expansión y colapso animados: al contraer, el botón queda
+  a la vista sin saltar a Contacto.
+
 ## 2026-09-18 — Badges cyan y FAQ progresivo
 
 ### Cambiado
