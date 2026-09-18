@@ -1026,18 +1026,43 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
     border-radius: 20px;
 }
 
-.case-link {
+.case-actions {
     margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 18px;
+}
+
+.case-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-weight: 700;
-    color: var(--accent-dark);
+    color: #fff;
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    padding: 12px 22px;
     font-size: 0.95rem;
-    transition: gap 0.3s ease;
+    min-height: 48px;
+    transition: gap 0.3s ease, background 0.3s ease, transform 0.3s ease;
 }
 
-.case-link:hover { gap: 13px; }
+.case-link:hover { gap: 13px; transform: translateY(-2px); }
+
+.case-actions .case-link:last-child {
+    background: transparent;
+    color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+body.dark-mode .case-actions .case-link:last-child {
+    color: var(--accent-light);
+    border-color: var(--accent-light);
+}
+
+body.dark-mode .case-actions .case-link:first-child { color: #fff; }
 
 /* ============ FAQ ============ */
 .faq-section { background: #fff; }
@@ -1185,6 +1210,23 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
     justify-content: center;
     color: var(--accent-light);
     flex-shrink: 0;
+}
+
+.contact-item .ci-icon--wa { background: #25D366; border: none; color: #fff; }
+.contact-item .ci-icon--mail { background: #fff; border: none; color: #0A1F44; }
+.contact-item .ci-icon--clock { background: #fff; border: none; color: #0A1F44; }
+
+.btn-whatsapp {
+    background: #22a85b;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(34, 168, 91, 0.35);
+}
+
+.btn-whatsapp:hover {
+    background: #1c8f4d;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(34, 168, 91, 0.45);
+    color: #fff;
 }
 
 .contact-item strong { display: block; font-size: 0.95rem; }
@@ -1685,10 +1727,9 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
 /* ============ Botón tema claro/oscuro ============ */
 .theme-toggle {
     width: 42px; height: 42px;
-    border-radius: 50%;
-    border: 1px solid rgba(10, 31, 68, 0.15);
-    background: rgba(255, 255, 255, 0.7);
-    color: var(--primary);
+    background: none;
+    border: none;
+    color: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1696,7 +1737,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     flex-shrink: 0;
     position: relative;
     z-index: 1001;
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .theme-toggle:hover { transform: scale(1.08); }
@@ -1704,11 +1745,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
 .theme-toggle svg { width: 19px; height: 19px; }
 .theme-toggle .icon-sun { display: none; }
 
-body.dark-mode .theme-toggle {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-}
+body.dark-mode .theme-toggle { color: #fff; }
 
 body.dark-mode .theme-toggle .icon-sun { display: block; }
 body.dark-mode .theme-toggle .icon-moon { display: none; }

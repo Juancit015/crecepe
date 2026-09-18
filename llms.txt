@@ -1,6 +1,6 @@
 # CrecePE
 
-> CrecePE es un servicio independiente de desarrollo web, e-commerce e inteligencia artificial para negocios en Perú, dirigido por Juan David (CEO & Founder) desde Trujillo, La Libertad. Construye sitios web, tiendas online con Bagisto y automatización con IA, con SEO + GEO integrados para que los negocios aparezcan en Google y sean recomendados por sistemas de IA.
+> CrecePE es un servicio independiente de desarrollo web, e-commerce e inteligencia artificial para negocios en Perú, dirigido por Juan David (CEO & Founder) desde Trujillo, La Libertad. Su propuesta: webs y tiendas que ahorran tiempo y venden 24/7, con SEO + GEO integrados para aparecer en Google y ser recomendados por sistemas de IA.
 
 ## Servicios
 

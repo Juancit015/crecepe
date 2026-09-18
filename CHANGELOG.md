@@ -1,5 +1,26 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-18 — Mensaje de beneficios, fotos de casos y detalles
+
+### Agregado
+
+- Fotos de fondo en las 2 páginas de casos (equipo en oficina y vendedora
+  con pedidos) con texto del héroe en blanco.
+
+### Cambiado
+
+- Hero enfocado en beneficios: "Tu negocio vendiendo solo, todos los
+  días", con visibilidad como mecanismo; meta y `llms.txt` sincronizados.
+- Copy visible en lenguaje de cliente ("Tienda Virtual + IA", beneficios
+  en vez de Bagisto/Schema/LLMs); tecnicismos reservados a schema y
+  `llms.txt`.
+- Diferenciador explicado como cambio de comportamiento (preguntar vs
+  buscar listas), sin marcas fuera de las píldoras.
+- Botón de tema al final de la navbar como icono plano sin círculo.
+- Contacto con pastillas de marca (WhatsApp verde, email y reloj en
+  blanco) y botón Agendar en verde.
+- Enlaces de casos como botones táctiles separados (primario + borde).
+
 ## 2026-09-18 — GEO legible, nav adaptativa y fotos de servicios
 
 ### Agregado
