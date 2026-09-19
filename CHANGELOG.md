@@ -1,5 +1,13 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-19 — SEO de contenido
+
+### Corregido
+
+- Título recortado bajo 580px, palabras del H1 sembradas en el cuerpo y
+  headings/anchors duplicados diferenciados (h3 "Plan…", CTAs y casos
+  con nombre propio).
+
 ## 2026-09-19 — Precios nuevos, planes iguales y fotos en casos
 
 ### Cambiado
