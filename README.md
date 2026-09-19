@@ -103,6 +103,8 @@ Además de la página inicial, el sitio es multipágina para SEO:
 - Precios: Presencia S/ 500, Tienda Virtual S/ 700, Automatización S/ 900.
 - Planes iguales con hover azul suave; navbar con hover cian en oscuro;
   cards de casos con foto real.
+- Fotos de cards con overlay descriptivo al hover (casos y servicios),
+  sin barra superior en servicios.
 - Botón de tema como icono plano al final de la navbar; Contacto con
   marcas y Agendar verde; casos con botones táctiles; páginas de casos
   con foto de fondo.

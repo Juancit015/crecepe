@@ -1,5 +1,13 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-19 — Overlays en cards
+
+### Cambiado
+
+- Overlays descriptivos al hover en fotos de casos (2 líneas) y de
+  servicios (1 línea), con velo ligero; botones fijos debajo.
+- Barra superior degradada de las cards de servicios eliminada.
+
 ## 2026-09-19 — SEO de contenido
 
 ### Corregido
