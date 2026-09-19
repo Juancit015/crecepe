@@ -1,5 +1,17 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-19 — Precios nuevos, planes iguales y fotos en casos
+
+### Cambiado
+
+- Precios: Presencia S/ 500, Tienda Virtual S/ 700, Automatización S/ 900
+  en cards, FAQs, metadatos, schema, prefills y `llms.txt`.
+- Planes sin jerarquía: 3 cards iguales con "Ideal si..." en la
+  descripción y borde azul solo al hover con transición suave.
+- Hover cian en la navbar en modo oscuro (antes marino invisible).
+- Fotos reales en las 2 cards de casos (equipo y empacando pedidos),
+  sin píldoras de URL encima.
+
 ## 2026-09-18 — Mensaje de beneficios, fotos de casos y detalles
 
 ### Agregado

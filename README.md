@@ -100,6 +100,9 @@ Además de la página inicial, el sitio es multipágina para SEO:
 - Cada página de servicios con su foto de fondo y texto del héroe en blanco.
 - Hero de beneficios ("vendiendo solo") y copy en lenguaje de cliente
   ("Tienda Virtual + IA"); tecnicismos solo para máquinas.
+- Precios: Presencia S/ 500, Tienda Virtual S/ 700, Automatización S/ 900.
+- Planes iguales con hover azul suave; navbar con hover cian en oscuro;
+  cards de casos con foto real.
 - Botón de tema como icono plano al final de la navbar; Contacto con
   marcas y Agendar verde; casos con botones táctiles; páginas de casos
   con foto de fondo.

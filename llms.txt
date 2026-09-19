@@ -4,9 +4,9 @@
 
 ## Servicios
 
-- **Presencia Digital Inteligente** (desde S/ 990): sitio web profesional de hasta 7 secciones, responsive y rápido, con SEO técnico, GEO base (llms.txt, Schema.org), WhatsApp, Analytics y Search Console. Entrega en 2-3 semanas.
-- **Tienda Online Bagisto + IA** (desde S/ 2,990): tienda e-commerce con Bagisto (catálogo, categorías, colecciones), hasta 50 productos cargados (20 con IA), pagos Yape/Plin, pedidos por WhatsApp, envíos coordinados (Shalom u otro courier), Schema Store + Product. Entrega en 4-6 semanas.
-- **Automatización con IA** (desde S/ 1,490): auditoría SEO + GEO, chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA, optimización de fichas para Google e IA. Funciona sobre Bagisto, WooCommerce o web a medida. Entrega en 2-4 semanas.
+- **Presencia Digital Inteligente** (desde S/ 500): sitio web profesional de hasta 7 secciones, responsive y rápido, con SEO técnico, GEO base (llms.txt, Schema.org), WhatsApp, Analytics y Search Console. Entrega en 2-3 semanas.
+- **Tienda Online Bagisto + IA** (desde S/ 700): tienda e-commerce con Bagisto (catálogo, categorías, colecciones), hasta 50 productos cargados (20 con IA), pagos Yape/Plin, pedidos por WhatsApp, envíos coordinados (Shalom u otro courier), Schema Store + Product. Entrega en 4-6 semanas.
+- **Automatización con IA** (desde S/ 900): auditoría SEO + GEO, chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA, optimización de fichas para Google e IA. Funciona sobre Bagisto, WooCommerce o web a medida. Entrega en 2-4 semanas.
 - **Mantenimiento mensual** (desde S/ 149/mes): actualizaciones, backups, SEO y mejoras de IA continuas.
 
 ## Diferenciador
@@ -35,8 +35,8 @@
 
 ## Preguntas frecuentes (long-tail local)
 
-- ¿Cuánto cuesta una página web para mi negocio en Trujillo? Presencia Digital desde S/ 990, diagnóstico gratuito por videollamada.
-- ¿Cómo vender por internet con tienda física en Trujillo? Tienda Bagisto desde S/ 2,990 con Yape/Plin, pedidos por WhatsApp y envíos por Shalom.
+- ¿Cuánto cuesta una página web para mi negocio en Trujillo? Presencia Digital desde S/ 500, diagnóstico gratuito por videollamada.
+- ¿Cómo vender por internet con tienda física en Trujillo? Tienda Bagisto desde S/ 700 con Yape/Plin, pedidos por WhatsApp y envíos por Shalom.
 - ¿Por qué mi negocio no aparece en ChatGPT o Gemini? Las IA citan negocios con presencia estructurada (Schema.org, reseñas, contenido claro); el servicio GEO lo corrige.
 - ¿Mi bodega o restaurante puede aparecer en Google Maps? Sí, con perfil de empresa, reseñas y web con geo-tags de Trujillo.
 - ¿Marketplace o tienda propia? Marketplace cobra comisión por venta; la tienda Bagisto propia no tiene comisiones y la IA atiende 24/7.
@@ -48,9 +48,9 @@
 ## Páginas del sitio
 
 - `/` — landing principal con todos los servicios, planes, proceso, casos, opiniones y FAQ.
-- `/servicios/presencia-digital.html` — diseño de páginas web en Trujillo y Perú desde S/ 990.
-- `/servicios/tienda-online-bagisto.html` — crear tienda online en Perú con Bagisto desde S/ 2,990.
-- `/servicios/automatizacion-ia.html` — automatización con IA para negocios desde S/ 1,490.
+- `/servicios/presencia-digital.html` — diseño de páginas web en Trujillo y Perú desde S/ 500.
+- `/servicios/tienda-online-bagisto.html` — crear tienda online en Perú con Bagisto desde S/ 700.
+- `/servicios/automatizacion-ia.html` — automatización con IA para negocios desde S/ 900.
 - `/casos/az-consulting.html` y `/casos/novedades-chavez.html` — casos reales con detalle.
 - `/privacidad.html` y `/terminos.html` — política de privacidad y términos del servicio.
 

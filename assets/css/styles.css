@@ -205,6 +205,7 @@ body.dark-mode .logo-img { filter: brightness(0) invert(1); }
 
 .nav-links a:hover { color: var(--accent-dark); }
 .nav-links a:hover::after { width: 100%; }
+body.dark-mode .nav-links a:hover { color: var(--accent-light); }
 
 .nav-cta {
     background: var(--accent);
@@ -770,16 +771,15 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
     border: 1px solid rgba(10, 31, 68, 0.06);
     display: flex;
     flex-direction: column;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, outline-color 0.25s ease;
     position: relative;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
 }
 
-.pricing-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-card-hover); }
+.pricing-card:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(11, 47, 212, 0.18); outline-color: var(--accent); }
 
-.pricing-card.popular {
-    border: 2px solid var(--accent);
-    box-shadow: 0 16px 48px rgba(11, 47, 212, 0.18);
-}
+
 
 .pricing-badge {
     display: inline-block;
@@ -795,10 +795,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
     align-self: flex-start;
 }
 
-.pricing-card.popular .pricing-badge {
-    background: var(--accent);
-    color: #fff;
-}
+
 
 .pricing-card h3 {
     font-size: 1.35rem;
@@ -971,19 +968,15 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
 .case-preview.az { background: linear-gradient(135deg, #0d1630, #14264d); }
 .case-preview.nv { background: linear-gradient(135deg, #060C3B, #2A3B8F); }
 
-.case-preview .case-url {
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 700;
-    font-size: 1.05rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 12px 26px;
-    border-radius: 14px;
-    backdrop-filter: blur(6px);
-    word-break: break-all;
-    text-align: center;
-    margin: 0 16px;
+.case-preview .case-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+
 
 .case-body { padding: 28px; display: flex; flex-direction: column; flex-grow: 1; }
 
@@ -1682,7 +1675,6 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     .nav-links a { font-size: 1.2rem; }
     .nav-toggle { display: block; }
     .services-grid, .pricing-grid, .process-grid, .cases-grid, .opiniones-grid, .geo-grid { grid-template-columns: 1fr; }
-    .pricing-card.popular { order: -1; }
     .scroll-mouse { display: none; }
     .hero { padding: 110px 0 60px; min-height: auto; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
