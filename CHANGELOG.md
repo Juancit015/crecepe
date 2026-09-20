@@ -1,5 +1,24 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-20 — Parallax en fondos y Proceso como timeline
+
+### Añadido
+
+- Efecto reveal tipo parallax en las imágenes de fondo (GEO,
+  Opiniones, Proceso y page-heros de servicios, casos, privacidad
+  y términos): la foto queda fija y el contenido la tapa al bajar
+  y la descubre al subir. Excluidos hero principal y cards.
+  Respeta `prefers-reduced-motion` y trae respaldo JS para iOS.
+- Spec nueva `parallax-fondos` sincronizada a los specs
+  principales (change archivado `2026-09-20-parallax-fondo-reveal`).
+
+### Cambiado
+
+- Sección Proceso: grid de 6 cards reemplazado por timeline
+  vertical con punto numerado, mismo contenido. Hover con glow,
+  paso activo al hacer scroll (scroll-spy que se suelta al salir
+  de la franja central) y más aire entre número y texto.
+
 ## 2026-09-20 — Botón de tema a juego y fotos nuevas
 
 ### Cambiado

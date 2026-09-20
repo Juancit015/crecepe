@@ -307,4 +307,81 @@
         revealEls.forEach(function (el) { el.classList.add('visible'); });
     }
 
+    /* ---------- Proceso: paso activo al hacer scroll ---------- */
+    // Marca con .active el paso del timeline que cruza el centro del viewport.
+    (function processSpy() {
+        var steps = document.querySelectorAll('.process-step');
+        if (!steps.length || !('IntersectionObserver' in window)) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var current = null;
+        var spy = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    if (current && current !== entry.target) current.classList.remove('active');
+                    current = entry.target;
+                    current.classList.add('active');
+                } else if (entry.target === current) {
+                    // Salió de la franja central: suelta el resaltado, no se queda pegado
+                    entry.target.classList.remove('active');
+                    current = null;
+                }
+            });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+        steps.forEach(function (s) { spy.observe(s); });
+    })();
+
+    /* ---------- Parallax: respaldo para navegadores sin background-attachment: fixed (iOS) ---------- */
+    // Emula el fondo fijo de .parallax-fondo ajustando background-position-y
+    // con rAF solo en los elementos visibles. No corre con reduced-motion.
+    (function parallaxFallback() {
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) return;
+
+        var ua = navigator.userAgent || '';
+        var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        if (!isIOS) return; // el resto usa el fixed nativo de .parallax-fondo
+
+        var targets = Array.prototype.slice.call(document.querySelectorAll('.parallax-fondo'));
+        if (!targets.length || !('IntersectionObserver' in window)) return;
+
+        var visible = [];
+        var ticking = false;
+
+        function update() {
+            ticking = false;
+            visible.forEach(function (el) {
+                var top = el.getBoundingClientRect().top;
+                el.style.backgroundPositionY = Math.round(-top) + 'px';
+            });
+        }
+
+        function requestUpdate() {
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(update);
+            }
+        }
+
+        var visObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                var i = visible.indexOf(entry.target);
+                if (entry.isIntersecting) {
+                    if (i === -1) visible.push(entry.target);
+                } else if (i !== -1) {
+                    visible.splice(i, 1);
+                    entry.target.style.backgroundPositionY = '';
+                }
+            });
+            requestUpdate();
+        });
+
+        targets.forEach(function (el) { visObserver.observe(el); });
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        window.addEventListener('resize', requestUpdate);
+        requestUpdate();
+    })();
+
 })();

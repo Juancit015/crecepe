@@ -1,8 +1,4 @@
-## Purpose
-
-Que el botón de tema quede en una posición cómoda al final de la navbar y se vea como icono simple sin círculo.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Botón de tema estilo AZ
 El sistema SHALL mostrar el botón de tema al final de la fila de la navbar como icono plano sin borde circular, heredando el color del texto.
