@@ -1,5 +1,15 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-20 — Botón de tema a juego y fotos nuevas
+
+### Cambiado
+
+- Botón de tema blanco sobre el hero y azul con scroll en modo
+  claro, en las 8 páginas.
+- Nueva foto de fondo en Proceso (`proceso-fondo.avif`) y reemplazo
+  de la del Diferenciador (`geo-fondo.avif`, más liviana) con velo
+  más oscuro para legibilidad (aporte Gemini).
+
 ## 2026-09-20 — Menú móvil drawer lateral
 
 ### Cambiado

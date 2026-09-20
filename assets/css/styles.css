@@ -257,6 +257,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .logo-img { filter: brightness(0) in
 body:not(.dark-mode) .navbar:not(.scrolled) .nav-links a { color: #fff; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
 body:not(.dark-mode) .navbar:not(.scrolled) .nav-links a:hover { color: var(--accent-light); }
 body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.45); }
+body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
 
 /* Menú móvil abierto: manda el fondo del panel, no el scroll */
 @media (max-width: 768px) {
@@ -655,7 +656,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
 
 /* ============ SEO vs GEO ============ */
 .geo-section {
-    background: linear-gradient(rgba(8, 15, 35, 0.35), rgba(8, 15, 35, 0.25)), url('../img/geo-fondo.avif');
+    background: linear-gradient(rgba(8, 15, 35, 0.60), rgba(8, 15, 35, 0.45)), url('../img/geo-fondo.avif');
     background-size: cover;
     background-position: center;
     color: #fff;
