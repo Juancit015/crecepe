@@ -51,9 +51,9 @@ post-lanzamiento de 30 días.
   - *novedadeschavez.azconsultingperu.com* — proyecto propio construido desde
     cero con Bagisto: catálogo, colecciones, envíos y pedidos por WhatsApp, con
     carga de productos automatizada con agentes de IA.
-- **Opiniones:** tres testimonios de proyectos de AZ Consulting donde participé
-  como colaborador (María García — TechCorp, Carlos Rivera — DataSys,
-  Ana López — InnovaGroup), con foto, cargo y calificación de 5 estrellas.
+- **Opiniones:** tres testimonios alineados a los servicios (María García — web
+  profesional, Dayron Chavez — Novedades Chávez, Ana López — IA),
+  con foto, cargo y calificación de 5 estrellas.
 - **FAQ:** 11 preguntas frecuentes (costos, tiempos, GEO, cobertura, pagos,
   diagnóstico y 5 long-tail locales): se muestran 6 y el botón "Ver todas
   las preguntas" revela las 5 restantes (viaja al final y alterna a

@@ -1062,10 +1062,10 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
     padding: 12px 22px;
     font-size: 0.95rem;
     min-height: 48px;
-    transition: gap 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.case-link:hover { gap: 13px; transform: translateY(-2px); }
+.case-link:hover { transform: translateY(-2px); }
 
 .case-actions .case-link:last-child {
     background: transparent;

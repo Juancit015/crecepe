@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-20 — Opiniones, héroes legales y botones de casos
+
+### Cambiado
+
+- Opiniones alineadas a los servicios (web, tienda 24/7, IA) y
+  Carlos Rivera renombrado a Dayron Chavez, fundador de Novedades Chávez.
+- Héroes de Términos y Privacidad con texto blanco sobre foto,
+  iguales a las páginas de servicios (`has-bg`).
+- Hover de botones de casos sin salto de línea en desktop
+  (fuera el `gap` animado que empujaba al segundo botón).
+
 ## 2026-09-19 — Overlays en cards
 
 ### Cambiado
