@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-20 — Menú móvil drawer lateral
+
+### Cambiado
+
+- Menú móvil como drawer lateral derecho marino (X, 7 links con
+  icono + divisores, CTA y tema), con velo con blur, scroll de fondo
+  bloqueado y cierre al tocar fuera, Escape o redimensionar.
+- Fixes: links blancos sobre el drawer, navbar sin blur con el menú
+  abierto (aplastaba el panel al hacer scroll) y hamburguesa con
+  borde a la derecha.
+
 ## 2026-09-20 — Hero y Opiniones más visibles
 
 ### Cambiado

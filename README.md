@@ -94,6 +94,8 @@ Además de la página inicial, el sitio es multipágina para SEO:
   FAQ y Diferenciador) con borde cyan en modo claro y oscuro.
 - Navbar adaptativa en modo claro: blanca sobre la foto al inicio, azul con
   el fondo blanco al hacer scroll (logo a juego).
+- Menú móvil drawer lateral marino con links iconizados, velo con blur,
+  scroll bloqueado y hamburguesa con borde a la derecha.
 - Diferenciador con cards blancas de SEO/GEO y píldoras blancas de
   plataformas con marca (Google, ChatGPT, Gemini, Perplexity, Claude,
   AI Overviews).

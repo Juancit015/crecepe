@@ -145,13 +145,42 @@
     /* ---------- Menú móvil ---------- */
     var navToggle = document.getElementById('navToggle');
     var navLinks = document.getElementById('navLinks');
+    var navBackdrop = document.getElementById('navBackdrop');
+
+    function syncBackdrop(isOpen) {
+        if (navBackdrop) {
+            navBackdrop.classList.toggle('open', isOpen);
+        }
+    }
+
+    function lockScroll(lock) {
+        var value = lock ? 'hidden' : '';
+        document.documentElement.style.overflow = value;
+        document.body.style.overflow = value;
+    }
 
     navToggle.addEventListener('click', function () {
         var isOpen = navLinks.classList.toggle('open');
         navToggle.classList.toggle('open', isOpen);
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+        lockScroll(isOpen);
+        syncBackdrop(isOpen);
     });
+
+    // Cerrar menú al tocar el velo
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', function () {
+            closeMenu();
+        });
+    }
+
+    // Cerrar menú con la X interna del drawer
+    var drawerClose = navLinks.querySelector('.drawer-close');
+    if (drawerClose) {
+        drawerClose.addEventListener('click', function () {
+            closeMenu();
+        });
+    }
 
     // Cerrar menú al hacer clic en un enlace
     navLinks.querySelectorAll('a').forEach(function (link) {
@@ -187,7 +216,8 @@
         navLinks.classList.remove('open');
         navToggle.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        lockScroll(false);
+        syncBackdrop(false);
     }
 
     /* ---------- FAQ accordion ---------- */
