@@ -359,7 +359,8 @@ body:not(.dark-mode) .navbar:not(.scrolled) .nav-toggle span { background: #fff;
 .g-g { color: #34A853; }
 
 .hero-description {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
+    font-weight: 500;
     color: var(--text);
     max-width: 540px;
     margin-bottom: 32px;
@@ -1567,6 +1568,12 @@ body.dark-mode .opiniones-section.has-bg {
     background-size: cover;
     background-position: center;
 }
+.opiniones-section .section-subtitle {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text);
+}
+body.dark-mode .opiniones-section .section-subtitle { color: #fff; }
 .opiniones-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

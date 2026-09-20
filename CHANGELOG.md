@@ -1,5 +1,14 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-20 — Hero y Opiniones más visibles
+
+### Cambiado
+
+- H1 del hero sin coma y subtítulo extendido con cierre
+  "cada día sin pausa".
+- Descripción del hero y subtítulo de Opiniones con más tamaño,
+  peso y brillo en ambos temas.
+
 ## 2026-09-20 — Opiniones, héroes legales y botones de casos
 
 ### Cambiado
