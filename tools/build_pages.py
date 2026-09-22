@@ -63,7 +63,7 @@ HEAD = '''<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{p}assets/css/styles.css">
+    <link rel="stylesheet" href="{p}assets/css/styles.min.css">
 
     <!-- PWA -->
     <link rel="manifest" href="{p}manifest.json">

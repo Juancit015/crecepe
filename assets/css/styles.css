@@ -1068,14 +1068,14 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
         transform: scale(1.14);
         box-shadow: 0 0 0 6px rgba(0, 194, 255, 0.18), 0 6px 16px rgba(11, 47, 212, 0.45);
     }
-    .process-step:hover .process-step-body h4 { color: var(--accent-light); }
+    .process-step:hover .process-step-body h3 { color: var(--accent-light); }
 }
 
 /* Spy móvil: el paso centrado tiñe su título igual que el hover.
    En desktop el JS nunca pone .active, así que aquí no cambia nada. */
-.process-step.active .process-step-body h4 { color: var(--accent-light); }
+.process-step.active .process-step-body h3 { color: var(--accent-light); }
 
-.process-step-body h4 {
+.process-step-body h3 {
     font-size: 1.15rem;
     font-weight: 800;
     color: #fff;
@@ -1090,7 +1090,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
 
 @media (prefers-reduced-motion: reduce) {
     .process-dot,
-    .process-step-body h4 { transition: none; }
+    .process-step-body h3 { transition: none; }
     .process-step:hover .process-dot,
     .process-step.active .process-dot { transform: none; }
 }
@@ -1568,7 +1568,7 @@ body.dark-mode .contact-card .btn-outline:hover {
 .footer .logo { color: #fff; margin-bottom: 14px; }
 .footer-about p { font-size: 0.9rem; max-width: 320px; }
 
-.footer h4 {
+.footer h3 {
     color: #fff;
     font-size: 1rem;
     font-weight: 700;

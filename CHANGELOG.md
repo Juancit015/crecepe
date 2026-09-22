@@ -1,5 +1,23 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Rendimiento PageSpeed: CSS minificado y encabezados en orden
+
+### Cambiado
+
+- `styles.min.css` generado con clean-css (78.5 KB → 56.1 KB,
+  −29%) y referenciado en las 8 páginas + `build_pages.py`.
+  El CSS sigue render-blocking a propósito: es necesario sobre
+  el pliegue y el async causaría FOUC. Fuentes ya óptimas
+  (`display=swap` + preconnect).
+- Encabezados en orden secuencial en las 8 páginas: pasos del
+  Proceso y títulos del footer pasan de `h4` a `h3` con sus
+  selectores CSS renombrados (visual idéntico).
+- Imágenes: inventario con la skill image-optimizer — todo el
+  contenido ya está en AVIF salvo la OG (PNG obligatorio para
+  scrapers) y el retrato en WebP (9 KB); sin conversiones
+  pendientes. Caché de GitHub Pages no configurable: se ignora
+  ese aviso del reporte.
+
 ## 2026-09-22 — Enlaces absolutos en llms.txt (auditoría agéntica)
 
 ### Cambiado
