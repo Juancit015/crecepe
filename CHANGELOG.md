@@ -1,5 +1,22 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Imágenes responsive, fonts async y scroll con rAF
+
+### Cambiado
+
+- Variantes angostas AVIF (`servicios-*-700`, `logo-400`, RMSE
+  < 0.024, −85/−91%) con `srcset`/`sizes` en las 3 cards de
+  servicios y los 16 logos: el navegador descarga según el
+  viewport en vez del archivo de 1200/1928px.
+- CSS de Google Fonts en async (`media="print"` + `onload`,
+  con `noscript` de respaldo) en las 8 páginas + generador:
+  sale de la ruta crítica de render.
+- Scroll handlers (navbar + volver-arriba) unificados en un
+  solo listener con throttle por `requestAnimationFrame`.
+  El `offsetHeight` del FAQ se conserva a propósito (evita el
+  flash de transición al cargar) y el CLS 0.014 del swap de
+  fuente se deja como está (umbral de aprobado: 0.1).
+
 ## 2026-09-22 — Rendimiento PageSpeed: CSS minificado y encabezados en orden
 
 ### Cambiado

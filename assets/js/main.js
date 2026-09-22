@@ -65,7 +65,19 @@
         toTop.classList.toggle('is-visible', y > 300);
     }
 
-    window.addEventListener('scroll', syncToTop, { passive: true });
+    // Un solo listener con rAF: evita lecturas geométricas por cada evento de scroll
+    var scrollTicking = false;
+    function onScrollFrame() {
+        onScroll();
+        syncToTop();
+        scrollTicking = false;
+    }
+    window.addEventListener('scroll', function () {
+        if (!scrollTicking) {
+            scrollTicking = true;
+            requestAnimationFrame(onScrollFrame);
+        }
+    }, { passive: true });
     syncToTop();
 
     toTop.addEventListener('click', function () {
