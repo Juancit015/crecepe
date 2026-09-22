@@ -1,3 +1,14 @@
+## 2026-09-22 — Overlays visibles + textos de servicios
+
+### Cambiado
+
+- Overlays de servicios a 2 líneas (beneficio + entrega).
+- En móvil el texto aparece como barra-caption al pie de la
+  foto (casos 2 líneas, servicios 3); se retira el
+  `display:none` del compacto. El hover PC queda intacto por
+  CSS (el fallo reportado era caché vieja).
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Paleta oscura fija para precios
 
 ### Cambiado
