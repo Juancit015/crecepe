@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — LCP móvil: logo con prioridad y variante 500px
+
+### Cambiado
+
+- El logo del navbar (elemento LCP en móvil según PageSpeed)
+  lleva `fetchpriority="high"` en las 8 páginas; el del footer
+  no, para no desperdiciar la prioridad.
+- Nueva variante `logo-crecepe-500.avif` (7.7 KB, RMSE 0.006):
+  con DPR ×2 el navegador pedía el logo de 1928px porque el
+  de 400px no alcanzaba; ahora elige el de 500px.
+
 ## 2026-09-22 — Imágenes responsive, fonts async y scroll con rAF
 
 ### Cambiado
