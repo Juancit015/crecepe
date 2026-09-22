@@ -397,18 +397,26 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     .parallax-fondo {
         background-attachment: scroll !important;
     }
-    /* Recortes verticales para que el fondo no se vea con zoom en móvil */
+    /* Recortes verticales para que el fondo no se vea con zoom en móvil.
+       El !important es necesario: las declaraciones base están después
+       en el archivo y a igual especificidad ganarían por orden. */
     .geo-section {
-        background-image: linear-gradient(rgba(8, 15, 35, 0.60), rgba(8, 15, 35, 0.45)), url('../img/geo-fondo-movil.avif');
+        background-image: linear-gradient(rgba(8, 15, 35, 0.60), rgba(8, 15, 35, 0.45)), url('../img/geo-fondo-movil.avif') !important;
     }
     .opiniones-section.has-bg {
-        background-image: linear-gradient(rgba(244, 247, 254, 0.35), rgba(244, 247, 254, 0.25)), url('../img/opiniones-fondo-movil.avif');
+        background-image: linear-gradient(rgba(244, 247, 254, 0.35), rgba(244, 247, 254, 0.25)), url('../img/opiniones-fondo-movil.avif') !important;
     }
     body.dark-mode .opiniones-section.has-bg {
-        background-image: linear-gradient(rgba(6, 13, 31, 0.60), rgba(6, 13, 31, 0.50)), url('../img/opiniones-fondo-movil.avif');
+        background-image: linear-gradient(rgba(6, 13, 31, 0.60), rgba(6, 13, 31, 0.50)), url('../img/opiniones-fondo-movil.avif') !important;
     }
     .process-section.parallax-fondo {
         background-image: linear-gradient(to bottom, rgba(10,25,48,0.85) 0%, rgba(10,25,48,0.65) 50%, rgba(10,25,48,0.90) 100%), url('../img/proceso-fondo-movil.avif') !important;
+    }
+    .contact-section {
+        background-image: linear-gradient(160deg, rgba(8, 15, 35, 0.72), rgba(8, 15, 35, 0.65)), url('../img/contacto-fondo-movil.avif') !important;
+    }
+    body.dark-mode .contact-section {
+        background-image: linear-gradient(160deg, rgba(6, 13, 31, 0.80), rgba(6, 13, 31, 0.72)), url('../img/contacto-fondo-movil.avif') !important;
     }
 }
 

@@ -1,5 +1,18 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Fondos táctiles sin zoom ni saltos
+
+### Cambiado
+
+- Parallax solo en desktop: en táctil los fondos hacen scroll
+  normal (`hover: none` + respaldo iOS desactivado), sin zoom
+  de golpe ni reacomodos.
+- Recortes verticales dedicados en táctil (GEO, Opiniones,
+  Proceso y Contacto, 8-22 KB) con `!important` para que el
+  swap aplique de verdad; encuadres revisados uno por uno.
+- Specs sincronizadas (`parallax-fondos`, `drawer-velo`,
+  `ux-movil-compacto`; changes archivados `2026-09-22-*`).
+
 ## 2026-09-22 — Recortes verticales de fondos para móvil
 
 ### Cambiado
