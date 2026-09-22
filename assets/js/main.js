@@ -289,6 +289,26 @@
         });
     }
 
+    /* ---------- Planes: acordeón de features en móvil ---------- */
+    // El botón .pricing-toggle solo es visible en móvil (CSS display:none en desktop).
+    // Cuando se hace clic, abre/cierra la lista .pricing-features con clase .is-open.
+    document.querySelectorAll('.pricing-toggle').forEach(function (btn) {
+        var featuresId = btn.getAttribute('aria-controls');
+        var featuresList = featuresId ? document.getElementById(featuresId) : null;
+        if (!featuresList) return;
+
+        btn.addEventListener('click', function () {
+            var isOpen = featuresList.classList.contains('is-open');
+            featuresList.classList.toggle('is-open', !isOpen);
+            btn.setAttribute('aria-expanded', String(!isOpen));
+            // Actualizar texto del botón
+            var textNode = btn.firstChild;
+            if (textNode && textNode.nodeType === 3) {
+                textNode.nodeValue = isOpen ? 'Ver qué incluye ' : 'Ocultar detalles ';
+            }
+        });
+    });
+
     /* ---------- Reveal on scroll ---------- */
     var revealEls = document.querySelectorAll('.reveal');
 
@@ -307,15 +327,19 @@
         revealEls.forEach(function (el) { el.classList.add('visible'); });
     }
 
-    /* ---------- Proceso: paso activo al hacer scroll ---------- */
+    /* ---------- Proceso: paso activo al hacer scroll (solo sin hover) ---------- */
     // Marca con .active el paso del timeline que cruza el centro del viewport.
+    // Solo corre sin mouse: en desktop manda el hover y el spy queda apagado.
     (function processSpy() {
         var steps = document.querySelectorAll('.process-step');
         if (!steps.length || !('IntersectionObserver' in window)) return;
         if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+        var hoverMQ = window.matchMedia ? window.matchMedia('(hover: hover)') : null;
         var current = null;
-        var spy = new IntersectionObserver(function (entries) {
+        var spy = null;
+
+        function onEntries(entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     if (current && current !== entry.target) current.classList.remove('active');
@@ -327,9 +351,34 @@
                     current = null;
                 }
             });
-        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+        }
 
-        steps.forEach(function (s) { spy.observe(s); });
+        function clearActive() {
+            steps.forEach(function (s) { s.classList.remove('active'); });
+            current = null;
+        }
+
+        function start() {
+            if (spy) return;
+            spy = new IntersectionObserver(onEntries, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+            steps.forEach(function (s) { spy.observe(s); });
+        }
+
+        function stop() {
+            if (spy) { spy.disconnect(); spy = null; }
+            clearActive();
+        }
+
+        function sync() {
+            // Con mouse hay hover y el spy sobra; sin hover el scroll manda
+            if (hoverMQ && hoverMQ.matches) { stop(); } else { start(); }
+        }
+
+        if (hoverMQ) {
+            if (hoverMQ.addEventListener) { hoverMQ.addEventListener('change', sync); }
+            else if (hoverMQ.addListener) { hoverMQ.addListener(sync); }
+        }
+        sync();
     })();
 
     /* ---------- Parallax: respaldo para navegadores sin background-attachment: fixed (iOS) ---------- */

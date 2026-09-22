@@ -1,5 +1,26 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-20 — Tira de garantías con loop continuo real
+
+### Cambiado
+
+- La pista llevaba 2 sets (1830px) y no cubría el viewport en
+  mitad del loop: tramo vacío ~14s y pop al reiniciar. Ahora
+  lleva 4 grupos (2 mitades idénticas, ~3660px) con loop -50%
+  exacto, medido en vivo sin huecos.
+- Todos los puntos visibles (fuera asimetría de 9px por ciclo)
+  y `flex-shrink: 0` en los spans.
+
+## 2026-09-20 — Proceso: señales separadas y más aire
+
+### Cambiado
+
+- Timeline de Proceso: el scroll-spy solo enciende el punto y el
+  hover (solo con mouse) tiñe el título — nunca más doble cyan.
+  En táctil el brillo sigue al scroll sin interferencias.
+- Más aire entre número y texto (gutter de 72px, 14px de
+  respiro) con línea realineada al centro de los puntos.
+
 ## 2026-09-20 — Parallax en fondos y Proceso como timeline
 
 ### Añadido

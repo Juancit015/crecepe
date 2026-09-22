@@ -133,7 +133,7 @@ def service_schema(name, desc, price, url):
         "name": name,
         "description": desc,
         "url": url,
-        "provider": {"@type": "ProfessionalService", "name": "CrecePE", "url": "https://crecepe.pe/"},
+        "provider": {"@type": "ProfessionalService", "name": "CrecePE", "url": "https://crecepe.com/"},
         "areaServed": "Perú",
         "offers": {"@type": "Offer", "price": price, "priceCurrency": "PEN"}
     }
@@ -232,10 +232,10 @@ faqs_p = [
 pages['servicios/presencia-digital.html'] = dict(
     title="Diseño de Páginas Web en Trujillo y Perú desde S/ 990 | CrecePE",
     desc="Presencia Digital Inteligente: página web profesional, responsive y rápida con SEO + GEO incluidos. Para negocios en Trujillo y todo el Perú. Desde S/ 990, entrega en 2-3 semanas.",
-    canonical="https://crecepe.pe/servicios/presencia-digital.html",
+    canonical="https://crecepe.com/servicios/presencia-digital.html",
     schemas=[
-        service_schema("Presencia Digital Inteligente", "Sitio web profesional de hasta 7 secciones, responsive y rápido, con SEO técnico, GEO base, WhatsApp, Analytics y Search Console.", "990", "https://crecepe.pe/servicios/presencia-digital.html"),
-        crumbs([("Inicio", "https://crecepe.pe/"), ("Presencia Digital", "https://crecepe.pe/servicios/presencia-digital.html")]),
+        service_schema("Presencia Digital Inteligente", "Sitio web profesional de hasta 7 secciones, responsive y rápido, con SEO técnico, GEO base, WhatsApp, Analytics y Search Console.", "990", "https://crecepe.com/servicios/presencia-digital.html"),
+        crumbs([("Inicio", "https://crecepe.com/"), ("Presencia Digital", "https://crecepe.com/servicios/presencia-digital.html")]),
         faq_schema(faqs_p),
     ],
     content=service_page(
@@ -253,7 +253,7 @@ pages['servicios/presencia-digital.html'] = dict(
         [("tienda-online-bagisto.html", "Tienda Online Bagisto + IA", "Vende 24/7 con catálogo, Yape/Plin y pedidos por WhatsApp."),
          ("automatizacion-ia.html", "Automatización con IA", "Chatbot 24/7 y agentes de IA trabajando para tu negocio.")],
         faqs_p,
-        "Presencia Digital Inteligente", "https://crecepe.pe/servicios/presencia-digital.html"),
+        "Presencia Digital Inteligente", "https://crecepe.com/servicios/presencia-digital.html"),
 )
 
 # ---------- 2. Tienda Bagisto ----------
@@ -266,10 +266,10 @@ faqs_t = [
 pages['servicios/tienda-online-bagisto.html'] = dict(
     title="Crear Tienda Online en Perú con Bagisto desde S/ 2,990 | CrecePE",
     desc="Tienda online con Bagisto: catálogo, pagos Yape/Plin, pedidos por WhatsApp y envíos por Shalom. Hasta 50 productos cargados con IA. Desde S/ 2,990, entrega en 4-6 semanas.",
-    canonical="https://crecepe.pe/servicios/tienda-online-bagisto.html",
+    canonical="https://crecepe.com/servicios/tienda-online-bagisto.html",
     schemas=[
-        service_schema("Tienda Online Bagisto + IA", "Tienda e-commerce con Bagisto: catálogo, categorías y colecciones, hasta 50 productos cargados, pagos Yape/Plin, pedidos por WhatsApp y envíos coordinados.", "2990", "https://crecepe.pe/servicios/tienda-online-bagisto.html"),
-        crumbs([("Inicio", "https://crecepe.pe/"), ("Tienda Online Bagisto", "https://crecepe.pe/servicios/tienda-online-bagisto.html")]),
+        service_schema("Tienda Online Bagisto + IA", "Tienda e-commerce con Bagisto: catálogo, categorías y colecciones, hasta 50 productos cargados, pagos Yape/Plin, pedidos por WhatsApp y envíos coordinados.", "2990", "https://crecepe.com/servicios/tienda-online-bagisto.html"),
+        crumbs([("Inicio", "https://crecepe.com/"), ("Tienda Online Bagisto", "https://crecepe.com/servicios/tienda-online-bagisto.html")]),
         faq_schema(faqs_t),
     ],
     content=service_page(
@@ -287,7 +287,7 @@ pages['servicios/tienda-online-bagisto.html'] = dict(
         [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 990."),
          ("automatizacion-ia.html", "Automatización con IA", "Chatbot 24/7 y carga masiva de productos con agentes.")],
         faqs_t,
-        "Tienda Online Bagisto + IA", "https://crecepe.pe/servicios/tienda-online-bagisto.html"),
+        "Tienda Online Bagisto + IA", "https://crecepe.com/servicios/tienda-online-bagisto.html"),
 )
 
 # ---------- 3. Automatización IA ----------
@@ -300,10 +300,10 @@ faqs_a = [
 pages['servicios/automatizacion-ia.html'] = dict(
     title="Automatización con IA para Negocios en Perú desde S/ 1,490 | CrecePE",
     desc="Chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA y auditoría SEO + GEO. Funciona sobre Bagisto, WooCommerce o web a medida. Desde S/ 1,490.",
-    canonical="https://crecepe.pe/servicios/automatizacion-ia.html",
+    canonical="https://crecepe.com/servicios/automatizacion-ia.html",
     schemas=[
-        service_schema("Automatización con IA", "Auditoría SEO + GEO, chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA y optimización de fichas para Google e IA.", "1490", "https://crecepe.pe/servicios/automatizacion-ia.html"),
-        crumbs([("Inicio", "https://crecepe.pe/"), ("Automatización con IA", "https://crecepe.pe/servicios/automatizacion-ia.html")]),
+        service_schema("Automatización con IA", "Auditoría SEO + GEO, chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA y optimización de fichas para Google e IA.", "1490", "https://crecepe.com/servicios/automatizacion-ia.html"),
+        crumbs([("Inicio", "https://crecepe.com/"), ("Automatización con IA", "https://crecepe.com/servicios/automatizacion-ia.html")]),
         faq_schema(faqs_a),
     ],
     content=service_page(
@@ -321,16 +321,16 @@ pages['servicios/automatizacion-ia.html'] = dict(
         [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 990."),
          ("tienda-online-bagisto.html", "Tienda Online Bagisto + IA", "Vende 24/7 con catálogo, Yape/Plin y pedidos por WhatsApp.")],
         faqs_a,
-        "Automatización con IA", "https://crecepe.pe/servicios/automatizacion-ia.html"),
+        "Automatización con IA", "https://crecepe.com/servicios/automatizacion-ia.html"),
 )
 
 # ---------- 4. Caso AZ Consulting ----------
 pages['casos/az-consulting.html'] = dict(
     title="Caso: AZ Consulting — De página vacía a web corporativa rápida | CrecePE",
     desc="Cómo participé en la transformación de azconsultingperu.com: secciones de servicios y stack tecnológico, carga responsiva y SEO técnico con Schema LocalBusiness + FAQ.",
-    canonical="https://crecepe.pe/casos/az-consulting.html",
+    canonical="https://crecepe.com/casos/az-consulting.html",
     schemas=[
-        crumbs([("Inicio", "https://crecepe.pe/"), ("Casos", "https://crecepe.pe/index.html#casos"), ("AZ Consulting", "https://crecepe.pe/casos/az-consulting.html")]),
+        crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("AZ Consulting", "https://crecepe.com/casos/az-consulting.html")]),
     ],
     content='''    <section class="page-hero">
         <div class="container">
@@ -377,9 +377,9 @@ pages['casos/az-consulting.html'] = dict(
 pages['casos/novedades-chavez.html'] = dict(
     title="Caso: Novedades Chavez — De tienda invisible a tienda 24/7 | CrecePE",
     desc="Tienda Bagisto construida desde cero: catálogo, colecciones de campaña, envíos por Shalom, pedidos por WhatsApp y carga de productos automatizada con agentes de IA.",
-    canonical="https://crecepe.pe/casos/novedades-chavez.html",
+    canonical="https://crecepe.com/casos/novedades-chavez.html",
     schemas=[
-        crumbs([("Inicio", "https://crecepe.pe/"), ("Casos", "https://crecepe.pe/index.html#casos"), ("Novedades Chavez", "https://crecepe.pe/casos/novedades-chavez.html")]),
+        crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("Novedades Chavez", "https://crecepe.com/casos/novedades-chavez.html")]),
     ],
     content='''    <section class="page-hero">
         <div class="container">
@@ -426,8 +426,8 @@ pages['casos/novedades-chavez.html'] = dict(
 pages['privacidad.html'] = dict(
     title="Política de Privacidad | CrecePE",
     desc="Política de privacidad de CrecePE: qué datos recopilamos, para qué los usamos y cómo ejercer tus derechos.",
-    canonical="https://crecepe.pe/privacidad.html",
-    schemas=[crumbs([("Inicio", "https://crecepe.pe/"), ("Privacidad", "https://crecepe.pe/privacidad.html")])],
+    canonical="https://crecepe.com/privacidad.html",
+    schemas=[crumbs([("Inicio", "https://crecepe.com/"), ("Privacidad", "https://crecepe.com/privacidad.html")])],
     content='''    <section class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
@@ -468,8 +468,8 @@ pages['privacidad.html'] = dict(
 pages['terminos.html'] = dict(
     title="Términos del Servicio | CrecePE",
     desc="Términos del servicio de CrecePE: alcance de los paquetes, pagos, plazos, propiedad del sitio y soporte.",
-    canonical="https://crecepe.pe/terminos.html",
-    schemas=[crumbs([("Inicio", "https://crecepe.pe/"), ("Términos", "https://crecepe.pe/terminos.html")])],
+    canonical="https://crecepe.com/terminos.html",
+    schemas=[crumbs([("Inicio", "https://crecepe.com/"), ("Términos", "https://crecepe.com/terminos.html")])],
     content='''    <section class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">

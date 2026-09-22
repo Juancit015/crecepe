@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crecepe.pe/sitemap.xml
+Sitemap: https://crecepe.com/sitemap.xml
