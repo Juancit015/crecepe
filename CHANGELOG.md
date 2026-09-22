@@ -1,3 +1,15 @@
+## 2026-09-22 — Pricing-cards estilo casos + tiers + CTA WhatsApp
+
+### Cambiado
+
+- Etiquetas de tier con `.pricing-badge` existente: Starter
+  (Presencia), Más popular (Tienda) y Enterprise
+  (Automatización); Tienda como `.pricing-card--featured`
+  (borde + elevación, sin escala).
+- CTAs unificados a `Consultar plan` con icono WhatsApp SVG
+  inline + `aria-label` por plan; links `wa.me` con prefill
+  intactos. Minificado regenerado y verificado.
+
 ## 2026-09-22 — Drawer móvil con X única a la izquierda
 
 ### Cambiado
