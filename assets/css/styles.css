@@ -351,6 +351,15 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     to { transform: scale(1.08); }
 }
 
+/* Hero móvil: fondo 768w para no descargar el de escritorio (PageSpeed LCP) */
+@media (max-width: 768px) {
+    .hero-photo-bg {
+        background-image:
+            linear-gradient(rgba(238, 243, 255, 0.35), rgba(238, 243, 255, 0.25)),
+            url('../img/hero-crecepe-mobile.avif');
+    }
+}
+
 /* Entrada del texto del hero al cargar (openspec: hero-entrada-texto) */
 @keyframes heroRise {
     from { opacity: 0; transform: translateY(26px); }

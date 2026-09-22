@@ -1,4 +1,12 @@
-# Registro de cambios — CrecePE
+## 2026-09-22 — Fix doble descarga hero en móvil
+
+### Cambiado
+
+- `.hero-photo-bg` usa `hero-crecepe-mobile.avif` bajo
+  `@media (max-width: 768px)` vía `background-image` (conserva
+  size/position/repeat). Antes el preload traía la móvil pero
+  el CSS pedía la de escritorio: ~63 KB de más por visita
+  móvil. Minificado regenerado y verificado.
 
 ## 2026-09-22 — Revisión de optimización externa (5 fixes)
 
