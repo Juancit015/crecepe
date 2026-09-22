@@ -6,4 +6,4 @@
 ## 2. Verificación y cierre
 
 - [x] 2.1 Verificar en desktop y móvil (claro y oscuro): mouse blanco, cards navy legibles, píldoras glass, claro intacto
-- [ ] 2.2 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear
+- [x] 2.2 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear
