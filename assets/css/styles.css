@@ -390,6 +390,15 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     }
 }
 
+/* Táctil: sin imagen fija (background-attachment: fixed provoca zoom de
+   golpe y reacomodos en iOS/Android). El !important vence los fixed inline
+   de los page-heros. Desktop con mouse conserva el reveal. */
+@media (hover: none) {
+    .parallax-fondo {
+        background-attachment: scroll !important;
+    }
+}
+
 .hero-content {
     position: relative;
     z-index: 1;

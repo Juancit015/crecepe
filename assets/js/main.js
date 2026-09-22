@@ -398,7 +398,8 @@
     // con rAF solo en los elementos visibles. No corre con reduced-motion.
     (function parallaxFallback() {
         var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduceMotion) return;
+        var noHover = window.matchMedia && window.matchMedia('(hover: none)').matches;
+        if (reduceMotion || noHover) return;
 
         var ua = navigator.userAgent || '';
         var isIOS = /iPad|iPhone|iPod/.test(ua) ||
