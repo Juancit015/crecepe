@@ -1,3 +1,12 @@
+## 2026-09-22 — Contacto card sólida sin badges
+
+### Cambiado
+
+- Fuera badges de pago de la tarjeta (footer los conserva).
+- Fondo sólido (`#fff` claro, `#0F1D3A` oscuro, sin blur) y
+  textos adaptados por tema con contraste AA.
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Hero mouse blanco + GEO oscuro
 
 ### Cambiado
