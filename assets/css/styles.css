@@ -1587,6 +1587,8 @@ body.dark-mode .contact-card .btn-outline:hover {
 }
 
 .footer-bottom strong { color: #fff; }
+.seobility-badge { display: inline-block; margin-left: 8px; vertical-align: middle; }
+.seobility-badge img { height: 31px; width: auto; }
 
 /* ============ Botón volver arriba (efecto desvanecido) ============ */
 .to-top {
