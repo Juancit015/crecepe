@@ -22,6 +22,10 @@ El sistema SHALL destacar visualmente la card de Tienda (plan Más popular) sobr
 - **WHEN** el visitante ve la card Tienda en móvil (claro u oscuro)
 - **THEN** el botón "Ver qué incluye" es blanco y pasa a cyan en hover
 
+#### Scenario: Toggles blancos en móvil
+- **WHEN** el visitante ve cualquier card de planes en móvil oscuro
+- **THEN** el botón "Ver qué incluye" es blanco y pasa a cyan en hover
+
 ### Requirement: CTA Consultar plan con icono WhatsApp
 El sistema SHALL mostrar en cada card un único CTA con texto por plan (`Consultar Presencia`, `Consultar Tienda`, `Consultar Automatización`) e icono de WhatsApp que abre el `wa.me` con prefill del plan correspondiente.
 

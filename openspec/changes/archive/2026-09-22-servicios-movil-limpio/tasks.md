@@ -6,4 +6,4 @@
 ## 2. Verificación y cierre
 
 - [x] 2.1 Verificar en móvil (claro y oscuro): fotos limpias y centradas, atajos blancos con hover cyan, caption de casos intacta
-- [ ] 2.2 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear
+- [x] 2.2 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear

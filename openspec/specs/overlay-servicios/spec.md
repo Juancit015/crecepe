@@ -5,7 +5,7 @@ Que todas las fotos de cards cuenten más con overlays descriptivos suaves, sin 
 ## Requirements
 
 ### Requirement: Overlays ampliados y barra fuera
-El sistema SHALL mostrar descripciones de 2 líneas en overlays de casos y servicios (logro + detalle), ninguna barra superior al hover, y caption siempre visible bajo la foto en móvil.
+El sistema SHALL mostrar descripciones de 2 líneas en overlays de casos y servicios (logro + detalle), ninguna barra superior al hover y ningún texto sobre la foto en móvil.
 
 #### Scenario: Descripción ampliada en casos
 - **WHEN** el visitante abre el cartel de un caso
@@ -17,7 +17,7 @@ El sistema SHALL mostrar descripciones de 2 líneas en overlays de casos y servi
 
 #### Scenario: Caption siempre visible en móvil
 - **WHEN** el visitante ve un servicio en móvil
-- **THEN** lee la descripción de 2 líneas bajo la foto sin tocarla
+- **THEN** no hay texto sobre la foto; la foto se ve limpia y centrada (reversión a pedido)
 
 #### Scenario: Sin barra superior
 - **WHEN** el visitante pasa el cursor sobre cualquier card de servicio
