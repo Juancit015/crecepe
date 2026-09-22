@@ -1,3 +1,13 @@
+## 2026-09-22 — Servicios móvil limpio + atajos blancos
+
+### Cambiado
+
+- Caption de servicios revertida (`display:none`); foto
+  centrada con `align-self:center` (caption de casos intacta).
+- `.service-link` y toggles de planes en blanco con hover cyan
+  solo en oscuro móvil (en claro las cards son blancas).
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Toggle visible en card destacada
 
 ### Cambiado
