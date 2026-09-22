@@ -670,7 +670,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
 
 .mouse {
     width: 30px; height: 50px;
-    border: 2px solid var(--accent);
+    border: 2px solid #fff;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -679,7 +679,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
 
 .wheel {
     width: 4px; height: 10px;
-    background: var(--accent);
+    background: #fff;
     border-radius: 10px;
     animation: scrollWheel 2s infinite;
     will-change: transform, opacity;
@@ -2457,6 +2457,16 @@ body.dark-mode .geo-section {
     background-size: cover;
     background-position: center;
 }
+/* GEO en oscuro: cards navy + píldoras glass */
+body.dark-mode .geo-card { background: #0F1D3A; border-color: rgba(255, 255, 255, 0.1); }
+body.dark-mode .geo-card.highlight { background: #0F1D3A; border-color: rgba(0, 194, 255, 0.6); }
+body.dark-mode .geo-card h3 { color: #fff; }
+body.dark-mode .geo-card h3 .geo-tag { background: rgba(255, 255, 255, 0.12); color: #DCE6FA; }
+body.dark-mode .geo-card.highlight h3 .geo-tag { background: var(--accent-light); color: var(--primary); }
+body.dark-mode .geo-card > p,
+body.dark-mode .geo-card ul li { color: #DCE6FA; }
+body.dark-mode .geo-card ul svg { color: var(--accent-light); }
+body.dark-mode .geo-engines span { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18); color: #fff; box-shadow: none; }
 body.dark-mode .contact-section {
     background: linear-gradient(160deg, rgba(6, 13, 31, 0.80), rgba(6, 13, 31, 0.72)), url('../img/contacto-fondo.avif');
     background-size: cover;

@@ -1,3 +1,12 @@
+## 2026-09-22 — Hero mouse blanco + GEO oscuro
+
+### Cambiado
+
+- `.mouse`/`.wheel` en blanco (ambos temas).
+- `.geo-card` en navy con textos claros y `.geo-engines span`
+  glass con texto blanco en modo oscuro; claro intacto.
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Servicios móvil limpio + atajos blancos
 
 ### Cambiado
