@@ -1,3 +1,11 @@
+## 2026-09-22 — Toggle visible en card destacada
+
+### Cambiado
+
+- `.pricing-card--featured .pricing-toggle` en blanco con hover
+  cyan (mismo patrón que proceso), válido en ambos temas.
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Overlays visibles + textos de servicios
 
 ### Cambiado

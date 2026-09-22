@@ -6,4 +6,4 @@
 ## 2. Hover PC + cierre
 
 - [x] 2.1 Verificar hover real en PC para casos y servicios; si el cartel no baja, corregir con el cambio mínimo (fallback opacidad) y re-verificar
-- [ ] 2.2 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear
+- [x] 2.2 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear

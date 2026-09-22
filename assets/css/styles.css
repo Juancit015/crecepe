@@ -2594,6 +2594,9 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     /* Proceso en móvil: Ver detalle blanco, cyan al hover (nunca azul oscuro) */
     .process-step .pricing-toggle { color: #fff; }
     .process-step .pricing-toggle:hover { color: var(--accent-light); }
+    /* Destacada en móvil: mismo patrón, la card es oscura en ambos temas */
+    .pricing-card--featured .pricing-toggle { color: #fff; }
+    .pricing-card--featured .pricing-toggle:hover { color: var(--accent-light); }
     .pricing-toggle svg {
         flex-shrink: 0;
         transition: transform 0.35s ease;
