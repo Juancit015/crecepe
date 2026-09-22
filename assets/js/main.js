@@ -175,6 +175,7 @@
     navToggle.addEventListener('click', function () {
         var isOpen = navLinks.classList.toggle('open');
         navToggle.classList.toggle('open', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         lockScroll(isOpen);
         syncBackdrop(isOpen);
@@ -228,6 +229,7 @@
     function closeMenu() {
         navLinks.classList.remove('open');
         navToggle.classList.remove('open');
+        document.body.classList.remove('menu-open');
         navToggle.setAttribute('aria-expanded', 'false');
         lockScroll(false);
         syncBackdrop(false);

@@ -2086,8 +2086,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
         pointer-events: auto;
     }
     /* X de cierre arriba del drawer */
-    .drawer-close {
-        display: flex;
+    .drawer-close {        display: flex;
         align-items: center;
         justify-content: center;
         align-self: flex-start;
@@ -2099,6 +2098,8 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
         cursor: pointer;
     }
     .drawer-close svg { width: 24px; height: 24px; }
+    /* Drawer abierto: X única (la interna, izquierda); el toggle conserva su espacio */
+    body.menu-open .nav-toggle { visibility: hidden; }
     /* Links iconizados con divisores */
     .nav-links a {
         display: flex;

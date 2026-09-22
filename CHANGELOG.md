@@ -1,3 +1,14 @@
+## 2026-09-22 — Drawer móvil con X única a la izquierda
+
+### Cambiado
+
+- Con el drawer abierto, `.nav-toggle` queda oculto
+  (`body.menu-open`, `visibility:hidden` para conservar el
+  layout del header): solo se ve la X interna del drawer.
+- `main.js` alterna `menu-open` en `body` al abrir/cerrar
+  (todos los cierres pasan por `closeMenu`). Minificado
+  regenerado y verificado.
+
 ## 2026-09-22 — Fix doble descarga hero en móvil
 
 ### Cambiado
