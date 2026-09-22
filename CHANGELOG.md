@@ -1,5 +1,14 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Recortes verticales de fondos para móvil
+
+### Cambiado
+
+- Nuevos `geo/opiniones/proceso-fondo-movil.avif` (recortes
+  600px, 8-22 KB): en táctil los fondos ya no se ven con zoom,
+  solo se sustituye la imagen manteniendo velos y encuadre
+  revisado uno por uno. Desktop sigue con los panoramas.
+
 ## 2026-09-22 — Drawer más ancho y anclas al inicio de sección
 
 ### Cambiado
