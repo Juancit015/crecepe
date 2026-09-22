@@ -2489,6 +2489,9 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         margin-bottom: 0;
         transition: color 0.25s ease;
     }
+    /* Proceso en móvil: Ver detalle blanco, cyan al hover (nunca azul oscuro) */
+    .process-step .pricing-toggle { color: #fff; }
+    .process-step .pricing-toggle:hover { color: var(--accent-light); }
     .pricing-toggle svg {
         flex-shrink: 0;
         transition: transform 0.35s ease;
@@ -2594,7 +2597,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     }
     .service-photo {
         grid-column: 1;
-        grid-row: 1 / span 4;
+        grid-row: 1 / -1;
         width: 100%;
         height: 118px;
         margin: 0;
@@ -2606,8 +2609,14 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .service-card:hover .service-photo img,
     .service-photo:focus-within img { filter: none; transform: none; }
     .service-overlay,
-    .service-icon,
-    .service-list { display: none; }
+    .service-icon { display: none; }
+    .service-card .service-list {
+        display: block;
+        grid-column: 2;
+        margin-bottom: 8px;
+    }
+    .service-card .service-list li { font-size: 0.82rem; padding: 3px 0; }
+    .service-card .service-list li:nth-child(n+4) { display: none; }
     .service-card h3 {
         grid-column: 2;
         font-size: 1.02rem;
