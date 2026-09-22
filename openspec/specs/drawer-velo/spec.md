@@ -20,7 +20,7 @@ El sistema SHALL mostrar el velo oscuro sin blur cubriendo la página, con solo 
 
 #### Scenario: Apertura con todo dim
 - **WHEN** el visitante abre el drawer
-- **THEN** la página se oscurece, solo el logo se atenúa y la hamburguesa (sin contorno) sigue cerrando el menú
+- **THEN** la página se oscurece, solo el logo se atenúa y la única X visible es la interna del drawer a la izquierda
 
 ### Requirement: Drawer al 60 por ciento
 El sistema SHALL mostrar el panel con ancho 69% del viewport (con tope 390px).
@@ -35,3 +35,18 @@ El sistema SHALL dejar el título de la sección destino totalmente visible bajo
 #### Scenario: Salto desde la hamburguesa
 - **WHEN** el visitante toca una sección en la hamburguesa en móvil
 - **THEN** la página hace scroll a la sección y su título se ve completo, sin quedar tapado a la mitad por la navbar
+
+### Requirement: X única a la izquierda con drawer abierto
+El sistema SHALL mostrar una sola X de cierre (la interna del drawer, a la izquierda) mientras el drawer móvil esté abierto; el botón hamburguesa no debe mutar a X en ese estado.
+
+#### Scenario: Apertura muestra una sola X
+- **WHEN** el visitante abre la hamburguesa en móvil (claro u oscuro)
+- **THEN** solo se ve la X de la izquierda dentro del drawer y el botón hamburguesa no muestra X
+
+#### Scenario: Cierre restaura la hamburguesa
+- **WHEN** el visitante cierra el drawer (X izquierda, velo, link, Escape o resize a desktop)
+- **THEN** la hamburguesa vuelve a su estado normal de 3 líneas
+
+#### Scenario: Hamburguesa oculta conserva layout
+- **WHEN** el drawer está abierto
+- **THEN** el header no se desplaza ni reordena (el botón conserva su espacio)
