@@ -1,5 +1,50 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Revisión de optimización externa (5 fixes)
+
+### Cambiado
+
+- CSS de vuelta a bloqueante (con `?v=2`): el preload
+  async arriesgaba FOUC real por ahorro solo de laboratorio.
+- `vercel.json` sin headers de caché: config muerta (el deploy
+  es GitHub Pages); se repone en 1 minuto si se migra a Vercel.
+- `?v=2` extendido a las 8 páginas (CSS+JS) y a
+  `build_pages.py` para futuras regeneraciones.
+- `srcset` 300w completado en tienda e IA
+  (`servicios-tienda/ia-300.avif`, ~5 KB c/u).
+- Keyframes `gradientRotate` muertos eliminados; minificado
+  regenerado con clean-css.
+
+## 2026-09-22 — Optimización PageSpeed (agente externo, auditado)
+
+### Cambiado
+
+- Imágenes responsive nuevas: `servicios-web-300.avif`,
+  `juan-david-100/200.webp`, `hero-crecepe-mobile.avif` con
+  `srcset`/`sizes` e `imagesrcset` en el preload del hero.
+- CSS con `preload` no bloqueante + `?v=2` en CSS/JS del index
+  para invalidar caché.
+- `will-change: transform` en animaciones, borde del CEO con
+  `conic-gradient` + `borderSpin` (compositable) en vez de
+  `gradientRotate`, `heroZoom` off en táctil.
+- JS: `onScroll` inicial por rAF y doble rAF en FAQ en vez de
+  `offsetHeight` (sintaxis validada).
+- `vercel.json` con headers de caché (NOTA: sin efecto real,
+  el deploy es GitHub Pages, no Vercel).
+- `styles.min.css` regenerado con minificador regex (57.3 KB):
+  integridad verificada (llaves, reglas clave, `content`).
+
+### Observaciones de auditoría
+
+- El CSS no bloqueante contradice la decisión previa (se
+  mantuvo bloqueante para evitar FOUC): vigilar destello sin
+  estilos en conexiones lentas.
+- `?v=2` solo en `index.html`; subpáginas y `build_pages.py`
+  siguen sin versionar (inconsistente en futuras
+  regeneraciones).
+- `srcset` 300w solo en servicios-web; tienda e IA pendientes.
+- Keyframes `gradientRotate` quedaron muertos en `styles.css`.
+
 ## 2026-09-22 — Fondos táctiles sin zoom ni saltos
 
 ### Cambiado

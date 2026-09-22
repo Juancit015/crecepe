@@ -38,11 +38,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <!-- CSS (bloqueante a propósito: evita FOUC; ?v=2 invalida caché vieja) -->
+    <link rel="stylesheet" href="assets/css/styles.min.css?v=2">
 
-    <!-- Preload imagen hero (LCP) -->
-    <link rel="preload" as="image" href="assets/img/hero-crecepe.avif" fetchpriority="high">
+    <!-- Preload imagen hero (LCP): versión móvil para ahorrar bytes en 4G lenta -->
+    <link rel="preload" as="image"
+          href="assets/img/hero-crecepe.avif"
+          imagesrcset="assets/img/hero-crecepe-mobile.avif 768w, assets/img/hero-crecepe.avif 1920w"
+          imagesizes="(max-width: 768px) 100vw, 100vw"
+          fetchpriority="high">
 
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
@@ -364,7 +368,12 @@
                     <h2>Tu especialista</h2>
 
                     <div class="ceo-img-wrap">
-                        <img src="assets/img/juan-david.webp" alt="Juan David, CEO y Founder de CrecePE - Webs y tiendas virtuales con IA en Trujillo, Perú" width="108" height="108" fetchpriority="high" decoding="async">
+                        <img src="assets/img/juan-david-100.webp"
+                             srcset="assets/img/juan-david-100.webp 100w, assets/img/juan-david-200.webp 200w"
+                             sizes="108px"
+                             alt="Juan David, CEO y Founder de CrecePE - Webs y tiendas virtuales con IA en Trujillo, Perú"
+                             width="108" height="108"
+                             decoding="async">
                     </div>
 
                     <span class="ceo-name">Juan David</span>
@@ -451,7 +460,7 @@
             <div class="services-grid">
 
                 <div class="service-card reveal">
-                    <div class="service-photo"><img src="assets/img/servicios-web.avif" srcset="assets/img/servicios-web-700.avif 700w, assets/img/servicios-web.avif 1200w" sizes="(max-width: 768px) 277px, 347px" alt="Sitio web corporativo en laptop — desarrollo web en Trujillo, Perú" width="1200" height="896" loading="lazy" decoding="async"><div class="service-overlay"><p>Tu primera web profesional visible en Google.</p></div></div>
+                    <div class="service-photo"><img src="assets/img/servicios-web.avif" srcset="assets/img/servicios-web-300.avif 300w, assets/img/servicios-web-700.avif 700w, assets/img/servicios-web.avif 1200w" sizes="(max-width: 480px) 300px, (max-width: 768px) 277px, 347px" alt="Sitio web corporativo en laptop — desarrollo web en Trujillo, Perú" width="1200" height="896" loading="lazy" decoding="async"><div class="service-overlay"><p>Tu primera web profesional visible en Google.</p></div></div>
                     <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
                     </div>
@@ -466,7 +475,7 @@
                 </div>
 
                 <div class="service-card reveal">
-                    <div class="service-photo"><img src="assets/img/servicios-tienda.avif" srcset="assets/img/servicios-tienda-700.avif 700w, assets/img/servicios-tienda.avif 1200w" sizes="(max-width: 768px) 277px, 347px" alt="Tienda virtual en smartphone con caja de pedido — vende sola las 24 horas" width="1200" height="896" loading="lazy" decoding="async"><div class="service-overlay"><p>Tu tienda vendiendo sola las 24 horas.</p></div></div>
+                    <div class="service-photo"><img src="assets/img/servicios-tienda.avif" srcset="assets/img/servicios-tienda-300.avif 300w, assets/img/servicios-tienda-700.avif 700w, assets/img/servicios-tienda.avif 1200w" sizes="(max-width: 480px) 300px, (max-width: 768px) 277px, 347px" alt="Tienda virtual en smartphone con caja de pedido — vende sola las 24 horas" width="1200" height="896" loading="lazy" decoding="async"><div class="service-overlay"><p>Tu tienda vendiendo sola las 24 horas.</p></div></div>
                     <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
                     </div>
@@ -481,7 +490,7 @@
                 </div>
 
                 <div class="service-card reveal">
-                    <div class="service-photo"><img src="assets/img/servicios-ia.avif" srcset="assets/img/servicios-ia-700.avif 700w, assets/img/servicios-ia.avif 1200w" sizes="(max-width: 768px) 277px, 347px" alt="Emprendedora usando chatbot con inteligencia artificial para su negocio" width="1200" height="896" loading="lazy" decoding="async"><div class="service-overlay"><p>Atiende y vende mientras duermes.</p></div></div>
+                    <div class="service-photo"><img src="assets/img/servicios-ia.avif" srcset="assets/img/servicios-ia-300.avif 300w, assets/img/servicios-ia-700.avif 700w, assets/img/servicios-ia.avif 1200w" sizes="(max-width: 480px) 300px, (max-width: 768px) 277px, 347px" alt="Emprendedora usando chatbot con inteligencia artificial para su negocio" width="1200" height="896" loading="lazy" decoding="async"><div class="service-overlay"><p>Atiende y vende mientras duermes.</p></div></div>
                     <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
                     </div>
@@ -1189,7 +1198,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js?v=2" defer></script>
 
 </body>
 

@@ -55,7 +55,8 @@
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    // Difiere la lectura inicial de scrollY fuera del parsing para evitar reflow
+    requestAnimationFrame(onScroll);
 
     /* ---------- Botón volver arriba (desvanecido) ---------- */
     var toTop = document.getElementById('to-top');
@@ -265,8 +266,13 @@
         // Sin transición para que no se anime al cargar la página.
         faqExtraWrap.style.transition = 'none';
         faqExtraWrap.classList.add('faq-collapsed');
-        void faqExtraWrap.offsetHeight;
-        faqExtraWrap.style.transition = '';
+        // Doble rAF: difiere la restauración de la transición fuera del layout
+        // inicial, evitando el reflow forzado que causaba offsetHeight.
+        requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+                faqExtraWrap.style.transition = '';
+            });
+        });
 
         faqToggleAll.addEventListener('click', function () {
             var expanded = faqToggleAll.getAttribute('aria-expanded') === 'true';

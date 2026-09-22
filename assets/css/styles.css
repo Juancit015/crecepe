@@ -342,6 +342,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     background-position: center;
     background-repeat: no-repeat;
     animation: heroZoom 20s ease-in-out infinite alternate;
+    will-change: transform;
     z-index: 0;
 }
 
@@ -387,6 +388,14 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
 @media (prefers-reduced-motion: reduce) {
     .parallax-fondo {
         background-attachment: scroll !important;
+    }
+}
+
+/* Móvil/táctil: heroZoom consume CPU innecesariamente; deshabilitarlo
+   en dispositivos sin hover (touch) para mejorar FCP/LCP. */
+@media (hover: none) {
+    .hero-photo-bg {
+        animation: none;
     }
 }
 
@@ -449,6 +458,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     border-radius: 50%;
     background: var(--accent-light);
     animation: pulse 2s infinite;
+    will-change: transform;
 }
 
 .hero h1 {
@@ -515,6 +525,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     overflow: hidden;
     animation: cardFloat 6s ease-in-out infinite;
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    will-change: transform;
 }
 
 .hero-ceo-card::before {
@@ -558,9 +569,21 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     border-radius: 50%;
     padding: 4px;
     background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    background-size: 200% 200%;
-    animation: gradientRotate 4s ease infinite;
     box-shadow: 0 10px 30px rgba(11, 47, 212, 0.3);
+    isolation: isolate;
+}
+
+/* Borde animado compositable: conic-gradient en pseudo-elem con transform:rotate()
+   en lugar de animar background-size (no compositable → repintado en GPU) */
+.ceo-img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent), var(--accent-light), var(--accent));
+    animation: borderSpin 4s linear infinite;
+    will-change: transform;
+    z-index: -1;
 }
 
 .ceo-img-wrap img {
@@ -619,6 +642,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     border-radius: 50%;
     background: var(--accent-light);
     animation: pulse 2s infinite;
+    will-change: transform;
 }
 
 .ceo-description {
@@ -649,6 +673,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     background: var(--accent);
     border-radius: 10px;
     animation: scrollWheel 2s infinite;
+    will-change: transform, opacity;
 }
 
 /* ============ Barra de especialidades ============ */
@@ -662,6 +687,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     display: flex;
     width: max-content;
     animation: marquee-loop 40s linear infinite;
+    will-change: transform;
 }
 
 /* Grupo de ítems: se duplica en el HTML para el ida y vuelta exacto */
@@ -721,6 +747,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     display: flex;
     width: max-content;
     animation: marquee-loop 30s linear infinite;
+    will-change: transform;
 }
 
 .trust-marquee-track span {
@@ -1944,10 +1971,9 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     50% { transform: translateY(-6px); }
 }
 
-@keyframes gradientRotate {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Reemplaza gradientRotate: animación compositable con transform:rotate() */
+@keyframes borderSpin {
+    to { transform: rotate(360deg); }
 }
 
 @keyframes scrollWheel {
