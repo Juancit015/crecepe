@@ -1,3 +1,13 @@
+## 2026-09-22 — Paleta oscura fija para precios
+
+### Cambiado
+
+- Bloque `Precios en oscuro`: hermanas sobre `#0F1D3A`,
+  títulos/precios blancos, cuerpo `#DCE6FA`, checks cyan;
+  badge base legible y popular en cyan también en oscuro.
+  Corrige títulos/features invisibles (navy sobre navy).
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Card Tienda en navy + CTAs por plan
 
 ### Cambiado

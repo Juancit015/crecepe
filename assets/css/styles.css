@@ -991,7 +991,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
 .pricing-card--featured .pricing-price { border-color: rgba(255, 255, 255, 0.18); }
 .pricing-card--featured .pricing-features svg { color: var(--accent-light); }
 .pricing-card--featured .pricing-cta { background: rgba(0, 194, 255, 0.65); color: #fff; }
-.pricing-card--featured .pricing-cta:hover { background: var(--accent-light); color: #fff; }
+.pricing-card--featured .pricing-cta:hover { background: var(--accent-light); color: var(--primary); }
 
 /* Etiqueta popular cyan con estrella (doble clase: el minificador reordena la base después) */
 .pricing-badge.pricing-badge--popular {
@@ -2519,6 +2519,14 @@ body.dark-mode .faq-more { color: var(--accent-light); background: rgba(0, 194, 
 body.dark-mode .faq-more:hover { background: var(--accent); color: #fff; }
 body.dark-mode .pricing-price { border-color: rgba(255, 255, 255, 0.1); }
 
+/* --- Precios en oscuro: paleta fija (hermanas #0F1D3A vía --white, Tienda #16294F) --- */
+body.dark-mode .pricing-card h3,
+body.dark-mode .pricing-card .pricing-price .amount { color: #fff; }
+body.dark-mode .pricing-card .pricing-desc,
+body.dark-mode .pricing-card .pricing-price .label,
+body.dark-mode .pricing-card .pricing-features li { color: #DCE6FA; }
+body.dark-mode .pricing-card .pricing-features svg { color: var(--accent-light); }
+
 /* Acento legible sobre superficies oscuras */
 body.dark-mode .section-badge { background: rgba(0, 194, 255, 0.14); border: 1px solid rgba(0, 194, 255, 0.4); color: var(--accent-light); }
 body.dark-mode .service-icon { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
@@ -2539,11 +2547,11 @@ body.dark-mode .case-stack span { background: rgba(255, 255, 255, 0.1); color: #
 body.dark-mode .btn-outline { border-color: rgba(255, 255, 255, 0.5); color: #fff; }
 body.dark-mode .btn-outline:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
 body.dark-mode .to-top { background: var(--accent); box-shadow: 0 8px 24px rgba(11, 47, 212, 0.45); }
-body.dark-mode .pricing-badge { background: rgba(255, 255, 255, 0.1); }
-body.dark-mode .pricing-badge--popular { background: var(--accent); color: #fff; }
+body.dark-mode .pricing-badge { background: rgba(255, 255, 255, 0.1); color: #DCE6FA; }
+body.dark-mode .pricing-badge.pricing-badge--popular { background: var(--accent-light); color: var(--primary); }
 body.dark-mode .pricing-card--featured { background: #16294F; border-color: rgba(255, 255, 255, 0.22); }
 body.dark-mode .pricing-card--featured .pricing-cta { background: var(--accent); color: #fff; }
-body.dark-mode .pricing-card--featured .pricing-cta:hover { background: linear-gradient(135deg, var(--accent-light), var(--accent)); color: #fff; }
+body.dark-mode .pricing-card--featured .pricing-cta:hover { background: var(--accent-light); color: var(--primary); }
 body.dark-mode .logo span { color: var(--accent-light); }
 
 /* Resaltados sólidos en oscuro para mantener contraste */
