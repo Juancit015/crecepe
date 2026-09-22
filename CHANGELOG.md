@@ -1,5 +1,14 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Enlaces absolutos en llms.txt (auditoría agéntica)
+
+### Cambiado
+
+- Sección "Páginas del sitio" de `llms.txt` con enlaces Markdown
+  absolutos: el auditor de navegación agéntica exigía al menos
+  un enlace y el archivo no tenía ninguno. Sin impacto en SEO
+  (categoría experimental separada).
+
 ## 2026-09-22 — Dominio propio, OG y pulido SEO nacional
 
 ### Añadido

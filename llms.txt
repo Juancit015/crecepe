@@ -52,12 +52,12 @@
 
 ## Páginas del sitio
 
-- `/` — landing principal con todos los servicios, planes, proceso, casos, opiniones y FAQ.
-- `/servicios/presencia-digital.html` — diseño de páginas web en Trujillo y Perú desde S/ 500.
-- `/servicios/tienda-online-bagisto.html` — crear tienda online en Perú con Bagisto desde S/ 700.
-- `/servicios/automatizacion-ia.html` — automatización con IA para negocios desde S/ 900.
-- `/casos/az-consulting.html` y `/casos/novedades-chavez.html` — casos reales con detalle.
-- `/privacidad.html` y `/terminos.html` — política de privacidad y términos del servicio.
+- [Inicio](https://crecepe.com/) — landing principal con todos los servicios, planes, proceso, casos, opiniones y FAQ.
+- [Presencia Digital Inteligente](https://crecepe.com/servicios/presencia-digital.html) — diseño de páginas web en Trujillo y Perú desde S/ 500.
+- [Tienda Online Bagisto + IA](https://crecepe.com/servicios/tienda-online-bagisto.html) — crear tienda online en Perú con Bagisto desde S/ 700.
+- [Automatización con IA](https://crecepe.com/servicios/automatizacion-ia.html) — automatización con IA para negocios desde S/ 900.
+- [Caso AZ Consulting](https://crecepe.com/casos/az-consulting.html) y [Caso Novedades Chavez](https://crecepe.com/casos/novedades-chavez.html) — casos reales con detalle.
+- [Privacidad](https://crecepe.com/privacidad.html) y [Términos](https://crecepe.com/terminos.html) — política de privacidad y términos del servicio.
 
 ## Contacto
 
