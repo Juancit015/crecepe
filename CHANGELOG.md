@@ -1,5 +1,16 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Drawer más ancho y anclas al inicio de sección
+
+### Cambiado
+
+- Drawer móvil a `min(69vw, 390px)` (+15%).
+- `scroll-margin-top: 76px` en secciones solo móvil: al navegar
+  desde la hamburguesa se aterriza justo al inicio de la sección,
+  sin asomar la anterior ni tapar el título. Desktop intacto.
+- Foto de cards revertida a 118px fijos (el estirado se veía muy
+  alto); el hueco bajo la foto queda pendiente de nueva idea.
+
 ## 2026-09-22 — LCP móvil: logo con prioridad y variante 500px
 
 ### Cambiado
