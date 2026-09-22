@@ -10,4 +10,4 @@
 
 ## 3. Cierre
 
-- [ ] 3.1 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear
+- [x] 3.1 Documentar en `CHANGELOG.md`, validar con `openspec validate --strict` y commitear
