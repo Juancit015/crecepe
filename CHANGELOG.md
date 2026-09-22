@@ -1,5 +1,12 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Higiene SEO: CHANGELOG fuera de crawlers
+
+### Cambiado
+
+- `robots.txt` bloquea `/CHANGELOG.md`: es un archivo interno sin
+  enlaces ni sitemap y no debe aparecer en resultados de búsqueda.
+
 ## 2026-09-20 — Tira de garantías con loop continuo real
 
 ### Cambiado

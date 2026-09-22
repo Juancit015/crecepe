@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /CHANGELOG.md
 
 Sitemap: https://crecepe.com/sitemap.xml
