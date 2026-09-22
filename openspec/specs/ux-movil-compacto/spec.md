@@ -20,11 +20,11 @@ El sistema SHALL mostrar en móvil cada plan compacto con descripción siempre c
 - **THEN** las listas y descripciones están siempre visibles y el botón no aparece
 
 ### Requirement: Secciones compactas en móvil
-El sistema SHALL mostrar Servicios en filas compactas, Casos podados (2° link solo desktop) y Opiniones compactas, solo en móvil.
+El sistema SHALL mostrar Servicios en filas con sus 3 primeros bullets visibles, Casos podados (2° link solo desktop) y Opiniones compactas, solo en móvil.
 
 #### Scenario: Servicios fila
 - **WHEN** el visitante ve Servicios en móvil
-- **THEN** cada card es una fila con foto 92px, título, descripción a 2 líneas y link, sin overlay, icono ni lista
+- **THEN** cada card es una fila con foto 92px, título, descripción a 2 líneas, los 3 primeros bullets de su lista y link, sin overlay ni icono
 
 #### Scenario: Casos podados
 - **WHEN** el visitante ve Casos en móvil

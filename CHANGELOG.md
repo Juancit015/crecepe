@@ -1,5 +1,42 @@
 # Registro de cambios — CrecePE
 
+## 2026-09-22 — Dominio propio, OG y pulido SEO nacional
+
+### Añadido
+
+- Dominio `crecepe.com` conectado (DNS en DonWeb + `CNAME`,
+  HTTPS activo con redirección 301 desde `http` y `www`).
+- Imagen OG 1200×630 (`og-crecepe.png`) con tags `og:image`,
+  `og:image:alt` y `twitter:image` en las 8 páginas; badge
+  Seobility en el footer del index.
+- Meta `google-site-verification` para Search Console.
+- Ficha del servicio con intro en las 3 páginas de servicios
+  (Inversión, Entrega, Recibes, Necesito de ti, Soporte) con
+  entradas laterales reutilizando reveal.
+- FAQs nuevos alineados a Google Trends PE: hosting + dominio
+  con Hostinger (Presencia y Tienda), agencia vs independiente,
+  diseño de tiendas online, qué es un chatbot y chatbot en
+  WhatsApp (con schema FAQPage 1:1 con lo visible).
+- Specs sincronizadas: `proceso-detalle`, `servicios-ficha`,
+  `proceso-resaltado` y `ux-movil-compacto` (changes archivados
+  `2026-09-22-*`).
+
+### Cambiado
+
+- Canonicals, OG, JSON-LD, sitemap, robots y `llms.txt`
+  migrados de `crecepe.pe` a `crecepe.com`.
+- Title y H1 nacionales: "Diseño Web y Tiendas Virtuales en
+  Perú" + "Diseñamos páginas web exitosas y tiendas virtuales
+  para todo el Perú" (Trujillo queda en badge, geo-tags y
+  schema para lo local).
+- Footer con posicionamiento nacional sin keyword stuffing
+  (sin prometer hosting: lo contrata el cliente).
+- Titles/descriptions recortados a rango (Presencia, IA y
+  casos) y `priceRange` corregido a S/ 500 - S/ 900.
+- Móvil: cards de Servicios muestran sus 3 bullets y botón
+  "Ver detalle" en blanco con hover cyan (nunca azul oscuro).
+- `robots.txt` bloquea `/CHANGELOG.md`.
+
 ## 2026-09-22 — Higiene SEO: CHANGELOG fuera de crawlers
 
 ### Cambiado

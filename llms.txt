@@ -40,6 +40,11 @@
 - ¿Por qué mi negocio no aparece en ChatGPT o Gemini? Las IA citan negocios con presencia estructurada (Schema.org, reseñas, contenido claro); el servicio GEO lo corrige.
 - ¿Mi bodega o restaurante puede aparecer en Google Maps? Sí, con perfil de empresa, reseñas y web con geo-tags de Trujillo.
 - ¿Marketplace o tienda propia? Marketplace cobra comisión por venta; la tienda Bagisto propia no tiene comisiones y la IA atiende 24/7.
+- ¿El dominio y el hosting están incluidos? No: se contratan a tu nombre (tú eres el dueño); se recomienda Hostinger y se deja configurado con SSL y correo corporativo. Costo típico S/ 100-150 al año.
+- ¿Por qué contratar a un independiente y no a una agencia de diseño web? Trato directo sin intermediarios, con diseño web profesional, SEO + GEO, capacitación y soporte a precio de independiente.
+- ¿En qué consiste el diseño de tiendas online? Tienda virtual sobre Bagisto adaptada a tu marca: catálogo, Yape/Plin, pedidos por WhatsApp y envíos coordinados, con productos cargados y optimizados para Google e IA.
+- ¿Qué es un chatbot y cómo ayuda a mi negocio? Asistente con IA que responde sobre productos, precios y horarios y toma pedidos 24/7; deriva a WhatsApp lo que necesita atención humana.
+- ¿El chatbot funciona en WhatsApp? Atiende en la web 24/7 y deriva clientes a tu WhatsApp; la respuesta directa dentro de WhatsApp se evalúa en el diagnóstico según volumen de mensajes.
 
 ## Pagos
 
