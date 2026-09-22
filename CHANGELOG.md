@@ -1,3 +1,16 @@
+## 2026-09-22 — Card Tienda en navy + CTAs por plan
+
+### Cambiado
+
+- `.pricing-card--featured` en fondo navy (`--primary`) con texto
+  en claro y CTA blanco; badge `⭐ Más Popular` con fondo cyan
+  (`--accent-light`). Ajuste para modo oscuro incluido.
+- CTAs con nombre de plan: Consultar Presencia / Tienda /
+  Automatización (icono WhatsApp y `wa.me` intactos).
+- Fix: título visible con doble clase (la regla base lo pisaba)
+  y fondo oscuro explícito `#16294F` en modo oscuro.
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Pricing-cards estilo casos + tiers + CTA WhatsApp
 
 ### Cambiado
