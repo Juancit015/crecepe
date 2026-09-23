@@ -1,3 +1,13 @@
+## 2026-09-23 — Alineación competitiva punto 2: FAQ tarjeta en ficha Tienda
+
+### Cambiado
+
+- FAQ "¿Puedo cobrar con tarjeta?" en
+  `servicios/tienda-online-bagisto.html` (visible +
+  schema FAQPage) y en `tools/build_pages.py`: plan
+  base Yape/Plin/transferencia, pasarela con tarjeta
+  como adicional cotizado. H1, title y precio intactos.
+
 ## 2026-09-23 — Alineación competitiva punto 1: FAQ tiempos en ficha Presencia
 
 ### Cambiado

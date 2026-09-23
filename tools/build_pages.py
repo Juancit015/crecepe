@@ -271,6 +271,7 @@ faqs_t = [
     ("¿Cómo funcionan los envíos?", "Los pedidos llegan a tu WhatsApp con los datos del cliente. Tú coordinas el envío con Shalom u otro courier, como ya lo hace la tienda Novedades Chavez."),
     ("¿Puedo cargar más de 50 productos?", "Sí. El plan incluye hasta 50 productos (20 cargados con IA). Después puedes cargar más tú mismo con la capacitación incluida, o con el plan de mantenimiento."),
     ("¿Qué necesito para empezar?", "Fotos de tus productos, precios y tu lista de categorías. Si tus fotos o descripciones no están listas, la IA las mejora dentro del proyecto."),
+    ("¿Puedo cobrar con tarjeta?", "El plan base cobra con Yape, Plin y transferencia directo a ti, sin comisiones. Si quieres pasarela con tarjeta (MercadoPago u otra), se cotiza como adicional según tu volumen de ventas."),
 ]
 pages['servicios/tienda-online-bagisto.html'] = dict(
     title="Crear Tienda Virtual en Perú desde S/ 700 | CrecePE",
