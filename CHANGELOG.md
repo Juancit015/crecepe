@@ -1,3 +1,10 @@
+## 2026-09-23 — Schema image ProfessionalService
+
+### Cambiado
+
+- Campo `image` (og-crecepe.png) en el bloque principal; los
+  `provider` anidados quedan como están (ruido de Google).
+
 ## 2026-09-23 — Pulido SEO agente externo
 
 ### Cambiado
