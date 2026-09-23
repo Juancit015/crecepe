@@ -1,3 +1,13 @@
+## 2026-09-23 — Alineación competitiva punto 3: 2 FAQs nuevas en home
+
+### Cambiado
+
+- FAQs "¿Puedo administrar mi web o tienda yo mismo?"
+  y "¿Mi tienda puede cobrar con tarjeta?" en
+  `index.html` (bloque colapsado + schema FAQPage,
+  validado). Sin empuje de layout: van en
+  `faq-extra-wrap` colapsado por defecto.
+
 ## 2026-09-23 — Alineación competitiva punto 2: FAQ tarjeta en ficha Tienda
 
 ### Cambiado
