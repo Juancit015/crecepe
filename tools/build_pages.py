@@ -235,6 +235,7 @@ faqs_p = [
     ("¿Qué necesito para empezar?", "Solo tu logo (si lo tienes), fotos de tu negocio y la información básica de tus servicios. Si no tienes logo ni textos, te ayudo a crearlos dentro del proyecto."),
     ("¿El dominio y el hosting están incluidos?", "Te asesoro para comprarlos a tu nombre (tú eres el dueño). El costo de dominio (.pe o .com) y hosting básico va por cuenta del cliente, típicamente S/ 100-150 al año."),
     ("¿Puedo editar el contenido después?", "Sí. Recibes una capacitación en video para actualizar textos e imágenes, y el plan de mantenimiento mensual cubre cambios si prefieres delegarlo."),
+    ("¿En cuánto tiempo está lista mi web?", "En 2-3 semanas desde que me entregas tu logo, fotos e información. La mitad del plazo depende de ti: si el material llega todo junto, tu web sale en 2 semanas."),
     ("¿Apareceré en Google desde el primer día?", "El sitio sale optimizado y se registra en Search Console, pero Google tarda de 2 a 8 semanas en posicionar un dominio nuevo. El SEO técnico acelera ese proceso; la constancia en reseñas y contenido lo consolida."),
 ]
 pages['servicios/presencia-digital.html'] = dict(

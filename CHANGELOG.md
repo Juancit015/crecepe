@@ -1,3 +1,12 @@
+## 2026-09-23 — Alineación competitiva punto 1: FAQ tiempos en ficha Presencia
+
+### Cambiado
+
+- FAQ "¿En cuánto tiempo está lista mi web?" en
+  `servicios/presencia-digital.html` (visible + schema
+  FAQPage) y en `tools/build_pages.py`. H1, title y
+  precio intactos.
+
 ## 2026-09-23 — Schema postalCode 13720
 
 ### Cambiado
