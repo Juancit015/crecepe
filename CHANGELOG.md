@@ -1,3 +1,13 @@
+## 2026-09-23 — Alineación competitiva punto 4: contacto humano + zona
+
+### Cambiado
+
+- Contacto en `index.html`: "Habla con Juan ·
+  Respuesta inmediata" y zona "Paiján, La Libertad ·
+  Atención remota a todo el Perú". Calle exacta solo
+  en schema (×4, validado). Sin estilos nuevos:
+  contraste intacto.
+
 ## 2026-09-23 — Alineación competitiva punto 3: 2 FAQs nuevas en home
 
 ### Cambiado
