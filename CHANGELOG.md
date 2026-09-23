@@ -1,3 +1,21 @@
+## 2026-09-23 — Pulido SEO agente externo
+
+### Cambiado
+
+- `build_pages.py` con precios 500/700/900 + OG; AVISO: su
+  salida diverge de lo publicado (no correr sin diff limpio).
+- Sitemap `lastmod` al 2026-09-23.
+- Hero móvil compacto (título + CTAs sin scroll).
+- Línea "2 proyectos en línea" → `#casos` (solo móvil;
+  actualizar el número al sumar casos).
+- Testimonios sin estrellas (textos intactos; CSS
+  `.opinion-stars` conservado reversible).
+
+### Excluido a propósito
+
+- Schema Review propio (spam) y botón fijo (decisión previa).
+  Minificado regenerado y verificado.
+
 ## 2026-09-22 — Contacto card sólida sin badges
 
 ### Cambiado
