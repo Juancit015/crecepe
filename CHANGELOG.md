@@ -5,6 +5,8 @@
 - `streetAddress` en el schema (sin `postalCode`: código
   exacto de Paiján no verificado). Locality se mantiene
   Trujillo por estrategia.
+- Providers anidados con teléfono, precio, dirección e
+  imagen (limpia avisos no críticos).
 
 ## 2026-09-23 — Schema image ProfessionalService
 
