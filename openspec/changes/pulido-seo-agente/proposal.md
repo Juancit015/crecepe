@@ -16,8 +16,7 @@ redundante con el dial).
 - `sitemap.xml`: `lastmod` a fecha de deploy.
 - Hero móvil más corto: título + 2 CTAs visibles sin scroll,
   tarjeta del especialista después (solo CSS móvil).
-- Línea de confianza bajo los CTAs del hero: "2 proyectos en
-  línea" con enlace a `#casos` (sin mencionar estrellas).
+- Línea de confianza descartada a pedido (no gustó; aporte marginal).
 - Testimonios sin visuales de rating (fuera estrellas SVG y
   "5 de 5"); textos, nombres y proyectos intactos.
 - Excluidos: punto 2 (reviews propias) y punto 5 (botón fijo).

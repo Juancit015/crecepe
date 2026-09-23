@@ -15,10 +15,6 @@ El sistema SHALL mostrar title bajo 580px, palabras del H1 en el cuerpo, heading
 - **WHEN** un auditor lista headings y anchors
 - **THEN** no hay textos repetidos entre ellos
 
-#### Scenario: Confianza con enlace a casos
-- **WHEN** el visitante ve el hero en móvil
-- **THEN** lee "2 proyectos en línea" con enlace a la sección de casos
-
 #### Scenario: Testimonios sin formato de reseña
 - **WHEN** Google analiza las opiniones
 - **THEN** no detecta visuales de puntuación (estrellas o "5 de 5"); textos y autores intactos
