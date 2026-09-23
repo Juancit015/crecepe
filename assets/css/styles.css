@@ -502,6 +502,9 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     flex-wrap: wrap;
 }
 
+/* Línea de confianza a casos: oculta en desktop, visible en móvil */
+.hero-cases-line { display: none; }
+
 .hero-trust {
     display: flex;
     gap: 26px;
@@ -2078,6 +2081,9 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     /* Hero compacto en móvil: título + CTAs visibles sin scroll */
     .hero { min-height: auto; padding: 110px 0 60px; }
     .hero-content { gap: 24px; }
+    /* Línea de confianza a casos (solo móvil) */
+    .hero-cases-line { display: block; margin: 14px 0 0; font-size: 0.85rem; font-weight: 600; }
+    .hero-cases-line a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
     /* Menú abierto: SIN blur, porque el blur la vuelve
        contenedor del drawer fijo y lo aplasta a su altura.
        Sin fondo forzado: solo el dim (velo + logo atenuado). */
