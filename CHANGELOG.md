@@ -1,3 +1,13 @@
+## 2026-09-23 — Iconos narrativos en cards de servicios
+
+### Cambiado
+
+- `index.html`: ventana → lupa sobre página
+  (Presencia, te encuentran), carrito → burbuja de
+  chat con check (Tienda, vendes por WhatsApp), chip
+  → destellos (IA, atiende sola). Mismo trazo 30px,
+  sin CSS nuevo, dark-mode intacto.
+
 ## 2026-09-23 — Alineación competitiva punto 5: ficha de proyecto en casos
 
 ### Cambiado
