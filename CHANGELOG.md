@@ -1,3 +1,11 @@
+## 2026-09-23 — Schema streetAddress
+
+### Cambiado
+
+- `streetAddress` en el schema (sin `postalCode`: código
+  exacto de Paiján no verificado). Locality se mantiene
+  Trujillo por estrategia.
+
 ## 2026-09-23 — Schema image ProfessionalService
 
 ### Cambiado
