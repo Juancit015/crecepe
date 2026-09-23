@@ -26,12 +26,12 @@
 
 ## Casos
 
-- **azconsultingperu.com** (colaboración): desarrollo de secciones de servicios y stack tecnológico, carga responsiva y rápida, SEO técnico con Schema LocalBusiness + FAQ.
-- **novedadeschavez.azconsultingperu.com** (proyecto propio desde cero): tienda Bagisto completa con catálogo, colecciones, envíos por Shalom, pedidos por WhatsApp y carga de productos automatizada con agentes de IA.
+- **azconsultingperu.com** (colaboración, agosto 2026, 1 semana): secciones de servicios y stack tecnológico, páginas de blog y FAQ, en Python + HTML/CSS/JS, con carga responsiva y SEO técnico (Schema LocalBusiness + FAQ).
+- **novedadeschavez.azconsultingperu.com** (proyecto propio desde cero, agosto 2026, 2 semanas): tienda Bagisto con 2000 productos cargados con IA desde catálogo, categorías y colecciones, envíos por Shalom y pedidos por WhatsApp.
 
 ## Opiniones
 
-- Testimonios alineados a los servicios (web profesional, tienda 24/7, IA que atiende): María García (Cliente — Sitio web profesional), Dayron Chavez (Fundador — Novedades Chávez) y Ana López (Cliente — Automatización con IA), todos con calificación de 5 estrellas.
+- Testimonios alineados a los servicios (web profesional, tienda 24/7, IA que atiende): María García (Cliente — Sitio web profesional), Dayron Chavez (Fundador — Novedades Chávez) y Ana López (Cliente — Automatización con IA). Se muestran como citas de texto, sin formato de reseña con estrellas.
 
 ## Preguntas frecuentes (long-tail local)
 
@@ -45,6 +45,9 @@
 - ¿En qué consiste el diseño de tiendas online? Tienda virtual sobre Bagisto adaptada a tu marca: catálogo, Yape/Plin, pedidos por WhatsApp y envíos coordinados, con productos cargados y optimizados para Google e IA.
 - ¿Qué es un chatbot y cómo ayuda a mi negocio? Asistente con IA que responde sobre productos, precios y horarios y toma pedidos 24/7; deriva a WhatsApp lo que necesita atención humana.
 - ¿El chatbot funciona en WhatsApp? Atiende en la web 24/7 y deriva clientes a tu WhatsApp; la respuesta directa dentro de WhatsApp se evalúa en el diagnóstico según volumen de mensajes.
+- ¿En cuánto tiempo está lista mi web? Presencia Digital en 2-3 semanas desde que el cliente entrega logo, fotos e información.
+- ¿La tienda puede cobrar con tarjeta? El plan base cobra con Yape, Plin y transferencia sin comisiones; la pasarela con tarjeta se cotiza como adicional.
+- ¿Puedo administrar mi web o tienda yo mismo? Sí, con capacitación en video incluida; el mantenimiento desde S/ 149 lo cubre si se prefiere delegar.
 
 ## Pagos
 
@@ -61,8 +64,8 @@
 
 ## Contacto
 
-- WhatsApp: +51 970 771 835
+- WhatsApp: +51 970 771 835 (atiende Juan, fundador)
 - Email: crecepe@azconsultingperu.com
 - Horario: lunes a viernes, 8:00 am - 6:00 pm (hora de Perú)
-- Ubicación: Trujillo, La Libertad, Perú. Atención remota a todo el país.
+- Ubicación: Paiján, La Libertad, Perú. Atención remota a todo el país.
 - Web: https://crecepe.com/
