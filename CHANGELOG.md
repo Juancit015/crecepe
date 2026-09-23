@@ -1,3 +1,15 @@
+## 2026-09-23 — Alineación competitiva punto 5: ficha de proyecto en casos
+
+### Cambiado
+
+- Bloque "Ficha del proyecto" (fecha, tecnología,
+  alcance, tiempo — datos reales) en
+  `casos/az-consulting.html` (ago 2026, Python +
+  HTML/CSS/JS, 1 semana) y
+  `casos/novedades-chavez.html` (ago 2026, Bagisto +
+  IA, 2000 productos, 2 semanas). Sin métricas
+  inventadas. JSON validado.
+
 ## 2026-09-23 — Alineación competitiva punto 4: contacto humano + zona
 
 ### Cambiado
