@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Genera las subpaginas de CrecePE reutilizando navbar, dial, to-top y footer del index."""
+"""Genera las subpaginas de CrecePE reutilizando navbar, dial, to-top y footer del index.
+AVISO: las páginas publicadas recibieron ediciones manuales (fichas, FAQs extra,
+copy) que el generador NO reproduce. No correr sin verificar `git diff` antes."""
 import re, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -54,7 +56,12 @@ HEAD = '''<!DOCTYPE html>
     <meta property="og:url" content="{canonical}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_PE">
+    <meta property="og:image" content="https://crecepe.com/assets/img/og-crecepe.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CrecePE - Webs y tiendas virtuales con IA en Perú">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://crecepe.com/assets/img/og-crecepe.png">
     <meta name="theme-color" content="#0B2FD4">
 
     <!-- Fonts -->
@@ -231,11 +238,11 @@ faqs_p = [
     ("¿Apareceré en Google desde el primer día?", "El sitio sale optimizado y se registra en Search Console, pero Google tarda de 2 a 8 semanas en posicionar un dominio nuevo. El SEO técnico acelera ese proceso; la constancia en reseñas y contenido lo consolida."),
 ]
 pages['servicios/presencia-digital.html'] = dict(
-    title="Diseño de Páginas Web en Trujillo y Perú desde S/ 990 | CrecePE",
-    desc="Presencia Digital Inteligente: página web profesional, responsive y rápida con SEO + GEO incluidos. Para negocios en Trujillo y todo el Perú. Desde S/ 990, entrega en 2-3 semanas.",
+    title="Diseño de Páginas Web en Trujillo y Perú desde S/ 500 | CrecePE",
+    desc="Página web profesional, responsive y rápida con SEO + GEO incluidos. Para negocios en Trujillo y todo el Perú. Desde S/ 500.",
     canonical="https://crecepe.com/servicios/presencia-digital.html",
     schemas=[
-        service_schema("Presencia Digital Inteligente", "Sitio web profesional de hasta 7 secciones, responsive y rápido, con SEO técnico, GEO base, WhatsApp, Analytics y Search Console.", "990", "https://crecepe.com/servicios/presencia-digital.html"),
+        service_schema("Presencia Digital Inteligente", "Sitio web profesional de hasta 7 secciones, responsive y rápido, con SEO técnico, GEO base, WhatsApp, Analytics y Search Console.", "500", "https://crecepe.com/servicios/presencia-digital.html"),
         crumbs([("Inicio", "https://crecepe.com/"), ("Presencia Digital", "https://crecepe.com/servicios/presencia-digital.html")]),
         faq_schema(faqs_p),
     ],
@@ -249,7 +256,7 @@ pages['servicios/presencia-digital.html'] = dict(
          "Google Analytics + Search Console configurados",
          "Capacitación en video para administrar tu sitio",
          "Soporte post-lanzamiento de 30 días"],
-        "990", "2-3 semanas",
+        "500", "2-3 semanas",
         "Hola%20CrecePE%2C%20me%20interesa%20el%20plan%20Presencia%20Digital%20para%20mi%20negocio",
         [("tienda-online-bagisto.html", "Tienda Online Bagisto + IA", "Vende 24/7 con catálogo, Yape/Plin y pedidos por WhatsApp."),
          ("automatizacion-ia.html", "Automatización con IA", "Chatbot 24/7 y agentes de IA trabajando para tu negocio.")],
@@ -265,11 +272,11 @@ faqs_t = [
     ("¿Qué necesito para empezar?", "Fotos de tus productos, precios y tu lista de categorías. Si tus fotos o descripciones no están listas, la IA las mejora dentro del proyecto."),
 ]
 pages['servicios/tienda-online-bagisto.html'] = dict(
-    title="Crear Tienda Online en Perú con Bagisto desde S/ 2,990 | CrecePE",
-    desc="Tienda online con Bagisto: catálogo, pagos Yape/Plin, pedidos por WhatsApp y envíos por Shalom. Hasta 50 productos cargados con IA. Desde S/ 2,990, entrega en 4-6 semanas.",
+    title="Crear Tienda Virtual en Perú desde S/ 700 | CrecePE",
+    desc="Diseño de tiendas online que venden solas: catálogo, pagos Yape/Plin, pedidos por WhatsApp y envíos por Shalom. Desde S/ 700, entrega en 4-6 semanas.",
     canonical="https://crecepe.com/servicios/tienda-online-bagisto.html",
     schemas=[
-        service_schema("Tienda Online Bagisto + IA", "Tienda e-commerce con Bagisto: catálogo, categorías y colecciones, hasta 50 productos cargados, pagos Yape/Plin, pedidos por WhatsApp y envíos coordinados.", "2990", "https://crecepe.com/servicios/tienda-online-bagisto.html"),
+        service_schema("Tienda Online Bagisto + IA", "Tienda e-commerce con Bagisto: catálogo, categorías y colecciones, hasta 50 productos cargados, pagos Yape/Plin, pedidos por WhatsApp y envíos coordinados.", "700", "https://crecepe.com/servicios/tienda-online-bagisto.html"),
         crumbs([("Inicio", "https://crecepe.com/"), ("Tienda Online Bagisto", "https://crecepe.com/servicios/tienda-online-bagisto.html")]),
         faq_schema(faqs_t),
     ],
@@ -283,9 +290,9 @@ pages['servicios/tienda-online-bagisto.html'] = dict(
          "Envíos coordinados (Shalom u otro courier)",
          "Schema Store + Product para Google e IA",
          "Capacitación en video + soporte 30 días"],
-        "2,990", "4-6 semanas",
+        "700", "4-6 semanas",
         "Hola%20CrecePE%2C%20me%20interesa%20el%20plan%20Tienda%20Online%20Bagisto%20para%20mi%20negocio",
-        [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 990."),
+        [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 500."),
          ("automatizacion-ia.html", "Automatización con IA", "Chatbot 24/7 y carga masiva de productos con agentes.")],
         faqs_t,
         "Tienda Online Bagisto + IA", "https://crecepe.com/servicios/tienda-online-bagisto.html"),
@@ -299,11 +306,11 @@ faqs_a = [
     ("¿Necesito conocimientos técnicos?", "No. Yo configuro todo y te entrego capacitación en video. El mantenimiento mensual cubre ajustes y mejoras continuas de la IA."),
 ]
 pages['servicios/automatizacion-ia.html'] = dict(
-    title="Automatización con IA para Negocios en Perú desde S/ 1,490 | CrecePE",
-    desc="Chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA y auditoría SEO + GEO. Funciona sobre Bagisto, WooCommerce o web a medida. Desde S/ 1,490.",
+    title="Automatización con IA en Perú desde S/ 900 | CrecePE",
+    desc="Chatbot con IA que atiende y vende 24/7 y deriva clientes a tu WhatsApp. Funciona con tu web actual o una hecha a medida. Desde S/ 900.",
     canonical="https://crecepe.com/servicios/automatizacion-ia.html",
     schemas=[
-        service_schema("Automatización con IA", "Auditoría SEO + GEO, chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA y optimización de fichas para Google e IA.", "1490", "https://crecepe.com/servicios/automatizacion-ia.html"),
+        service_schema("Automatización con IA", "Auditoría SEO + GEO, chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA y optimización de fichas para Google e IA.", "900", "https://crecepe.com/servicios/automatizacion-ia.html"),
         crumbs([("Inicio", "https://crecepe.com/"), ("Automatización con IA", "https://crecepe.com/servicios/automatizacion-ia.html")]),
         faq_schema(faqs_a),
     ],
@@ -317,9 +324,9 @@ pages['servicios/automatizacion-ia.html'] = dict(
          "Optimización de fichas para Google e IA",
          "Funciona sobre Bagisto, WooCommerce o web a medida",
          "Capacitación en video + soporte 30 días"],
-        "1,490", "2-4 semanas",
+        "900", "2-4 semanas",
         "Hola%20CrecePE%2C%20me%20interesa%20el%20plan%20Automatizaci%C3%B3n%20con%20IA%20para%20mi%20negocio",
-        [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 990."),
+        [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 500."),
          ("tienda-online-bagisto.html", "Tienda Online Bagisto + IA", "Vende 24/7 con catálogo, Yape/Plin y pedidos por WhatsApp.")],
         faqs_a,
         "Automatización con IA", "https://crecepe.com/servicios/automatizacion-ia.html"),
