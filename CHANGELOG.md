@@ -1,3 +1,10 @@
+## 2026-09-23 — Schema postalCode 13720
+
+### Cambiado
+
+- `postalCode: 13720` en bloque principal + 3 providers
+  (verdecito total en Rich Results). Puesto a mano por Juan.
+
 ## 2026-09-23 — Schema streetAddress
 
 ### Cambiado
