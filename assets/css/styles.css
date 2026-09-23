@@ -2075,6 +2075,9 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
 
 @media (max-width: 768px) {
     section { padding: 64px 0; }
+    /* Hero compacto en móvil: título + CTAs visibles sin scroll */
+    .hero { min-height: auto; padding: 110px 0 60px; }
+    .hero-content { gap: 24px; }
     /* Menú abierto: SIN blur, porque el blur la vuelve
        contenedor del drawer fijo y lo aplasta a su altura.
        Sin fondo forzado: solo el dim (velo + logo atenuado). */
