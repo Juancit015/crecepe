@@ -857,6 +857,7 @@ body.dark-mode .service-card:hover .service-icon { background: #fff; color: #0A1
 /* Pasos numerados en fichas (lenguaje de Proceso, sin JS) */
 .svc-steps { counter-reset: svcstep; }
 .svc-steps li > svg { display: none; }
+.svc-steps li { transition: transform 0.45s cubic-bezier(0.22, 0.9, 0.28, 1); }
 .svc-steps li::before {
     counter-increment: svcstep;
     content: counter(svcstep);
@@ -873,25 +874,28 @@ body.dark-mode .service-card:hover .service-icon { background: #fff; color: #0A1
     margin-top: 1px;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
-.svc-steps li:hover { transform: translateX(4px); }
-.svc-steps li:hover::before { background: var(--primary); color: #fff; }
-body.dark-mode .svc-steps li::before { background: rgba(0, 194, 255, 0.14); color: var(--accent-light); }
-body.dark-mode .svc-steps li:hover::before { background: var(--accent-light); color: var(--primary); }
+.svc-steps li:hover, .svc-steps li.active { transform: translateX(4px); }
+.svc-steps li:hover::before, .svc-steps li.active::before { background: var(--primary); color: #fff; }
+body.dark-mode .svc-steps li:hover::before, body.dark-mode .svc-steps li.active::before { background: var(--accent-light); color: var(--primary); }
 
-/* Checklist QA clicable en fichas */
-.qa-hint { font-size: 0.85rem; opacity: 0.75; margin: 0 0 6px; }
+/* Iconos narrativos en QA de fichas: lift + color en hover (PC) o .active (spy móvil) */
 .qa-check li {
-    cursor: pointer;
     border-radius: 10px;
     padding: 6px 8px;
     margin: 0 -8px;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.45s cubic-bezier(0.22, 0.9, 0.28, 1);
 }
-.qa-check li:hover { background: rgba(11, 47, 212, 0.06); transform: translateX(4px); }
-.qa-check li.done { background: rgba(37, 211, 102, 0.1); }
-.qa-check li.done svg { color: #25D366; }
-.qa-check li:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-body.dark-mode .qa-check li:hover { background: rgba(255, 255, 255, 0.06); }
+.qa-check li > svg {
+    flex-shrink: 0;
+    margin-top: 0;
+    color: var(--accent-dark);
+    transition: transform 0.35s ease, color 0.35s ease;
+}
+.qa-check li:hover, .qa-check li.active { background: rgba(11, 47, 212, 0.06); transform: translateX(4px); }
+.qa-check li:hover > svg, .qa-check li.active > svg { transform: translateY(-3px); color: var(--primary); }
+body.dark-mode .qa-check li:hover, body.dark-mode .qa-check li.active { background: rgba(255, 255, 255, 0.06); }
+body.dark-mode .qa-check li > svg { color: var(--accent-light); }
+body.dark-mode .qa-check li:hover > svg, body.dark-mode .qa-check li.active > svg { color: #fff; }
 
 /* Contadores animados (números reales) */
 .count { font-variant-numeric: tabular-nums; }
@@ -2182,13 +2186,13 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
 /* PRUEBA: reveal enmascarado por palabra en títulos/subtítulos de sección.
    Cada palabra sube desde su máscara con stagger. Solo transform+opacity.
    Sin JS el texto queda intacto; reduced-motion lo muestra directo. */
-.section-title .w-mask, .section-subtitle .w-mask {
+.section-title .w-mask, .section-subtitle .w-mask, .svc-h2 .w-mask {
     display: inline-block;
     overflow: hidden;
     padding-bottom: 0.1em;
     margin-bottom: -0.1em;
 }
-.section-title .w-word, .section-subtitle .w-word {
+.section-title .w-word, .section-subtitle .w-word, .svc-h2 .w-word {
     display: inline-block;
     transform: translateY(115%);
     transition: transform 0.7s cubic-bezier(0.22, 0.9, 0.28, 1);

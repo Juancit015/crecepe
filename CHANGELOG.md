@@ -1,3 +1,15 @@
+## 2026-09-24 — Fichas: reveal en h2, spy en pasos/QA, iconos QA
+
+### Cambiado
+
+- Word-reveal extendido a `.svc-h2` de fichas.
+- Pasos con transición suave + spy `.active`
+  (espejo Proceso, solo sin hover).
+- QA sin clics: 14 iconos Lucide narrativos
+  (zap, lupa, rayo...) con lift en hover/`.active`;
+  fuera emoji 😊 (lo representa el icono smile).
+- `?v=9` ×8 + generador. JSON válido.
+
 ## 2026-09-24 — Fichas interactivas (pasos, QA, contadores)
 
 ### Cambiado

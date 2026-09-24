@@ -337,7 +337,7 @@
     // Parte .section-title/.section-subtitle en palabras con máscara.
     // Sin JS no toca el DOM (texto intacto, SEO intacto).
     (function wordReveal() {
-        var els = document.querySelectorAll('.section-title, .section-subtitle');
+        var els = document.querySelectorAll('.section-title, .section-subtitle, .svc-h2');
         if (!els.length) return;
         els.forEach(function (el) {
             var n = 0;
@@ -440,11 +440,11 @@
         sync();
     })();
 
-    /* ---------- Opiniones: comilla activa al hacer scroll (solo sin hover) ---------- */
-    // Espejo del spy de Proceso: marca con .active la card que cruza el
-    // centro del viewport para alzar su comilla. En desktop manda el hover.
+    /* ---------- Spy de resaltado al hacer scroll (solo sin hover) ---------- */
+    // Opiniones, pasos y QA de fichas: marca con .active lo que cruza el
+    // centro del viewport. Espejo del spy de Proceso. En desktop manda el hover.
     (function opinionSpy() {
-        var cards = document.querySelectorAll('.opinion-card');
+        var cards = document.querySelectorAll('.opinion-card, .svc-steps li, .qa-check li');
         if (!cards.length || !('IntersectionObserver' in window)) return;
         if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -565,23 +565,6 @@
                 ul.classList.add('svc-steps');
             } else if (t.indexOf('Nos tomamos en serio') === 0) {
                 ul.classList.add('qa-check');
-                var hint = document.createElement('p');
-                hint.className = 'qa-hint';
-                hint.textContent = 'Toca cada prueba para simularla:';
-                ul.parentNode.insertBefore(hint, ul);
-                ul.querySelectorAll('li').forEach(function (li) {
-                    li.setAttribute('tabindex', '0');
-                    li.setAttribute('role', 'checkbox');
-                    li.setAttribute('aria-checked', 'false');
-                    function toggle() {
-                        var done = li.classList.toggle('done');
-                        li.setAttribute('aria-checked', done ? 'true' : 'false');
-                    }
-                    li.addEventListener('click', toggle);
-                    li.addEventListener('keydown', function (e) {
-                        if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); }
-                    });
-                });
             }
         });
 
