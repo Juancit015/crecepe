@@ -466,8 +466,19 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     width: 8px; height: 8px;
     border-radius: 50%;
     background: var(--accent-light);
-    animation: pulse 2s infinite;
-    will-change: transform;
+    position: relative;
+}
+/* Anillo expansible componible (transform+opacity): reemplaza el
+   box-shadow animado que marcaba Lighthouse como no compuesto */
+.pulse-dot::after, .avail-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--accent-light);
+    animation: ringPulse 2s infinite;
+    will-change: transform, opacity;
+    pointer-events: none;
 }
 
 .hero h1 {
@@ -650,8 +661,7 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     width: 8px; height: 8px;
     border-radius: 50%;
     background: var(--accent-light);
-    animation: pulse 2s infinite;
-    will-change: transform;
+    position: relative;
 }
 
 .ceo-description {
@@ -1751,8 +1761,19 @@ body.dark-mode .contact-card small a:hover { color: var(--accent-light); }
     position: absolute;
     bottom: 0; right: 0;
     z-index: 2;
-    animation: waPulse 2.5s infinite;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+/* Anillo del dial con transform+opacity (componible); la sombra base queda estática */
+.contact-dial__main::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #25D366;
+    animation: dialRing 2.5s infinite;
+    will-change: transform, opacity;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .contact-dial__main:hover { transform: scale(1.08); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55); }
@@ -2004,10 +2025,10 @@ body.dark-mode .opinion-card:hover .opinion-quote { background: #fff; color: #0A
 body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
 
 /* ============ Animaciones ============ */
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 194, 255, 0.5); }
-    70% { box-shadow: 0 0 0 9px rgba(0, 194, 255, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 194, 255, 0); }
+@keyframes ringPulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    70% { transform: scale(2.4); opacity: 0; }
+    100% { transform: scale(2.4); opacity: 0; }
 }
 
 @keyframes cardFloat {
@@ -2026,10 +2047,10 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     100% { opacity: 0; transform: translateY(0); }
 }
 
-@keyframes waPulse {
-    0% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.4); }
-    70% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.45), 0 0 0 16px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 8px 26px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0); }
+@keyframes dialRing {
+    0% { transform: scale(1); opacity: 0.5; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1.5); opacity: 0; }
 }
 
 /* Reveal on scroll */

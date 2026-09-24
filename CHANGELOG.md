@@ -1,3 +1,13 @@
+## 2026-09-24 — Anillos pulse componibles (PageSpeed desktop)
+
+### Cambiado
+
+- `assets/css/styles.css` (+ `styles.min.css?v=4`
+  en 8 páginas y generador): `pulse` y `waPulse`
+  (box-shadow animado, no componible) → `ringPulse`
+  y `dialRing` con transform+opacity en `::after`.
+  Efecto visual idéntico, cero repaint por frame.
+
 ## 2026-09-23 — Fix reflow forzado en scroll (PageSpeed)
 
 ### Cambiado
