@@ -1,3 +1,15 @@
+## 2026-09-24 — Fix títulos fichas + spy + barra compra móvil
+
+### Cambiado
+
+- Títulos huérfanos (fichas) reciben `.reveal`
+  antes del observer: ya no quedan ocultos.
+- `fichas()` movido antes del spy: pasos y QA
+  sí se iluminan en scroll/mouse.
+- Aside en móvil: barra fija compacta
+  (precio+CTA) que aparece tras 500px de scroll.
+- `?v=10` ×8 + generador.
+
 ## 2026-09-24 — Fichas: reveal en h2, spy en pasos/QA, iconos QA
 
 ### Cambiado

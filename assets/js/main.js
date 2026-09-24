@@ -76,6 +76,8 @@
         var y = window.pageYOffset || document.documentElement.scrollTop;
         onScroll(y);
         syncToTop(y);
+        // Barra de compra móvil: aparece al pasar el hero
+        document.body.classList.toggle('scrolled-past', y > 500);
         scrollTicking = false;
     }
     window.addEventListener('scroll', onScrollY, { passive: true });
@@ -340,6 +342,9 @@
         var els = document.querySelectorAll('.section-title, .section-subtitle, .svc-h2');
         if (!els.length) return;
         els.forEach(function (el) {
+            // Sin ancestro .reveal (fichas) las palabras quedarían ocultas:
+            // se le da .reveal al propio título ANTES de montar el observer.
+            if (!el.closest || !el.closest('.reveal')) el.classList.add('reveal');
             var n = 0;
             function wrapWords(node) {
                 var children = Array.prototype.slice.call(node.childNodes);
@@ -385,6 +390,57 @@
     } else {
         revealEls.forEach(function (el) { el.classList.add('visible'); });
     }
+
+    /* ---------- Fichas: pasos, QA clicable y contadores ---------- */
+    // Marca las listas por su encabezado (sin tocar el HTML): "Cómo lo
+    // hacemos" → pasos numerados; "Nos tomamos en serio" → checklist.
+    (function fichas() {
+        function nextList(h) {
+            var el = h.nextElementSibling, guard = 0;
+            while (el && guard++ < 4) {
+                if (el.tagName === 'UL') return el;
+                el = el.nextElementSibling;
+            }
+            return null;
+        }
+        document.querySelectorAll('.svc-h2').forEach(function (h) {
+            var t = h.textContent.trim();
+            var ul = nextList(h);
+            if (!ul) return;
+            if (t.indexOf('Cómo lo hacemos') === 0) {
+                ul.classList.add('svc-steps');
+            } else if (t.indexOf('Nos tomamos en serio') === 0) {
+                ul.classList.add('qa-check');
+            }
+        });
+
+        // Contadores: animan 0 → data-count al entrar en vista (solo cifras reales)
+        var counters = document.querySelectorAll('.count[data-count]');
+        if (!counters.length) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        function fmt(n) { return n.toLocaleString('es-PE'); }
+        if (!('IntersectionObserver' in window)) {
+            counters.forEach(function (el) { el.textContent = fmt(+el.getAttribute('data-count')); });
+            return;
+        }
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var el = entry.target;
+                obs.unobserve(el);
+                var target = +el.getAttribute('data-count');
+                var t0 = null;
+                function tick(t) {
+                    if (!t0) t0 = t;
+                    var p = Math.min((t - t0) / 1200, 1);
+                    el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3))));
+                    if (p < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            });
+        }, { threshold: 0.4 });
+        counters.forEach(function (el) { obs.observe(el); });
+    })();
 
     /* ---------- Proceso: paso activo al hacer scroll (solo sin hover) ---------- */
     // Marca con .active el paso del timeline que cruza el centro del viewport.
@@ -545,56 +601,7 @@
         requestUpdate();
     })();
 
-    /* ---------- Fichas: pasos, QA clicable y contadores ---------- */
-    // Marca las listas por su encabezado (sin tocar el HTML): "Cómo lo
-    // hacemos" → pasos numerados; "Nos tomamos en serio" → checklist.
-    (function fichas() {
-        function nextList(h) {
-            var el = h.nextElementSibling, guard = 0;
-            while (el && guard++ < 4) {
-                if (el.tagName === 'UL') return el;
-                el = el.nextElementSibling;
-            }
-            return null;
-        }
-        document.querySelectorAll('.svc-h2').forEach(function (h) {
-            var t = h.textContent.trim();
-            var ul = nextList(h);
-            if (!ul) return;
-            if (t.indexOf('Cómo lo hacemos') === 0) {
-                ul.classList.add('svc-steps');
-            } else if (t.indexOf('Nos tomamos en serio') === 0) {
-                ul.classList.add('qa-check');
-            }
-        });
 
-        // Contadores: animan 0 → data-count al entrar en vista (solo cifras reales)
-        var counters = document.querySelectorAll('.count[data-count]');
-        if (!counters.length) return;
-        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        function fmt(n) { return n.toLocaleString('es-PE'); }
-        if (!('IntersectionObserver' in window)) {
-            counters.forEach(function (el) { el.textContent = fmt(+el.getAttribute('data-count')); });
-            return;
-        }
-        var obs = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (!entry.isIntersecting) return;
-                var el = entry.target;
-                obs.unobserve(el);
-                var target = +el.getAttribute('data-count');
-                var t0 = null;
-                function tick(t) {
-                    if (!t0) t0 = t;
-                    var p = Math.min((t - t0) / 1200, 1);
-                    el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3))));
-                    if (p < 1) requestAnimationFrame(tick);
-                }
-                requestAnimationFrame(tick);
-            });
-        }, { threshold: 0.4 });
-        counters.forEach(function (el) { obs.observe(el); });
-    })();
 
     /* ---------- Consentimiento de cookies + Google Analytics ---------- */
     // GA solo se carga si el visitante acepta (Ley 29733). Sin elección
