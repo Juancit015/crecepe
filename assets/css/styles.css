@@ -108,7 +108,7 @@ section { padding: 90px 0; }
     margin-bottom: 14px;
 }
 
-.section-title span { color: var(--accent); }
+.section-title span:not(.w-mask):not(.w-word) { color: var(--accent); }
 
 .section-subtitle {
     font-size: 1.1rem;
@@ -2554,11 +2554,11 @@ body.dark-mode .hero-actions .btn-primary:hover { background: var(--accent-light
 body.dark-mode .hero-actions .btn-outline { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 255, 255, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 body.dark-mode .hero-actions .btn-outline:hover { background: #fff; border-color: #fff; color: #0A1F44; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2); }
 body:not(.dark-mode) .geo-section .section-badge { color: #fff; background: rgba(8, 15, 35, 0.55); }
-body:not(.dark-mode) .geo-section .section-title span { color: var(--accent-light); }
+body:not(.dark-mode) .geo-section .section-title span:not(.w-mask):not(.w-word) { color: var(--accent-light); }
 /* Proceso sobre foto oscura: header claro solo en modo claro */
 body:not(.dark-mode) #proceso .section-badge { color: var(--accent-light); background: rgba(8, 15, 35, 0.55); border-color: rgba(0, 194, 255, 0.5); }
 body:not(.dark-mode) #proceso .section-title { color: #fff; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
-body:not(.dark-mode) #proceso .section-title span { color: var(--accent-light); }
+body:not(.dark-mode) #proceso .section-title span:not(.w-mask):not(.w-word) { color: var(--accent-light); }
 body:not(.dark-mode) #proceso .section-subtitle { color: rgba(255, 255, 255, 0.92); text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
 
 /* ============ Dark mode ============ */
@@ -2692,7 +2692,7 @@ body.dark-mode .pricing-card--featured .pricing-cta:hover { background: var(--ac
 body.dark-mode .logo span { color: var(--accent-light); }
 
 /* Resaltados sólidos en oscuro para mantener contraste */
-body.dark-mode .section-title span,
+body.dark-mode .section-title span:not(.w-mask):not(.w-word),
 body.dark-mode .hero h1 .hl { color: var(--accent-light); }
 
 @media (max-width: 768px) {
