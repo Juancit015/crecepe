@@ -1,3 +1,14 @@
+## 2026-09-24 — Fichas con prueba, proceso, fit y QA
+
+### Cambiado
+
+- 4 bloques nuevos en las 3 fichas (lenguaje
+  general, sin centrar en Chávez): Prueba real
+  (enlace al caso), Cómo lo hacemos, ¿Es para ti?
+  y checklist "Nos tomamos en serio..." con visto
+  bueno. Solo clases existentes, JSON válido.
+  Generador no replicado (ya diverge): anotado.
+
 ## 2026-09-24 — Spy de comillas en opiniones (solo móvil)
 
 ### Cambiado
