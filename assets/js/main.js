@@ -545,6 +545,74 @@
         requestUpdate();
     })();
 
+    /* ---------- Fichas: pasos, QA clicable y contadores ---------- */
+    // Marca las listas por su encabezado (sin tocar el HTML): "Cómo lo
+    // hacemos" → pasos numerados; "Nos tomamos en serio" → checklist.
+    (function fichas() {
+        function nextList(h) {
+            var el = h.nextElementSibling, guard = 0;
+            while (el && guard++ < 4) {
+                if (el.tagName === 'UL') return el;
+                el = el.nextElementSibling;
+            }
+            return null;
+        }
+        document.querySelectorAll('.svc-h2').forEach(function (h) {
+            var t = h.textContent.trim();
+            var ul = nextList(h);
+            if (!ul) return;
+            if (t.indexOf('Cómo lo hacemos') === 0) {
+                ul.classList.add('svc-steps');
+            } else if (t.indexOf('Nos tomamos en serio') === 0) {
+                ul.classList.add('qa-check');
+                var hint = document.createElement('p');
+                hint.className = 'qa-hint';
+                hint.textContent = 'Toca cada prueba para simularla:';
+                ul.parentNode.insertBefore(hint, ul);
+                ul.querySelectorAll('li').forEach(function (li) {
+                    li.setAttribute('tabindex', '0');
+                    li.setAttribute('role', 'checkbox');
+                    li.setAttribute('aria-checked', 'false');
+                    function toggle() {
+                        var done = li.classList.toggle('done');
+                        li.setAttribute('aria-checked', done ? 'true' : 'false');
+                    }
+                    li.addEventListener('click', toggle);
+                    li.addEventListener('keydown', function (e) {
+                        if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); }
+                    });
+                });
+            }
+        });
+
+        // Contadores: animan 0 → data-count al entrar en vista (solo cifras reales)
+        var counters = document.querySelectorAll('.count[data-count]');
+        if (!counters.length) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        function fmt(n) { return n.toLocaleString('es-PE'); }
+        if (!('IntersectionObserver' in window)) {
+            counters.forEach(function (el) { el.textContent = fmt(+el.getAttribute('data-count')); });
+            return;
+        }
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var el = entry.target;
+                obs.unobserve(el);
+                var target = +el.getAttribute('data-count');
+                var t0 = null;
+                function tick(t) {
+                    if (!t0) t0 = t;
+                    var p = Math.min((t - t0) / 1200, 1);
+                    el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3))));
+                    if (p < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            });
+        }, { threshold: 0.4 });
+        counters.forEach(function (el) { obs.observe(el); });
+    })();
+
     /* ---------- Consentimiento de cookies + Google Analytics ---------- */
     // GA solo se carga si el visitante acepta (Ley 29733). Sin elección
     // guardada no se hace ninguna petición a Google. Revocar = desactivar

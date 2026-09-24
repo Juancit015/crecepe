@@ -1,3 +1,14 @@
+## 2026-09-24 — Fichas interactivas (pasos, QA, contadores)
+
+### Cambiado
+
+- `main.js?v=8` + `styles.min.css?v=8` (×8 y
+  generador): "Cómo lo hacemos" con pasos
+  numerados (hover como Proceso); checklist QA
+  clicable con teclado (role checkbox); contadores
+  2000 y 8 animados (cifras reales). Clases por JS
+  según encabezado: HTML casi intacto.
+
 ## 2026-09-24 — Fichas con prueba, proceso, fit y QA
 
 ### Cambiado
