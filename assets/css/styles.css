@@ -2520,13 +2520,19 @@ body.dark-mode .page-hero h1 span { color: var(--accent-light); }
 .svc-aside {
     position: sticky;
     top: 110px;
-    background: var(--white);
+    background: var(--primary);
+    border: 2px solid var(--primary);
     border-radius: var(--radius);
     padding: 30px 26px;
-    box-shadow: var(--shadow-card);
-    border: 1px solid rgba(10, 31, 68, 0.06);
+    box-shadow: 0 20px 56px rgba(10, 31, 68, 0.35);
     text-align: center;
 }
+.svc-aside .pricing-badge { background: var(--accent-light); color: var(--primary); }
+.svc-aside .svc-price { color: #fff; }
+.svc-aside .svc-weeks, .svc-aside .svc-note { color: #DCE6FA; }
+.svc-aside .svc-wa { background: rgba(0, 194, 255, 0.65); border-color: transparent; color: #fff; }
+.svc-aside .svc-wa:hover { background: var(--accent-light); color: var(--primary); }
+body.dark-mode .svc-aside { background: #16294F; border-color: #16294F; }
 .svc-price {
     font-size: 2.2rem;
     font-weight: 800;
@@ -2592,7 +2598,7 @@ body.dark-mode .legal a { color: var(--accent-light); }
         transform: translateY(140%);
         transition: transform 0.4s cubic-bezier(0.22, 0.9, 0.28, 1);
     }
-    body.scrolled-past .svc-aside { transform: none; }
+    body.scrolled-past:not(.buybar-down):not(.buybar-hidden) .svc-aside { transform: none; }
     .svc-aside .pricing-badge, .svc-aside .svc-note { display: none; }
     .svc-aside .svc-price { font-size: 1.35rem; margin: 0; grid-column: 1; grid-row: 1; }
     .svc-aside .svc-weeks { font-size: 0.75rem; margin: 0; grid-column: 1; grid-row: 2; }

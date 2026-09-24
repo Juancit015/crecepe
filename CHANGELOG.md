@@ -1,3 +1,14 @@
+## 2026-09-24 — Aside navy + barra móvil inteligente
+
+### Cambiado
+
+- Aside con look de card destacada (navy, badge
+  cyan, CTA cyan) como en Planes, claro/oscuro.
+- Móvil: la barra se esconde al bajar (vuelve al
+  subir) y se retira en relacionados/footer.
+  Desktop sticky ya moría solo: intacto.
+- `?v=11` ×8 + generador. JSON válido.
+
 ## 2026-09-24 — Fix títulos fichas + spy + barra compra móvil
 
 ### Cambiado
