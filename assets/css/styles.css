@@ -1669,6 +1669,80 @@ body.dark-mode .contact-card small a:hover { color: var(--accent-light); }
     padding: 50px 0 26px;
 }
 
+/* Banner de consentimiento de cookies (inyectado por JS): barra inferior
+   pequeña, coherente con el tema. Sin elección guardada GA no se carga. */
+.consent-banner {
+    position: fixed;
+    left: 16px; right: 16px; bottom: 16px;
+    z-index: 1001;
+    max-width: 560px;
+    margin: 0 auto;
+    background: #fff;
+    color: var(--primary);
+    border: 1px solid rgba(11, 47, 212, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(10, 31, 68, 0.18);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+.consent-banner.consent-visible { opacity: 1; visibility: visible; transform: none; }
+.consent-banner p { margin: 0; font-size: 0.85rem; line-height: 1.55; }
+.consent-banner a { color: var(--primary); }
+.consent-actions { display: flex; gap: 10px; }
+.consent-actions button {
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.consent-actions [data-consent="accepted"] {
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    color: #fff;
+}
+.consent-actions [data-consent="rejected"] {
+    background: transparent;
+    border: 2px solid rgba(11, 47, 212, 0.35);
+    color: var(--primary);
+}
+body.dark-mode .consent-banner {
+    background: #0F1D3A;
+    color: #DCE6FA;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+body.dark-mode .consent-banner a { color: var(--accent-light); }
+body.dark-mode .consent-actions [data-consent="accepted"] {
+    background: var(--accent-light);
+    border-color: var(--accent-light);
+    color: var(--primary);
+}
+body.dark-mode .consent-actions [data-consent="rejected"] {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+/* Botón "Cookies" del footer: se ve como enlace */
+.consent-open {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+@media (max-width: 480px) {
+    .consent-banner { left: 10px; right: 10px; bottom: 10px; }
+}
+
 .footer-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr;

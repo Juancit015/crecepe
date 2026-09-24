@@ -458,4 +458,85 @@
         requestUpdate();
     })();
 
+    /* ---------- Consentimiento de cookies + Google Analytics ---------- */
+    // GA solo se carga si el visitante acepta (Ley 29733). Sin elección
+    // guardada no se hace ninguna petición a Google. Revocar = desactivar
+    // inmediato vía ga-disable + la elección rige futuras visitas.
+    (function consent() {
+        var KEY = 'crecepe-consent';
+        var GA_ID = 'G-PFC4CHMJT4';
+        var loaded = false;
+        var banner = null;
+
+        function loadGA() {
+            if (loaded) return;
+            loaded = true;
+            window['ga-disable-' + GA_ID] = false;
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { window.dataLayer.push(arguments); };
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+            document.head.appendChild(s);
+            window.gtag('js', new Date());
+            window.gtag('config', GA_ID, { anonymize_ip: true });
+        }
+
+        function disableGA() {
+            window['ga-disable-' + GA_ID] = true;
+        }
+
+        function hideBanner() {
+            if (banner) banner.classList.remove('consent-visible');
+        }
+
+        function choose(value) {
+            try { localStorage.setItem(KEY, value); } catch (e) {}
+            if (value === 'accepted') { loadGA(); }
+            else { disableGA(); }
+            hideBanner();
+        }
+
+        function policyUrl() {
+            var p = location.pathname;
+            return (p.indexOf('/servicios/') !== -1 || p.indexOf('/casos/') !== -1) ? '../privacidad.html' : 'privacidad.html';
+        }
+
+        function showBanner() {
+            if (banner) { banner.classList.add('consent-visible'); return; }
+            banner = document.createElement('div');
+            banner.className = 'consent-banner';
+            banner.setAttribute('role', 'dialog');
+            banner.setAttribute('aria-label', 'Aviso de cookies');
+            banner.innerHTML = '<p>Usamos cookies de medición (Google Analytics) solo si aceptas. Ver <a href="' + policyUrl() + '">Política de Privacidad</a>.</p>' +
+                '<div class="consent-actions"><button type="button" data-consent="accepted">Aceptar</button>' +
+                '<button type="button" data-consent="rejected">Rechazar</button></div>';
+            document.body.appendChild(banner);
+            banner.addEventListener('click', function (e) {
+                var t = e.target;
+                var v = t && t.getAttribute ? t.getAttribute('data-consent') : null;
+                if (v) choose(v);
+            });
+            requestAnimationFrame(function () { banner.classList.add('consent-visible'); });
+        }
+
+        var stored = null;
+        try { stored = localStorage.getItem(KEY); } catch (e) {}
+        if (stored === 'accepted') { loadGA(); }
+        else if (stored === 'rejected') { disableGA(); }
+        else if (document.readyState === 'complete' || document.readyState === 'interactive') { showBanner(); }
+        else { document.addEventListener('DOMContentLoaded', showBanner); }
+
+        // Enlace "Cookies" del footer: borra la elección y reabre el banner
+        document.addEventListener('click', function (e) {
+            var t = e.target;
+            if (t && t.getAttribute && t.getAttribute('data-consent-open') !== null) {
+                e.preventDefault();
+                try { localStorage.removeItem(KEY); } catch (err) {}
+                disableGA();
+                showBanner();
+            }
+        });
+    })();
+
 })();

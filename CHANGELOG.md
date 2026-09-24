@@ -1,3 +1,17 @@
+## 2026-09-24 — Google Analytics con consentimiento (G-PFC4CHMJT4)
+
+### Cambiado
+
+- `assets/js/main.js?v=5`: banner de cookies
+  inyectado (Aceptar/Rechazar, claro/oscuro); gtag
+  se carga solo si acepta, con IP anonimizada.
+  Sin elección no hay peticiones a Google.
+- Enlace "Cookies" en footer de las 8 páginas
+  (reabre y revoca con `ga-disable` inmediato).
+- `privacidad.html` (página + generador): sección
+  "Analítica y cookies" reescrita.
+- `styles.min.css?v=5`. Lógica probada con stub.
+
 ## 2026-09-24 — Registro tardío (cierre de documentación)
 
 ### Cambiado
