@@ -1,3 +1,14 @@
+## 2026-09-24 — Fix prueba reveal: acentos cyan acotados
+
+### Cambiado
+
+- Reglas `.section-title span` (×4, claro/oscuro)
+  excluyen `.w-mask`/`.w-word`: el cyan queda solo
+  en el span de acento original. Revisado: 14/14
+  títulos+subtítulos con ancestro reveal (sin
+  riesgo de texto oculto), stagger topado en 12,
+  `?v=6` ×8, JSON válido.
+
 ## 2026-09-24 — PRUEBA: reveal enmascarado por palabra (revertible)
 
 ### Cambiado
