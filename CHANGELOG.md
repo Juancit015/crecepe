@@ -1,3 +1,13 @@
+## 2026-09-23 — Fix reflow forzado en scroll (PageSpeed)
+
+### Cambiado
+
+- `assets/js/main.js`: una sola lectura de scrollY
+  por frame y solo escrituras después (adiós 119ms
+  de reflow + 1 long task). `main.js?v=4` en las 8
+  páginas + `tools/build_pages.py`. Lógica
+  verificada con stub.
+
 ## 2026-09-23 — Hover con lift en iconos de servicios y opiniones
 
 ### Cambiado

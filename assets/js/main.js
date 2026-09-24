@@ -46,40 +46,44 @@
     /* ---------- Navbar: fondo al hacer scroll ---------- */
     var navbar = document.getElementById('navbar');
 
-    function onScroll() {
-        if (window.scrollY > 40) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+    // Lee UNA vez por frame y luego escribe: leer después de mutar
+    // el DOM fuerza reflow (lo marcaba Lighthouse: 119ms).
+    function onScroll(y) {
+        navbar.classList.toggle('scrolled', y > 40);
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', onScrollY, { passive: true });
     // Difiere la lectura inicial de scrollY fuera del parsing para evitar reflow
-    requestAnimationFrame(onScroll);
+    requestAnimationFrame(onScrollY);
 
     /* ---------- Botón volver arriba (desvanecido) ---------- */
     var toTop = document.getElementById('to-top');
 
-    function syncToTop() {
-        var y = window.pageYOffset || document.documentElement.scrollTop;
+    function syncToTop(y) {
         toTop.classList.toggle('is-visible', y > 300);
     }
 
-    // Un solo listener con rAF: evita lecturas geométricas por cada evento de scroll
+    // Un solo listener con rAF: una lectura geométrica por frame y
+    // solo escrituras después (cero reflows forzados en scroll)
     var scrollTicking = false;
-    function onScrollFrame() {
-        onScroll();
-        syncToTop();
-        scrollTicking = false;
-    }
-    window.addEventListener('scroll', function () {
+    function onScrollY() {
         if (!scrollTicking) {
             scrollTicking = true;
             requestAnimationFrame(onScrollFrame);
         }
-    }, { passive: true });
-    syncToTop();
+    }
+    function onScrollFrame() {
+        var y = window.pageYOffset || document.documentElement.scrollTop;
+        onScroll(y);
+        syncToTop(y);
+        scrollTicking = false;
+    }
+    window.addEventListener('scroll', onScrollY, { passive: true });
+    requestAnimationFrame(function () {
+        var y = window.pageYOffset || document.documentElement.scrollTop;
+        onScroll(y);
+        syncToTop(y);
+    });
 
     toTop.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });

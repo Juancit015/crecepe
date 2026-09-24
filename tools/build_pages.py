@@ -103,7 +103,7 @@ HEAD = '''<!DOCTYPE html>
 
 {footer}
 
-    <script src="{p}assets/js/main.js?v=3" defer></script>
+    <script src="{p}assets/js/main.js?v=4" defer></script>
 
 </body>
 
