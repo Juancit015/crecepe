@@ -1,3 +1,14 @@
+## 2026-09-24 — Registro tardío (cierre de documentación)
+
+### Cambiado
+
+- Se documenta lo que quedó sin entrada propia:
+  iconos Lucide oficiales (`977ede6`), `llms.txt`
+  alineado a contenido real (`9f067d4`) y sync de
+  specs + archive del change alineación
+  competitiva (`bb92806`). Sin cambios de código
+  en este commit, solo registro.
+
 ## 2026-09-24 — Anillos pulse componibles (PageSpeed desktop)
 
 ### Cambiado
