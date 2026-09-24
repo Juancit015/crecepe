@@ -2134,6 +2134,24 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
+/* PRUEBA: reveal enmascarado por palabra en títulos/subtítulos de sección.
+   Cada palabra sube desde su máscara con stagger. Solo transform+opacity.
+   Sin JS el texto queda intacto; reduced-motion lo muestra directo. */
+.section-title .w-mask, .section-subtitle .w-mask {
+    display: inline-block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+    margin-bottom: -0.1em;
+}
+.section-title .w-word, .section-subtitle .w-word {
+    display: inline-block;
+    transform: translateY(115%);
+    transition: transform 0.7s cubic-bezier(0.22, 0.9, 0.28, 1);
+    transition-delay: calc(var(--w-i, 0) * 55ms);
+    will-change: transform;
+}
+.visible .w-word { transform: translateY(0); }
+
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);

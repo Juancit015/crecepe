@@ -1,3 +1,13 @@
+## 2026-09-24 — PRUEBA: reveal enmascarado por palabra (revertible)
+
+### Cambiado
+
+- Títulos/subtítulos de sección suben por palabra
+  desde máscara (stagger 55ms, transform puro).
+  Sin JS el texto queda intacto. `?v=6` en 8
+  páginas + generador. Si no gusta: revertir este
+  commit.
+
 ## 2026-09-24 — Google Analytics con consentimiento (G-PFC4CHMJT4)
 
 ### Cambiado

@@ -333,6 +333,41 @@
         });
     });
 
+    /* ---------- PRUEBA: reveal enmascarado por palabra ---------- */
+    // Parte .section-title/.section-subtitle en palabras con máscara.
+    // Sin JS no toca el DOM (texto intacto, SEO intacto).
+    (function wordReveal() {
+        var els = document.querySelectorAll('.section-title, .section-subtitle');
+        if (!els.length) return;
+        els.forEach(function (el) {
+            var n = 0;
+            function wrapWords(node) {
+                var children = Array.prototype.slice.call(node.childNodes);
+                children.forEach(function (child) {
+                    if (child.nodeType === 3) {
+                        var frag = document.createDocumentFragment();
+                        child.textContent.split(/(\s+)/).forEach(function (part) {
+                            if (!part) return;
+                            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+                            var mask = document.createElement('span');
+                            mask.className = 'w-mask';
+                            var w = document.createElement('span');
+                            w.className = 'w-word';
+                            w.style.setProperty('--w-i', Math.min(n++, 12));
+                            w.textContent = part;
+                            mask.appendChild(w);
+                            frag.appendChild(mask);
+                        });
+                        node.replaceChild(frag, child);
+                    } else if (child.nodeType === 1) {
+                        wrapWords(child);
+                    }
+                });
+            }
+            wrapWords(el);
+        });
+    })();
+
     /* ---------- Reveal on scroll ---------- */
     var revealEls = document.querySelectorAll('.reveal');
 
