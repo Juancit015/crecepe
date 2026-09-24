@@ -440,6 +440,58 @@
         sync();
     })();
 
+    /* ---------- Opiniones: comilla activa al hacer scroll (solo sin hover) ---------- */
+    // Espejo del spy de Proceso: marca con .active la card que cruza el
+    // centro del viewport para alzar su comilla. En desktop manda el hover.
+    (function opinionSpy() {
+        var cards = document.querySelectorAll('.opinion-card');
+        if (!cards.length || !('IntersectionObserver' in window)) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var hoverMQ = window.matchMedia ? window.matchMedia('(hover: hover)') : null;
+        var current = null;
+        var spy = null;
+
+        function onEntries(entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    if (current && current !== entry.target) current.classList.remove('active');
+                    current = entry.target;
+                    current.classList.add('active');
+                } else if (entry.target === current) {
+                    entry.target.classList.remove('active');
+                    current = null;
+                }
+            });
+        }
+
+        function clearActive() {
+            cards.forEach(function (c) { c.classList.remove('active'); });
+            current = null;
+        }
+
+        function start() {
+            if (spy) return;
+            spy = new IntersectionObserver(onEntries, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+            cards.forEach(function (c) { spy.observe(c); });
+        }
+
+        function stop() {
+            if (spy) { spy.disconnect(); spy = null; }
+            clearActive();
+        }
+
+        function sync() {
+            if (hoverMQ && hoverMQ.matches) { stop(); } else { start(); }
+        }
+
+        if (hoverMQ) {
+            if (hoverMQ.addEventListener) { hoverMQ.addEventListener('change', sync); }
+            else if (hoverMQ.addListener) { hoverMQ.addListener(sync); }
+        }
+        sync();
+    })();
+
     /* ---------- Parallax: respaldo para navegadores sin background-attachment: fixed (iOS) ---------- */
     // Emula el fondo fijo de .parallax-fondo ajustando background-position-y
     // con rAF solo en los elementos visibles. No corre con reduced-motion.

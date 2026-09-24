@@ -1,3 +1,14 @@
+## 2026-09-24 — Spy de comillas en opiniones (solo móvil)
+
+### Cambiado
+
+- `main.js?v=7`: `opinionSpy` espejo de Proceso
+  (centro del viewport → `.active`, solo sin
+  hover y sin `reduced-motion`).
+- `styles.min.css?v=7`: `.opinion-card.active
+  .opinion-quote` con lift + color (claro/oscuro).
+  Transform puro, ?v=7 ×8.
+
 ## 2026-09-24 — Fix prueba reveal: acentos cyan acotados
 
 ### Cambiado

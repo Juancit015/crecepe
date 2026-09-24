@@ -2063,6 +2063,9 @@ body.dark-mode .opiniones-section .section-subtitle { color: #fff; }
     transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
 }
 .opinion-card:hover .opinion-quote { background: var(--primary); color: #fff; transform: translateY(-4px); }
+/* Spy móvil (sin hover): mismo efecto cuando la card cruza el centro */
+.opinion-card.active .opinion-quote { background: var(--primary); color: #fff; transform: translateY(-4px); }
+body.dark-mode .opinion-card.active .opinion-quote { background: #fff; color: #0A1F44; }
 body.dark-mode .opinion-card:hover .opinion-quote { background: #fff; color: #0A1F44; }
 .opinion-quote svg { width: 20px; height: 20px; }
 .opinion-text {
