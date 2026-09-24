@@ -1,3 +1,14 @@
+## 2026-09-23 — Hover con lift en iconos de servicios y opiniones
+
+### Cambiado
+
+- `assets/css/styles.css` (+ `styles.min.css`
+  regenerado): `.service-card:hover .service-icon`
+  se alza 6px y pasa a sólido (azul/blanco en claro,
+  blanco/navy en oscuro); `.opinion-quote` suma
+  lift de 4px a su cambio de color existente.
+  `prefers-reduced-motion` global lo apaga.
+
 ## 2026-09-23 — Iconos narrativos en cards de servicios
 
 ### Cambiado

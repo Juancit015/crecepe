@@ -812,7 +812,10 @@ body:not(.dark-mode) .navbar:not(.scrolled) .theme-toggle { color: #fff; }
     justify-content: center;
     margin-bottom: 22px;
     color: var(--accent-dark);
+    transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
 }
+.service-card:hover .service-icon { transform: translateY(-6px); background: var(--primary); color: #fff; }
+body.dark-mode .service-card:hover .service-icon { background: #fff; color: #0A1F44; }
 
 .service-card h3 {
     font-size: 1.3rem;
@@ -1962,9 +1965,9 @@ body.dark-mode .opiniones-section .section-subtitle { color: #fff; }
     align-items: center;
     justify-content: center;
     color: var(--primary);
-    transition: background 0.35s ease, color 0.35s ease;
+    transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
 }
-.opinion-card:hover .opinion-quote { background: var(--primary); color: #fff; }
+.opinion-card:hover .opinion-quote { background: var(--primary); color: #fff; transform: translateY(-4px); }
 body.dark-mode .opinion-card:hover .opinion-quote { background: #fff; color: #0A1F44; }
 .opinion-quote svg { width: 20px; height: 20px; }
 .opinion-text {
