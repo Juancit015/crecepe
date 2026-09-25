@@ -15,14 +15,14 @@ El aside de cada ficha MUST mostrar badge pill, nombre del plan (h3), precio con
 - **WHEN** el visitante compara el aside de una ficha con la card destacada del home
 - **THEN** reconoce el mismo diseño (badge, precio, CTA) adaptado al plan de la ficha
 
-### Requirement: Card de precio incrustada entre QA y FAQ en móvil
+### Requirement: Card de precio tras Prueba en móvil
 
-En viewports ≤992px el aside MUST mostrarse como card completa fija dentro del flujo, ubicada entre la sección de rigor ("Nos tomamos en serio tu sitio") y "Preguntas frecuentes", con badge, nombre del plan, precio con plazo, mini-lista, CTA y nota, sin sticky viajero ni posicionamiento fijo. MUST verse como una card de Planes incrustada en su sección. La zona inferior del viewport MUST quedar siempre libre y no existe ningún elemento flotante de compra.
+En viewports ≤992px el aside MUST mostrarse como card completa fija dentro del flujo, ubicada tras la sección "Prueba real" (slot `order` tras el 4º `h2`), con badge, nombre del plan, precio con plazo, mini-lista, CTA y nota, sin sticky viajero ni posicionamiento fijo. MUST verse como una card de Planes incrustada en su sección. La zona inferior del viewport MUST quedar siempre libre y no existe ningún elemento flotante de compra.
 
-#### Scenario: Precio en el momento caliente
+#### Scenario: Precio con contexto
 
-- **WHEN** el visitante lee una ficha en móvil y termina la sección de rigor
-- **THEN** encuentra la card completa de precio antes del FAQ, sin haberla visto flotar durante la lectura
+- **WHEN** el visitante lee una ficha en móvil y termina "Prueba real"
+- **THEN** encuentra la card completa de precio con propuesta de valor y prueba encima, sin haberla visto flotar durante la lectura
 
 #### Scenario: Sin flotantes de compra
 
