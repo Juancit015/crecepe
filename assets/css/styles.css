@@ -2596,7 +2596,7 @@ body.dark-mode .legal a { color: var(--accent-light); }
     /* Card incrustada entre QA y FAQ: .svc-main se disuelve y sus hijos
        + el aside se ordenan en el grid (sin markup, sin sticky, sin fixed) */
     .svc-main { display: contents; }
-    .svc-aside { order: 9; position: static; margin: 10px 0 34px; padding: 38px 30px; }
+    .svc-aside { order: 9; position: static; margin: 10px auto 34px; max-width: 440px; padding: 38px 30px; }
     .svc-aside h3 { font-size: 1.35rem; margin: 12px 0 8px; }
     .svc-aside .svc-price { font-size: 2rem; margin: 0; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.18); }
     .svc-aside .svc-weeks { font-size: 0.85rem; margin: 0 0 22px; padding-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.18); }

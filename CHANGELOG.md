@@ -1,3 +1,12 @@
+## 2026-09-24 — Card contenida en tablet (card-tablet-compacta)
+
+### Cambiado
+
+- Aside móvil con `max-width: 440px` +
+  centrado: ya no domina en tablet. En
+  móvil chico sigue a una columna.
+- `?v=18` ×8 + generador + minificado.
+
 ## 2026-09-24 — Card móvil paridad Planes (card-paridad-planes)
 
 ### Cambiado

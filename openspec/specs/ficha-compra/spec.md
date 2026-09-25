@@ -15,16 +15,25 @@ El aside de cada ficha MUST mostrar badge pill, nombre del plan (h3), precio con
 - **WHEN** el visitante compara el aside de una ficha con la card destacada del home
 - **THEN** reconoce el mismo diseño (badge, precio, CTA) adaptado al plan de la ficha
 
-### Requirement: Compra móvil sticky en flujo (reemplaza mini-barra fija)
+### Requirement: Card de precio incrustada entre QA y FAQ en móvil
 
-En viewports ≤992px el aside MUST mostrarse como card compacta dentro del flujo (nombre del plan, precio con plazo y CTA de ancho natural; mini-lista, badge y nota ocultos), ubicada tras la intro mediante `order` y con `position: sticky` bajo el header. MUST acompañar la lectura y soltarse sola al terminar el layout, sin superponerse nunca a "También te puede interesar" ni al footer. El mecanismo `buybar-*` por JS (`scrolled-past`, `buybar-down`, `buybar-hidden`) queda retirado en las fichas. La zona inferior del viewport (flotantes ↑ y WhatsApp) MUST quedar siempre libre.
+En viewports ≤992px el aside MUST mostrarse como card completa fija dentro del flujo, ubicada entre la sección de rigor ("Nos tomamos en serio tu sitio") y "Preguntas frecuentes", con badge, nombre del plan, precio con plazo, mini-lista, CTA y nota, sin sticky viajero ni posicionamiento fijo. MUST verse como una card de Planes incrustada en su sección. La zona inferior del viewport MUST quedar siempre libre y no existe ningún elemento flotante de compra.
 
-#### Scenario: Card que acompaña sin tapar
+#### Scenario: Precio en el momento caliente
 
-- **WHEN** el visitante hace scroll por una ficha en móvil
-- **THEN** la card compacta sigue visible bajo el header durante la lectura y se suelta antes de relacionados, sin cubrir nunca contenido, footer ni flotantes
+- **WHEN** el visitante lee una ficha en móvil y termina la sección de rigor
+- **THEN** encuentra la card completa de precio antes del FAQ, sin haberla visto flotar durante la lectura
 
-#### Scenario: Sin barra fija ni JS de show/hide
+#### Scenario: Sin flotantes de compra
 
 - **WHEN** el visitante abre cualquier ficha en un viewport ≤992px con la caché limpia
-- **THEN** no existe barra `fixed` inferior ni parpadeos de aparición: solo la card sticky en flujo
+- **THEN** no hay sticky viajero ni barra fija: la compra vive solo en su sección, como en Planes
+
+### Requirement: Card móvil indistinguible de Planes
+
+En viewports ≤992px la card del aside MUST replicar las proporciones de `.pricing-card--featured` del home: mismo padding, banda de precio con bordes, lista con el ritmo de `pricing-features` y CTA con igual ancho y radio. Un visitante que compare ambas MUST sentir el mismo diseño.
+
+#### Scenario: Paridad con Planes en móvil
+
+- **WHEN** el visitante ve la card incrustada en una ficha en móvil y luego la destacada en Planes
+- **THEN** reconoce idénticas proporciones (padding, banda de precio, lista, CTA)
