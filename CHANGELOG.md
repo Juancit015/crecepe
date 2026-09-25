@@ -1,3 +1,13 @@
+## 2026-09-24 — Híbrido Airbnb móvil (hibrido-airbnb-movil)
+
+### Cambiado
+
+- Card full quieta tras Prueba + mini-barra
+  post-card (precio + CTA) por observers:
+  aparece tras la card, se retira al final,
+  flotantes libres. Sin heurísticas scroll-Y.
+- `?v=20` ×8 + generador + minificado.
+
 ## 2026-09-24 — Seguidora tras Prueba (seguidora-tras-prueba)
 
 ### Cambiado

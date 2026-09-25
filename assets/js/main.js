@@ -79,6 +79,37 @@
         scrollTicking = false;
     }
 
+    /* ---------- Mini-barra post-card (híbrido Airbnb, solo fichas) ---------- */
+    // Visible ⇔ card real fuera del viewport y fuera de related/footer.
+    // Sin .buybar en el DOM (home, casos) no hace nada.
+    (function buybarPostCard() {
+        var bar = document.querySelector('.buybar');
+        var card = document.querySelector('.svc-aside');
+        if (!bar || !card || !('IntersectionObserver' in window)) return;
+        var cardGone = false;
+        var atEnd = false;
+        function sync() {
+            document.body.classList.toggle('buybar-on', cardGone && !atEnd);
+        }
+        new IntersectionObserver(function (entries) {
+            cardGone = !entries[0].isIntersecting;
+            sync();
+        }, { threshold: 0 }).observe(card);
+        var zones = document.querySelectorAll('.page-related, .footer');
+        if (zones.length) {
+            var visible = new Set();
+            var endObs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) { visible.add(entry.target); }
+                    else { visible.delete(entry.target); }
+                });
+                atEnd = visible.size > 0;
+                sync();
+            }, { threshold: 0 });
+            zones.forEach(function (z) { endObs.observe(z); });
+        }
+    })();
+
     window.addEventListener('scroll', onScrollY, { passive: true });
     requestAnimationFrame(function () {
         var y = window.pageYOffset || document.documentElement.scrollTop;
