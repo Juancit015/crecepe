@@ -1,3 +1,13 @@
+## 2026-09-24 — Aside espejo de Planes + mini-barra (ficha-compra)
+
+### Cambiado
+
+- Aside de las 3 fichas con h3 + mini-lista y
+  hover lift, espejo de la destacada (navy, AA).
+- Barra móvil mini (~56px): precio + CTA, sin
+  h3/mini/badge/nota; conserva smart-hide.
+- `?v=12` ×8 + generador + minificado.
+
 ## 2026-09-24 — Aside navy + barra móvil inteligente
 
 ### Cambiado
