@@ -15,16 +15,16 @@ El aside de cada ficha MUST mostrar badge pill, nombre del plan (h3), precio con
 - **WHEN** el visitante compara el aside de una ficha con la card destacada del home
 - **THEN** reconoce el mismo diseño (badge, precio, CTA) adaptado al plan de la ficha
 
-### Requirement: Mini-barra móvil que no tapa
+### Requirement: Compra móvil sticky en flujo (reemplaza mini-barra fija)
 
-En viewports ≤992px el aside MUST medir como máximo 92px de alto en una sola fila (precio + CTA), aparecer solo tras pasar el hero, esconderse al bajar y retirarse en relacionados/footer. Todo contenido extra del aside (badge, h3, mini-lista, nota) MUST permanecer oculto en este modo para no estirar la barra.
+En viewports ≤992px el aside MUST mostrarse como card compacta dentro del flujo (nombre del plan, precio con plazo y CTA de ancho natural; mini-lista, badge y nota ocultos), ubicada tras la intro mediante `order` y con `position: sticky` bajo el header. MUST acompañar la lectura y soltarse sola al terminar el layout, sin superponerse nunca a "También te puede interesar" ni al footer. El mecanismo `buybar-*` por JS (`scrolled-past`, `buybar-down`, `buybar-hidden`) queda retirado en las fichas. La zona inferior del viewport (flotantes ↑ y WhatsApp) MUST quedar siempre libre.
 
-#### Scenario: Barra compacta
+#### Scenario: Card que acompaña sin tapar
 
-- **WHEN** el visitante hace scroll en móvil en una ficha
-- **THEN** ve una barra fina con precio y Consultar que nunca cubre más de 92px ni aparece sobre relacionados o footer
+- **WHEN** el visitante hace scroll por una ficha en móvil
+- **THEN** la card compacta sigue visible bajo el header durante la lectura y se suelta antes de relacionados, sin cubrir nunca contenido, footer ni flotantes
 
-#### Scenario: Regresión de barra gigante (2026-09-24)
+#### Scenario: Sin barra fija ni JS de show/hide
 
 - **WHEN** el visitante abre cualquier ficha en un viewport ≤992px con la caché limpia
-- **THEN** la barra mide como máximo 92px de alto y muestra solo precio, plazo micro y CTA en una fila, sin bloques navy de pantalla completa
+- **THEN** no existe barra `fixed` inferior ni parpadeos de aparición: solo la card sticky en flujo

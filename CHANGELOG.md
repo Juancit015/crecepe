@@ -1,3 +1,12 @@
+## 2026-09-24 — Card incrustada entre QA y FAQ (embed-card-precio-movil)
+
+### Cambiado
+
+- Móvil: card completa fija entre rigor y
+  FAQ vía `display: contents` + `order`
+  (CSS puro, sin markup). Cero flotantes.
+- `?v=16` ×8 + generador + minificado.
+
 ## 2026-09-24 — Card compacta sticky en móvil (sticky-compacto-movil)
 
 ### Cambiado
