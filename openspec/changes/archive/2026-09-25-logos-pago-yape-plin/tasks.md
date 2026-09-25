@@ -10,5 +10,5 @@
 
 ## 3. Lanzamiento y documentación
 
-- [ ] 3.1 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py`, registrar en `CHANGELOG.md` y commitear
+- [x] 3.1 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py`, registrar en `CHANGELOG.md` y commitear
 - [ ] 3.2 Sync de deltas a `medios-pago` (nuevo) y `seo-contenido`, archivar el change y reportar
