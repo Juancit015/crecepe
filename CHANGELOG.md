@@ -1,3 +1,13 @@
+## 2026-09-24 — Barra afinada: slim + flotantes quietos
+
+### Arreglado
+
+- Barra ~52px (era ~64): menos padding y type.
+- Flecha ↑ intacta (libra por geometría);
+  dial WA se oculta con barra visible y
+  vuelve al esconderse. Cero choques.
+- Spec hibrido actualizado en el change.
+
 ## 2026-09-24 — Híbrido Airbnb móvil (hibrido-airbnb-movil)
 
 ### Cambiado
