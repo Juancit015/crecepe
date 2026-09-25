@@ -1,3 +1,10 @@
+## 2026-09-25 — Aside sin scroll interno
+
+### Arreglado
+
+- Fuera `max-height`/`overflow` del aside: con viewport bajo (≤800px de alto) la card pasa a flujo completo, siempre entera; en alto sigue sticky con `top: 88px`.
+- `?v=32` ×8 + generador + minificado.
+
 ## 2026-09-25 — Aside sticky responsive
 
 ### Arreglado
