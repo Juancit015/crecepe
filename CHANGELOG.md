@@ -1,3 +1,10 @@
+## 2026-09-25 — Aside sticky responsive
+
+### Arreglado
+
+- `.svc-aside` con `top: 88px` + `max-height: calc(100vh - 112px)` y scroll interno (`overscroll-behavior: contain`): nunca se corta en laptop 13"; móvil neutralizado (estática, sin altura máxima).
+- `?v=31` ×8 + generador + minificado.
+
 ## 2026-09-25 — Restauración de fichas y casos
 
 ### Arreglado

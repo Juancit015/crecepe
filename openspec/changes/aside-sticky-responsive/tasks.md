@@ -1,7 +1,7 @@
 ## 1. Aside sticky responsive
 
-- [ ] 1.1 Ajustar `top` (~88-92px, medido contra navbar real), agregar `max-height: calc(100vh - top - 24px)` + `overflow-y: auto` + `overscroll-behavior: contain` + scrollbar fina en `.svc-aside` desktop, regenerar `styles.min.css`
-- [ ] 1.2 Probar a 1366×753 (captura evidencial: card completa en presencia/tienda/automatización), 1280×720 y viewport alto sin cambios; móvil ≤992px intacto, claro/oscuro
+- [x] 1.1 Ajustar `top` (~88-92px, medido contra navbar real), agregar `max-height: calc(100vh - top - 24px)` + `overflow-y: auto` + `overscroll-behavior: contain` + scrollbar fina en `.svc-aside` desktop, regenerar `styles.min.css`
+- [x] 1.2 Probar a 1366×753 (captura evidencial: card completa en presencia/tienda/automatización), 1280×720 y viewport alto sin cambios; móvil ≤992px intacto, claro/oscuro
 
 ## 2. Lanzamiento y documentación
 
