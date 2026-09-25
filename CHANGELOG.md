@@ -1,3 +1,12 @@
+## 2026-09-24 — Copy de mini-listas del aside
+
+### Cambiado
+
+- Presencia: "SEO y GEO profesional incluido".
+- Tienda: "Pagos por Yape, Plin y WhatsApp".
+- IA: "Carga masiva con IA". Solo copy visible,
+  sin tocar schemas ni headings (SEO intacto).
+
 ## 2026-09-24 — Sticky real del aside (aside-sticky-servicios)
 
 ### Arreglado
