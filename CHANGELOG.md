@@ -1,12 +1,3 @@
-## 2026-09-24 — Aside con más aire (paridad Planes)
-
-### Cambiado
-
-- Aside desktop con padding 38/30, h3 1.35rem
-  y mini-lista con respiro, a la par de las
-  cards de Planes. Móvil intacto.
-- `?v=14` ×8 + generador + minificado.
-
 ## 2026-09-24 — Sticky real del aside (aside-sticky-servicios)
 
 ### Arreglado
