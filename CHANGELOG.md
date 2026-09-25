@@ -1,3 +1,12 @@
+## 2026-09-24 — Seguidora tras Prueba (seguidora-tras-prueba)
+
+### Cambiado
+
+- Móvil: card compacta (~154px) tras Prueba
+  con sticky (slot `order` 5/6, sin markup).
+  Intro libre arriba; se suelta sola.
+- `?v=19` ×8 + generador + minificado.
+
 ## 2026-09-24 — Card contenida en tablet (card-tablet-compacta)
 
 ### Cambiado
