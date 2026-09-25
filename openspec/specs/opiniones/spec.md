@@ -18,3 +18,12 @@ El sistema SHALL mostrar 3 testimonios cuyos textos describan resultados de web 
 #### Scenario: Datos estructurados coherentes
 - **WHEN** un buscador lee el JSON-LD de reseñas
 - **THEN** los autores coinciden con los nombres visibles en las tarjetas
+
+### Requirement: Opiniones legibles en tablet
+
+En viewports de 769–991px los testimonios MUST mostrarse sin apretujones: 2 columnas (media 900px), nunca 3 columnas de ~240px.
+
+#### Scenario: Tablet a 800px
+
+- **WHEN** el visitante abre Opiniones a ~800px de ancho
+- **THEN** cada testimonio tiene aire suficiente para avatar, cita y autor sin compresión
