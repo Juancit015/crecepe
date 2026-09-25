@@ -2570,9 +2570,9 @@ body.dark-mode .page-hero h1 span { color: var(--accent-light); }
     .svc-aside:hover { transform: translateY(-8px); box-shadow: 0 24px 64px rgba(10, 31, 68, 0.45); }
 }
 body.dark-mode .svc-aside { background: #16294F; border-color: #16294F; }
-/* Viewports bajos (laptop 13"): la card no cabe como sticky → flujo normal,
-   entera y sin scroll interno. Umbral 800px cubre card (~620px) + top + aire. */
-@media (max-height: 800px) {
+/* Viewports bajos: la card (medida 493px) no cabe como sticky → flujo normal,
+   entera y sin scroll interno. Umbral 600px = 493 + top 88 + aire. */
+@media (max-height: 600px) {
     .svc-aside { position: static; max-height: none; overflow-y: visible; }
 }
 .svc-price {

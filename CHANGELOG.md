@@ -1,3 +1,10 @@
+## 2026-09-25 — Umbral sticky medido
+
+### Arreglado
+
+- Media de altura de 800px a 600px (card real 493px, medida con Chromium): a 1366×753 el sticky vuelve y la card se ve entera; bajo 600px pasa a flujo.
+- `?v=33` ×8 + generador + minificado.
+
 ## 2026-09-25 — Aside sin scroll interno
 
 ### Arreglado
