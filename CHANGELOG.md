@@ -1,3 +1,11 @@
+## 2026-09-25 — Logos de pago Yape/Plin + paymentAccepted
+
+### Agregado
+
+- Badges con logo oficial (AVIF local, 19.6 KB total) + texto en footer, Planes y banda de garantías; `alt` limpio y dimensiones fijas, sin CLS.
+- `"paymentAccepted": ["Yape", "Plin", "Transferencia bancaria"]` en el schema y `priceRange` corregido a `"S/ 149 - S/ 2,990"` (fuera precios viejos).
+- `?v=28` ×8 + generador + minificado.
+
 ## 2026-09-24 — Banner atenuado e inerte con drawer abierto
 
 ### Arreglado

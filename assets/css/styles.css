@@ -1558,13 +1558,22 @@ body.dark-mode .case-actions .case-link:first-child { color: #fff; }
     margin-top: 14px;
 }
 .pay-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #0f1d3a;
+    background: #fff;
+    border: 1px solid rgba(10, 31, 68, 0.12);
     border-radius: 999px;
-    padding: 5px 14px;
+    padding: 4px 14px 4px 5px;
+}
+.pay-badge img {
+    width: 22px;
+    height: 22px;
+    display: block;
 }
 .footer-pay {
     display: flex;
@@ -1574,9 +1583,13 @@ body.dark-mode .case-actions .case-link:first-child { color: #fff; }
 }
 .footer-pay .pay-badge {
     font-size: 0.7rem;
-    padding: 3px 10px;
+    padding: 3px 11px 3px 4px;
     border-color: rgba(255, 255, 255, 0.25);
-    color: rgba(255, 255, 255, 0.85);
+    color: #0f1d3a;
+}
+.footer-pay .pay-badge img {
+    width: 18px;
+    height: 18px;
 }
 .pay-badges--center { justify-content: center; }
 .contact-card small a { color: var(--accent-dark); font-weight: 700; }
