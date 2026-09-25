@@ -1,3 +1,13 @@
+## 2026-09-24 — Fix barra móvil gigante (fix-mini-barra-movil)
+
+### Arreglado
+
+- La barra tapaba la pantalla: heredaba
+  `top: 110px` del sticky + `bottom: 10px` del
+  fixed y se estiraba. `top: auto` (1 línea).
+  Barra ≤92px, smart-hide y desktop intactos.
+- `?v=14` ×8 + generador + minificado.
+
 ## 2026-09-24 — Copy de mini-listas del aside
 
 ### Cambiado
