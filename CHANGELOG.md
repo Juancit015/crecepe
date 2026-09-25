@@ -1,3 +1,13 @@
+## 2026-09-24 — Card móvil paridad Planes (card-paridad-planes)
+
+### Cambiado
+
+- Card móvil con métricas de la destacada:
+  padding 38/30, banda de precio con bordes,
+  lista ritmo pricing-features y CTA full
+  radius 14 (no pill). Solo media 992px.
+- `?v=17` ×8 + generador + minificado.
+
 ## 2026-09-24 — Card incrustada entre QA y FAQ (embed-card-precio-movil)
 
 ### Cambiado
