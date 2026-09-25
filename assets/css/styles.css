@@ -2406,6 +2406,9 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
         font-size: 1.1rem;
     }
     .services-grid, .pricing-grid, .cases-grid, .opiniones-grid, .geo-grid { grid-template-columns: 1fr; }
+    /* Cards de una columna centradas con tope (tablet retrato ~768px):
+       respiran con aire lateral; en teléfono (<600px) el tope no aplica. */
+    .opiniones-grid, .geo-grid, .services-grid, .contact-grid { max-width: 600px; margin-left: auto; margin-right: auto; }
     .scroll-mouse { display: none; }
     .hero { padding: 110px 0 60px; min-height: auto; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }

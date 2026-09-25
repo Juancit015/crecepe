@@ -1,3 +1,10 @@
+## 2026-09-25 — Cards centradas en móvil/tablet
+
+### Arreglado
+
+- Grids de una columna (`opiniones`, `geo`, `services`, `contact`) centrados con tope 600px en ≤768px: aire lateral en iPad mini, teléfono intacto.
+- `?v=35` ×8 + generador + minificado.
+
 ## 2026-09-25 — Preview Planes + breakpoint tablet
 
 ### Arreglado
