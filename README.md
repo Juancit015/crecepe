@@ -18,14 +18,14 @@ Propuesta del sitio: *"Webs y tiendas que Google encuentra y la IA recomienda"*.
 Tres planes con precios referenciales en soles. El alcance final se define en el
 diagnóstico gratuito, sin costos ocultos.
 
-- **Presencia Digital** (desde S/ 990): sitio web de hasta 7 secciones, responsive
+- **Presencia Digital** (desde S/ 500): sitio web de hasta 7 secciones, responsive
   y de carga rápida, con SEO técnico + GEO base, botón de WhatsApp, formulario,
   Analytics y Search Console. Entrega en 2–3 semanas.
-- **Tienda Bagisto + IA** (desde S/ 2,990, el más pedido): todo lo del plan
+- **Tienda Bagisto + IA** (desde S/ 700, el más pedido): todo lo del plan
   Presencia más tienda Bagisto (catálogo, categorías y colecciones), hasta 50
   productos cargados (20 con IA), pagos Yape/Plin, pedidos por WhatsApp, envíos
   coordinados y Schema Store + Product. Entrega en 4–6 semanas con capacitación.
-- **Automatización con IA** (desde S/ 1,490): auditoría SEO + GEO del sitio actual,
+- **Automatización con IA** (desde S/ 900): auditoría SEO + GEO del sitio actual,
   chatbot de atención y ventas 24/7, carga masiva de productos con agentes de IA y
   optimización de fichas para Google e IA. Funciona sobre Bagisto, WooCommerce o
   web a medida. Entrega en 2–4 semanas.
