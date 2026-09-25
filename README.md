@@ -73,7 +73,8 @@ Además de la página inicial, el sitio es multipágina para SEO:
 - **Servicios** (`/servicios/`): una página por servicio con H1 orientado a
   búsqueda, qué incluye, FAQ propio con schema, precio, CTA a WhatsApp y
   breadcrumbs: `presencia-digital.html`, `tienda-online-bagisto.html`,
-  `automatizacion-ia.html`.
+  `automatizacion-ia.html`. Cada ficha lleva card lateral sticky con precio
+  (estática si la altura no alcanza) y foto de héroe propia.
 - **Casos** (`/casos/`): `az-consulting.html` y `novedades-chavez.html` con
   punto de partida, trabajo realizado y resultado.
 - **Legales** (raíz): `privacidad.html` (Ley N.° 29733) y `terminos.html`,
@@ -81,6 +82,8 @@ Además de la página inicial, el sitio es multipágina para SEO:
 - Las subpáginas se regeneran con `tools/build_pages.py`, que reutiliza
   navbar, dial, botón "volver arriba" y footer del index y ajusta las rutas
   relativas según la profundidad de cada página.
+- **Footer:** 3 columnas en desktop, 1 columna centrada en tablet/móvil, con
+  badges de pago (Yape, Plin, Transferencia con logo) y `paymentAccepted` en el schema.
 
 ## Identidad y tema
 
@@ -115,3 +118,6 @@ Además de la página inicial, el sitio es multipágina para SEO:
 - Imágenes del sitio en AVIF optimizado (hero, servicios, fondos de secciones
   SEO+GEO y Opiniones, fondos de las 3 páginas de servicios, avatares de
   testimonios).
+- Responsive: breakpoints en 992px y 768px más intermedio en 900px (Opiniones
+  a 2 col en tablet) y tope 600px centrado para cards de una columna en móvil;
+  acordeón de Planes con preview de 3 items en móvil.
