@@ -58,16 +58,16 @@ El aside `.svc-aside` de cada página de servicio SHALL acompañar el scroll en 
 - **WHEN** el visitante tiene `prefers-reduced-motion` activado
 - **THEN** el sticky sigue funcionando (es posición, no animación) sin transiciones asociadas
 
-### Requirement: Aside sticky nunca cortado
+### Requirement: Card siempre entera, sin scroll interno
 
-En desktop (>992px) el aside sticky MUST mostrar su contenido completo en cualquier altura de viewport ≥600px: si la card no cabe entre el `top` y el borde inferior, MUST ofrecer scroll interno en vez de cortar la parte baja (CTA/nota). El scroll interno MUST NOT atrapar el scroll de la página al llegar a sus extremos.
+En desktop (>992px) la card del aside MUST verse siempre completa, sin recortes ni scroll interno. Si la altura del viewport no alcanza para el sticky (≤800px), el aside MUST pasar a estático en flujo normal, mostrando la card entera de arriba a abajo. En viewports altos el sticky funciona como siempre (`top: 88px`).
 
-#### Scenario: Laptop 13" sin cortes
+#### Scenario: Laptop 13" con card completa
 
-- **WHEN** el visitante abre una ficha a 1366×753 (captura evidencial: presencia cortada, tienda al límite)
-- **THEN** la card muestra CTA y nota completos, con scroll interno solo si la altura no alcanza
+- **WHEN** el visitante abre presencia a 1366×753
+- **THEN** la card se ve entera en flujo, sin scroll interno ni partes ocultas
 
-#### Scenario: Scroll interno no atrapa la página
+#### Scenario: Sticky intacto en viewport alto
 
-- **WHEN** el visitante rueda sobre la card hasta el final de su scroll interno
-- **THEN** la página sigue scrolleando con normalidad
+- **WHEN** el visitante abre una ficha con altura >800px
+- **THEN** el aside sigue fijo al hacer scroll, igual que antes
