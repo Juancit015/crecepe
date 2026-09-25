@@ -2262,7 +2262,9 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     .hero-ceo-card { max-width: 350px; margin: 0 auto; }
     .services-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+    .footer-about p { margin-left: auto; margin-right: auto; }
+    .footer-pay { justify-content: center; }
 }
 
 /* Tablet intermedia (769–900px): opiniones es el único grid que seguía en
@@ -2411,7 +2413,8 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     .opiniones-grid, .geo-grid, .services-grid, .contact-grid, .pricing-grid, .cases-grid, .faq-list { max-width: 600px; margin-left: auto; margin-right: auto; }
     .scroll-mouse { display: none; }
     .hero { padding: 110px 0 60px; min-height: auto; }
-    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; justify-items: center; text-align: center; }
+    .footer-pay { justify-content: center; }
     .contact-dial { width: 52px; height: 52px; bottom: 18px; right: 18px; }
     .contact-dial__main { width: 52px; height: 52px; }
     .contact-dial__main svg { width: 28px; height: 28px; }
