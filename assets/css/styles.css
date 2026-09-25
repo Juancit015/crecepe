@@ -1723,7 +1723,10 @@ body.dark-mode .contact-card small a:hover { color: var(--accent-light); }
 .consent-banner {
     position: fixed;
     left: 16px; right: 16px; bottom: 16px;
-    z-index: 1001;
+    /* Mapa de apilado móvil: dial/to-top 999, velo 999, drawer 1000,
+       hamburguesa 1001. El banner va a 999 (debajo del drawer) y sigue
+       sobre dial/velo porque se inyecta último en el body. */
+    z-index: 999;
     max-width: 560px;
     margin: 0 auto;
     background: #fff;

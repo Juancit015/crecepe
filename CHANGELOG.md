@@ -1,3 +1,10 @@
+## 2026-09-24 — Banner de cookies detrás del drawer
+
+### Arreglado
+
+- `.consent-banner` a `z-index: 999`: el drawer (1000) y la hamburguesa/X (1001) quedan por encima en móvil; el banner sigue sobre dial, to-top y velo (empate a 999 ganado por orden DOM).
+- `?v=26` ×8 + generador + minificado.
+
 ## 2026-09-24 — Fuera conectores de timeline en fichas
 
 ### Quitado
