@@ -1,3 +1,12 @@
+## 2026-09-24 — Timeline en pasos y QA (timeline-fichas)
+
+### Cambiado
+
+- Riel vertical + aire en `.svc-steps` y
+  `.qa-check`, espejo de Proceso, con modo
+  oscuro. Spy `.active` intacto.
+- `?v=23` ×8 + generador + minificado.
+
 ## 2026-09-24 — Spy secuencial sin saltos (spy-secuencial-movil)
 
 ### Arreglado
