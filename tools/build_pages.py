@@ -20,9 +20,11 @@ def adapt(prefix):
     nav = navbar_raw.replace('href="#', 'href="{p}index.html#'.format(p=prefix))
     nav = nav.replace('src="assets/', 'src="{p}assets/'.format(p=prefix))
     nav = nav.replace('srcset="assets/', 'srcset="{p}assets/'.format(p=prefix))
+    nav = nav.replace(', assets/', ', {p}assets/'.format(p=prefix))
     foot = footer_raw.replace('href="#', 'href="{p}index.html#'.format(p=prefix))
     foot = foot.replace('src="assets/', 'src="{p}assets/'.format(p=prefix))
     foot = foot.replace('srcset="assets/', 'srcset="{p}assets/'.format(p=prefix))
+    foot = foot.replace(', assets/', ', {p}assets/'.format(p=prefix))
     # Footer: servicios apuntan a las paginas dedicadas
     foot = foot.replace('href="{p}index.html#servicios">Presencia Digital'.format(p=prefix), 'href="{p}servicios/presencia-digital.html">Presencia Digital'.format(p=prefix))
     foot = foot.replace('href="{p}index.html#servicios">Tienda Bagisto + IA'.format(p=prefix), 'href="{p}servicios/tienda-online-bagisto.html">Tienda Bagisto + IA'.format(p=prefix))

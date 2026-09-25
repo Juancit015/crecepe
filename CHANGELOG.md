@@ -9,7 +9,7 @@
 
 ### Arreglado
 
-- Generador adapta `srcset` (el logo no cargaba en servicios/casos por `srcset` sin `../`).
+- Generador adapta `srcset` (el logo no cargaba en servicios/casos por `srcset` sin `../`, incluyendo entradas tras la coma).
 - Héroes de las 3 fichas con su foto + velo (spec `fondos-servicios`): clases `has-bg` desde el generador.
 - `?v=29` ×8 + generador + minificado.
 
