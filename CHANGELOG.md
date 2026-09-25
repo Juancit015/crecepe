@@ -1,13 +1,3 @@
-## 2026-09-24 — Fichas a ancho completo (fichas-ancho-completo)
-
-### Cambiado
-
-- Desktop sin sidebar: contenido a 1140px como
-  el home; card 600px centrada entre QA y FAQ
-  (mismo mecanismo móvil, sin markup). Adiós
-  sticky desktop; paridad Planes en ambos.
-- `?v=19` ×8 + generador + minificado.
-
 ## 2026-09-24 — Card contenida en tablet (card-tablet-compacta)
 
 ### Cambiado
