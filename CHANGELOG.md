@@ -1,3 +1,12 @@
+## 2026-09-24 — Fuera conectores de timeline en fichas
+
+### Quitado
+
+- Riel y segmentos en `.svc-steps` y
+  `.qa-check` (más su aire extra): vuelven
+  a lista limpia. Proceso intacto.
+- `?v=25` ×8 + generador + minificado.
+
 ## 2026-09-24 — Timeline por segmentos (timeline-fichas rev)
 
 ### Arreglado
