@@ -1,3 +1,10 @@
+## 2026-09-25 — Tope también en Planes, Casos y FAQ
+
+### Arreglado
+
+- `pricing-grid`, `cases-grid` y `faq-list` se suman al tope 600px centrado en ≤768px.
+- `?v=36` ×8 + generador + minificado.
+
 ## 2026-09-25 — Cards centradas en móvil/tablet
 
 ### Arreglado
