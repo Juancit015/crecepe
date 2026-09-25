@@ -62,6 +62,9 @@ post-lanzamiento de 30 días.
   de 30 minutos, con propuesta personalizada en menos de 24 horas.
 - **Elementos flotantes:** dial de contacto en abanico (WhatsApp, llamar, email,
   agendar) y botón para volver arriba.
+- **Cookies:** banner inferior con Aceptar/Rechazar; Google Analytics solo se
+  carga tras aceptar (Ley N.° 29733). Se reabre desde el botón "Cookies" del
+  footer; con el drawer abierto se atenúa y no es interactivo.
 
 ## Páginas del sitio
 
@@ -94,7 +97,7 @@ Además de la página inicial, el sitio es multipágina para SEO:
   FAQ y Diferenciador) con borde cyan en modo claro y oscuro.
 - Navbar adaptativa en modo claro: blanca sobre la foto al inicio, azul con
   el fondo blanco al hacer scroll (logo a juego).
-- Menú móvil drawer lateral marino con links iconizados, velo con blur,
+- Menú móvil drawer lateral marino con links iconizados, velo oscuro sin blur,
   scroll bloqueado y hamburguesa con borde a la derecha.
 - Diferenciador con cards blancas de SEO/GEO y píldoras blancas de
   plataformas con marca (Google, ChatGPT, Gemini, Perplexity, Claude,
@@ -102,7 +105,6 @@ Además de la página inicial, el sitio es multipágina para SEO:
 - Cada página de servicios con su foto de fondo y texto del héroe en blanco.
 - Hero de beneficios ("vendiendo solo") y copy en lenguaje de cliente
   ("Tienda Virtual + IA"); tecnicismos solo para máquinas.
-- Precios: Presencia S/ 500, Tienda Virtual S/ 700, Automatización S/ 900.
 - Planes iguales con hover azul suave; navbar con hover cian en oscuro;
   cards de casos con foto real.
 - Fotos de cards con overlay descriptivo al hover (casos y servicios),
