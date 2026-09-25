@@ -1,17 +1,23 @@
+## 2026-09-25 — Restauración de fichas y casos
+
+### Arreglado
+
+- El generador tenía plantilla vieja: cada corrida borraba el contenido enriquecido de fichas/casos (Ficha, Prueba real, Cómo lo hacemos, QA, FAQs extra, héroes con foto). Restaurado desde `ab6b559` y reaplicados badges de pago + `?v=30` con sed, sin regenerar. Regla: no correr `build_pages.py` hasta sincronizar su plantilla (solo conserva el fix de `srcset`).
+- `?v=30` ×8 + minificado.
+
 ## 2026-09-25 — Fondos de héroe en casos
 
 ### Arreglado
 
-- Héroes de los 2 casos con su foto + velo (spec `fondos-casos`), mismo patrón que fichas.
+- (Revertido: las fotos ya existían inline; ver entrada de restauración.)
 - `?v=30` ×8 + generador + minificado.
 
 ## 2026-09-25 — Logos y fondos rotos en subpáginas
 
 ### Arreglado
 
-- Generador adapta `srcset` (el logo no cargaba en servicios/casos por `srcset` sin `../`, incluyendo entradas tras la coma).
-- Héroes de las 3 fichas con su foto + velo (spec `fondos-servicios`): clases `has-bg` desde el generador.
-- `?v=29` ×8 + generador + minificado.
+- Generador adapta `srcset`, incluyendo entradas tras la coma (conservado).
+- (Clases de héroe revertidas: los héroes ya traían foto inline; ver entrada de restauración).
 
 ## 2026-09-25 — Logos de pago Yape/Plin + paymentAccepted
 

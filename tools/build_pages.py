@@ -169,9 +169,6 @@ def bullets(items):
     return '\n'.join(f'                        <li>{svg}{i}</li>' for i in items)
 
 def service_page(badge, title_hl, sub, desc_long, incluye, price, weeks, wa_text, related, faqs, name, url):
-    hero_bg = {'presencia-digital': 'servicios-presencia-fondo.avif', 'tienda-online-bagisto': 'servicios-tienda-fondo.avif', 'automatizacion-ia': 'servicios-ia-fondo.avif'}
-    slug = url.rsplit('/', 1)[-1].replace('.html', '')
-    hero_class = 'page-hero has-bg page-hero--' + slug if slug in hero_bg else 'page-hero'
     rel_cards = []
     for href, rtitle, rdesc in related:
         rel_cards.append(f'''                <a href="{href}" class="svc-related-card reveal">
@@ -183,7 +180,7 @@ def service_page(badge, title_hl, sub, desc_long, incluye, price, weeks, wa_text
     <!-- SERVICIO -->
     <!-- ===================== -->
 
-    <section class="{hero_class}">
+    <section class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <span>{badge}</span>
@@ -349,7 +346,7 @@ pages['casos/az-consulting.html'] = dict(
     schemas=[
         crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("AZ Consulting", "https://crecepe.com/casos/az-consulting.html")]),
     ],
-    content='''    <section class="page-hero has-bg page-hero--az-consulting">
+    content='''    <section class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <a href="../index.html#casos">Casos</a> <span aria-hidden="true">/</span> <span>AZ Consulting</span>
@@ -398,7 +395,7 @@ pages['casos/novedades-chavez.html'] = dict(
     schemas=[
         crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("Novedades Chavez", "https://crecepe.com/casos/novedades-chavez.html")]),
     ],
-    content='''    <section class="page-hero has-bg page-hero--novedades-chavez">
+    content='''    <section class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <a href="../index.html#casos">Casos</a> <span aria-hidden="true">/</span> <span>Novedades Chavez</span>

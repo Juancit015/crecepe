@@ -27,8 +27,8 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="CrecePE - Webs y tiendas virtuales con IA en Perú">
-    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://crecepe.com/assets/img/og-crecepe.png">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#0B2FD4">
 
     <!-- Fonts -->
@@ -109,7 +109,7 @@
                   "name": "¿El dominio y el hosting están incluidos?",
                   "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Te asesoro para comprarlos a tu nombre (tú eres el dueño). El costo de dominio (.pe o .com) y hosting básico va por cuenta del cliente, típicamente S/ 100-150 al año."
+                        "text": "No están incluidos en el precio: el dominio (.pe o .com) y el hosting se contratan a tu nombre, porque tú debes ser el dueño. Te recomiendo un buen hosting como Hostinger y te dejo todo configurado: dominio, hosting con certificado SSL y correo corporativo. Costo típico: S/ 100-150 al año."
                   }
             },
             {
@@ -134,6 +134,14 @@
                   "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "El sitio sale optimizado y se registra en Search Console, pero Google tarda de 2 a 8 semanas en posicionar un dominio nuevo. El SEO técnico acelera ese proceso; la constancia en reseñas y contenido lo consolida."
+                  }
+            },
+            {
+                  "@type": "Question",
+                  "name": "¿Por qué contratar a un independiente y no a una agencia de diseño web?",
+                  "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Trabajas directo conmigo, sin ejecutivos ni intermediarios: avances por WhatsApp y decisiones rápidas. Recibes lo mismo que en una agencia (diseño web profesional, SEO + GEO, capacitación y soporte) a precio de independiente."
                   }
             }
       ]
@@ -190,15 +198,15 @@
     <nav class="navbar" id="navbar">
         <div class="container navbar-inner">
 
-
             <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <a href="../index.html#inicio" class="logo" aria-label="CrecePE - Inicio">
-                <img class="logo-img" src="../assets/img/logo-crecepe.avif" srcset="../assets/img/logo-crecepe-400.avif 400w, ../assets/img/logo-crecepe-500.avif 500w, ../assets/img/logo-crecepe.avif 1928w" sizes="(max-width: 768px) 249px, 142px" fetchpriority="high" alt="CrecePE - Webs, tiendas virtuales e IA" width="1928" height="542">
+                        <img class="logo-img" src="../assets/img/logo-crecepe.avif" srcset="../assets/img/logo-crecepe-400.avif 400w, ../assets/img/logo-crecepe-500.avif 500w, ../assets/img/logo-crecepe.avif 1928w" sizes="(max-width: 768px) 249px, 142px" fetchpriority="high" alt="CrecePE - Webs, tiendas virtuales e IA" width="1928" height="542">
             </a>
+
 
             <div class="nav-links" id="navLinks">
                 <button class="drawer-close" aria-label="Cerrar menú"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -218,10 +226,12 @@
                     </button>
                 </div>
             </div>
+            
 
         </div>
     </nav>
 
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
     <main>
 
@@ -229,7 +239,7 @@
     <!-- SERVICIO -->
     <!-- ===================== -->
 
-    <section class="page-hero has-bg page-hero--presencia-digital">
+    <section class="page-hero has-bg parallax-fondo" style="background: linear-gradient(to bottom, rgba(10,25,48,0.70) 0%, rgba(10,25,48,0.30) 50%, rgba(10,25,48,0.85) 100%), url('../assets/img/servicios-presencia-fondo.avif') center/cover no-repeat fixed;">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <span>Servicios</span>
@@ -243,16 +253,52 @@
         <div class="container svc-layout">
 
             <div class="svc-main">
-                <p class="svc-desc">Para negocios que parten de cero o tienen una web invisible. Un sitio profesional, rápido y preparado para buscadores e IA desde el primer día: tus clientes te encuentran en Google, te contactan por WhatsApp con un toque y los sistemas de IA entienden exactamente qué ofreces y dónde estás.</p>
+                <p class="svc-desc">Para negocios que parten de cero o tienen una web invisible. Un sitio profesional, rápido y preparado para buscadores e IA desde el primer día: tus clientes te encuentran en Google, te contactan por WhatsApp con un toque y los sistemas de IA entienden exactamente qué ofreces y dónde estás. Diseño web profesional en Perú, con atención remota a todo el país.</p>
 
                 <h2 class="svc-h2">Qué incluye</h2>
                 <ul class="service-list svc-list">
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Web de hasta 7 secciones, responsive y veloz</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO técnico + GEO base (llms.txt, Schema.org)</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Apareces en Google y te recomienda la IA</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Botón de WhatsApp y formulario de contacto</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Google Analytics + Search Console configurados</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Capacitación en video para administrar tu sitio</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Soporte post-lanzamiento de 30 días</li>
+                </ul>
+
+                <h2 class="svc-h2">Ficha del servicio</h2>
+                <p class="svc-ficha-intro reveal reveal-left">Todo lo que necesitas para existir en internet con presencia profesional: una web rápida y visible en Google, con acompañamiento para lanzarla sin errores y soporte para crecer después.</p>
+                <ul class="service-list svc-list reveal reveal-right">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Inversión:</strong> desde S/ 500 (50% al inicio y 50% contra entrega).</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Entrega:</strong> 2-3 semanas.</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Recibes:</strong> web de hasta 7 secciones, SEO + GEO, Analytics y Search Console, más capacitación en video.</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Necesito de ti:</strong> logo, fotos y la info de tus servicios.</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Soporte:</strong> 30 días incluidos + mantenimiento mensual opcional.</span></li>
+                </ul>
+
+                <h2 class="svc-h2">Prueba real</h2>
+                <p>La web de AZ Consulting partió de una sola página vacía y hoy tiene <span class="count" data-count="8">8</span> secciones de servicios, blog y SEO técnico que Google y la IA entienden.</p>
+                <p><a href="../casos/az-consulting.html" class="service-link">Ver caso AZ Consulting <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p>
+
+                <h2 class="svc-h2">Cómo lo hacemos</h2>
+                <ul class="service-list svc-list">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>1. Diagnóstico:</strong> revisamos qué necesitas y qué te falta en Google.</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>2. Diseño y textos:</strong> diseño a tu marca; si no tienes textos o logo, te ayudo a crearlos.</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>3. Desarrollo:</strong> web rápida y optimizada, con avances por WhatsApp.</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>4. Lanzamiento:</strong> capacitación en video y soporte de 30 días.</span></li>
+                </ul>
+
+                <h2 class="svc-h2">¿Es para ti?</h2>
+                <p><strong>Es para ti si</strong> tu negocio no tiene web o la que tiene es invisible en Google, y quieres que te encuentren y te escriban.</p>
+                <p><strong>Mejor no si</strong> necesitas vender online con carrito y pagos (eso es <a href="tienda-online-bagisto.html">Tienda Online</a>) o un sistema a medida.</p>
+
+                <h2 class="svc-h2">Nos tomamos en serio tu sitio</h2>
+                <p>Antes de entregar, tu web pasa estas pruebas:</p>
+                <ul class="service-list svc-list">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></svg>Velocidad de carga en celular y computadora</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg>SEO + GEO validados (Google entiende tu sitio y la IA también)</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /> <path d="M12 18h.01" /></svg>Se ve bien en todos los tamaños de pantalla</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6" /> <path d="m22 7-8.5 8.5-5-5L2 17" /></svg>Analytics y Search Console verificados funcionando</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10V9" /> <path d="M16.472 15a6 6 0 01-8.943 0" /> <path d="M9 10V9" /> <circle cx="12" cy="12" r="10" /></svg>Se lanza solo con tu visto bueno</li>
                 </ul>
 
                 <h2 class="svc-h2">Preguntas frecuentes</h2>
@@ -273,7 +319,7 @@
                         <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
                     </button>
                     <div class="faq-answer">
-                        <p>Te asesoro para comprarlos a tu nombre (tú eres el dueño). El costo de dominio (.pe o .com) y hosting básico va por cuenta del cliente, típicamente S/ 100-150 al año.</p>
+                        <p>No están incluidos en el precio: el dominio (.pe o .com) y el hosting se contratan a tu nombre, porque tú debes ser el dueño. Te recomiendo un buen hosting como Hostinger y te dejo todo configurado: dominio, hosting con certificado SSL y correo corporativo. Costo típico: S/ 100-150 al año.</p>
                     </div>
                 </div>
 
@@ -306,13 +352,29 @@
                         <p>El sitio sale optimizado y se registra en Search Console, pero Google tarda de 2 a 8 semanas en posicionar un dominio nuevo. El SEO técnico acelera ese proceso; la constancia en reseñas y contenido lo consolida.</p>
                     </div>
                 </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        ¿Por qué contratar a un independiente y no a una agencia de diseño web?
+                        <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajas directo conmigo, sin ejecutivos ni intermediarios: avances por WhatsApp y decisiones rápidas. Recibes lo mismo que en una agencia (diseño web profesional, SEO + GEO, capacitación y soporte) a precio de independiente.</p>
+                    </div>
+                </div>
                 </div>
             </div>
 
             <aside class="svc-aside reveal">
                 <span class="pricing-badge">Desde</span>
+                <h3>Presencia Digital</h3>
                 <div class="svc-price">S/ 500</div>
                 <p class="svc-weeks">Entrega en 2-3 semanas</p>
+                <ul class="service-list svc-list svc-mini">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Web de hasta 7 secciones</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO y GEO profesional incluido</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Capacitación en video</li>
+                </ul>
                 <a href="https://wa.me/51970771835?text=Hola%20CrecePE%2C%20me%20interesa%20el%20plan%20Presencia%20Digital%20para%20mi%20negocio" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg svc-wa">Consultar por WhatsApp</a>
                 <p class="svc-note">Diagnóstico gratuito de 30 minutos. Sin compromiso.</p>
             </aside>
@@ -325,7 +387,7 @@
             <h2 class="svc-h2">También te puede interesar</h2>
             <div class="svc-related-grid">
                 <a href="tienda-online-bagisto.html" class="svc-related-card reveal">
-                    <h3>Tienda Online Bagisto + IA</h3>
+                    <h3>Tienda Virtual + IA</h3>
                     <p>Vende 24/7 con catálogo, Yape/Plin y pedidos por WhatsApp.</p>
                     <span class="svc-related-link">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>
@@ -361,7 +423,7 @@
                     <h3>Servicios</h3>
                     <ul class="footer-links">
                         <li><a href="../servicios/presencia-digital.html">Presencia Digital</a></li>
-                        <li><a href="../index.html#servicios">Tienda Virtual + IA</a></li>
+                        <li><a href="../servicios/tienda-online-bagisto.html">Tienda Virtual + IA</a></li>
                         <li><a href="../servicios/automatizacion-ia.html">Automatización con IA</a></li>
                         <li><a href="../index.html#planes">Ver planes y precios</a></li>
                     </ul>
@@ -370,7 +432,7 @@
                 <div>
                     <h3>Contacto</h3>
                     <ul class="footer-links">
-                        <li><a href="https://wa.me/51970771835" target="_blank" rel="noopener noreferrer">+51 970 771 835</a> · <a href="tel:+51970771835">Llamar</a></li>
+                        <li><a href="https://wa.me/51970771835" target="_blank" rel="noopener noreferrer">+51 970 771 835</a></li>
                         <li><a href="mailto:crecepe@azconsultingperu.com">crecepe@azconsultingperu.com</a></li>
                         <li>Trujillo, La Libertad - Perú</li>
                         <li>Lun - Vie · 8:00 am - 6:00 pm</li>
@@ -386,7 +448,6 @@
 
             <div class="footer-bottom">
                 © 2026 <strong>CrecePE</strong> — Todos los derechos reservados. Hecho en Trujillo para todo el Perú. · <a href="../privacidad.html">Privacidad</a> · <a href="../terminos.html">Términos</a> · <button type="button" class="consent-open" data-consent-open>Cookies</button>
-                <a class="seobility-badge" href="https://www.seobility.net/en/seocheck/check?url=https%3A%2F%2Fcrecepe.com%2F" target="_blank" rel="noopener noreferrer" aria-label="Puntuación SEO de crecepe.com en Seobility"><img src="https://app.seobility.net/widget/widget.png?url=https%3A%2F%2Fcrecepe.com%2F" alt="Seobility Score for crecepe.com" loading="lazy" width="100" height="31"></a>
             </div>
 
         </div>
