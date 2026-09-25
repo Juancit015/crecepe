@@ -1,3 +1,15 @@
+## 2026-09-24 — Card compacta sticky en móvil (sticky-compacto-movil)
+
+### Cambiado
+
+- Adiós barra fixed: card compacta en flujo
+  tras la intro con sticky (precio + CTA),
+  se suelta sola antes de relacionados.
+  Zona inferior libre para ↑ y WhatsApp.
+- Retirado `buybar-*` de `main.js` (nadie
+  más lo usaba). Desktop intacto.
+- `?v=15` ×8 + generador + minificado.
+
 ## 2026-09-24 — Fix barra móvil gigante (fix-mini-barra-movil)
 
 ### Arreglado

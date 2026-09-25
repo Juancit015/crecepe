@@ -66,7 +66,6 @@
     // Un solo listener con rAF: una lectura geométrica por frame y
     // solo escrituras después (cero reflows forzados en scroll)
     var scrollTicking = false;
-    var lastBuyY = 0;
     function onScrollY() {
         if (!scrollTicking) {
             scrollTicking = true;
@@ -77,32 +76,9 @@
         var y = window.pageYOffset || document.documentElement.scrollTop;
         onScroll(y);
         syncToTop(y);
-        // Barra de compra móvil: aparece al pasar el hero
-        document.body.classList.toggle('scrolled-past', y > 500);
-        // ...y se esconde al bajar (reaparece al subir): no tapa el contenido
-        document.body.classList.toggle('buybar-down', y > lastBuyY + 4);
-        if (y < lastBuyY - 4) document.body.classList.remove('buybar-down');
-        lastBuyY = y;
         scrollTicking = false;
     }
 
-    /* ---------- Barra de compra: se retira en relacionados/footer ---------- */
-    // En móvil la barra fija se esconde al llegar a page-related o footer.
-    // En desktop el sticky ya muere solo al terminar su contenedor.
-    (function buybarZones() {
-        if (!('IntersectionObserver' in window)) return;
-        var zones = document.querySelectorAll('.page-related, .footer');
-        if (!zones.length) return;
-        var visible = new Set();
-        var obs = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) { visible.add(entry.target); }
-                else { visible.delete(entry.target); }
-            });
-            document.body.classList.toggle('buybar-hidden', visible.size > 0);
-        }, { threshold: 0 });
-        zones.forEach(function (z) { obs.observe(z); });
-    })();
     window.addEventListener('scroll', onScrollY, { passive: true });
     requestAnimationFrame(function () {
         var y = window.pageYOffset || document.documentElement.scrollTop;
