@@ -2,8 +2,8 @@
 
 ### Arreglado
 
-- `.footer-grid` a 1 columna centrada en ≤992px (adiós columna a la derecha en tablet); hijos centrados en ambos medias.
-- `?v=37` ×8 + generador + minificado.
+- `.footer-grid` a 1 columna centrada en ≤992px (adiós columna a la derecha en tablet); hijos centrados en ambos medias, incluido el logo (`justify-content: center`).
+- `?v=38` ×8 + generador + minificado.
 
 ## 2026-09-25 — Tope también en Planes, Casos y FAQ
 

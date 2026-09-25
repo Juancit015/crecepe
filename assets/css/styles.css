@@ -2263,6 +2263,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     .services-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 36px; }
     .footer-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+    .footer .logo { justify-content: center; }
     .footer-about p { margin-left: auto; margin-right: auto; }
     .footer-pay { justify-content: center; }
 }
