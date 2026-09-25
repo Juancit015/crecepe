@@ -1,3 +1,11 @@
+## 2026-09-25 — Logos y fondos rotos en subpáginas
+
+### Arreglado
+
+- Generador adapta `srcset` (el logo no cargaba en servicios/casos por `srcset` sin `../`).
+- Héroes de las 3 fichas con su foto + velo (spec `fondos-servicios`): clases `has-bg` desde el generador.
+- `?v=29` ×8 + generador + minificado.
+
 ## 2026-09-25 — Logos de pago Yape/Plin + paymentAccepted
 
 ### Agregado

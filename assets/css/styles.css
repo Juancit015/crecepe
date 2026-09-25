@@ -2519,6 +2519,11 @@ body.dark-mode .page-hero h1 span { color: var(--accent-light); }
 .page-hero.has-bg h1 { color: #fff; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
 .page-hero.has-bg h1 span { color: var(--accent-light); }
 .page-hero.has-bg .page-hero-sub { color: rgba(255, 255, 255, 0.9); text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+/* Foto de fondo por ficha (spec fondos-servicios): velo oscuro medio,
+   misma foto en claro y oscuro. CSS vive en assets/css → url ../img/. */
+.page-hero--presencia-digital { background: linear-gradient(rgba(6, 13, 31, 0.55), rgba(6, 13, 31, 0.55)), url('../img/servicios-presencia-fondo.avif') center/cover no-repeat; }
+.page-hero--tienda-online-bagisto { background: linear-gradient(rgba(6, 13, 31, 0.55), rgba(6, 13, 31, 0.55)), url('../img/servicios-tienda-fondo.avif') center/cover no-repeat; }
+.page-hero--automatizacion-ia { background: linear-gradient(rgba(6, 13, 31, 0.55), rgba(6, 13, 31, 0.55)), url('../img/servicios-ia-fondo.avif') center/cover no-repeat; }
 
 .page-body { padding: 60px 0; }
 

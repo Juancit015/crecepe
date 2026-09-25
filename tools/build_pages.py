@@ -19,8 +19,10 @@ def adapt(prefix):
     prefix: '' para paginas en raiz, '../' para un nivel abajo."""
     nav = navbar_raw.replace('href="#', 'href="{p}index.html#'.format(p=prefix))
     nav = nav.replace('src="assets/', 'src="{p}assets/'.format(p=prefix))
+    nav = nav.replace('srcset="assets/', 'srcset="{p}assets/'.format(p=prefix))
     foot = footer_raw.replace('href="#', 'href="{p}index.html#'.format(p=prefix))
     foot = foot.replace('src="assets/', 'src="{p}assets/'.format(p=prefix))
+    foot = foot.replace('srcset="assets/', 'srcset="{p}assets/'.format(p=prefix))
     # Footer: servicios apuntan a las paginas dedicadas
     foot = foot.replace('href="{p}index.html#servicios">Presencia Digital'.format(p=prefix), 'href="{p}servicios/presencia-digital.html">Presencia Digital'.format(p=prefix))
     foot = foot.replace('href="{p}index.html#servicios">Tienda Bagisto + IA'.format(p=prefix), 'href="{p}servicios/tienda-online-bagisto.html">Tienda Bagisto + IA'.format(p=prefix))
@@ -71,7 +73,7 @@ HEAD = '''<!DOCTYPE html>
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=28">
+    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=29">
 
     <!-- PWA -->
     <link rel="manifest" href="{p}manifest.json">
@@ -103,7 +105,7 @@ HEAD = '''<!DOCTYPE html>
 
 {footer}
 
-    <script src="{p}assets/js/main.js?v=28" defer></script>
+    <script src="{p}assets/js/main.js?v=29" defer></script>
 
 </body>
 
@@ -165,6 +167,9 @@ def bullets(items):
     return '\n'.join(f'                        <li>{svg}{i}</li>' for i in items)
 
 def service_page(badge, title_hl, sub, desc_long, incluye, price, weeks, wa_text, related, faqs, name, url):
+    hero_bg = {'presencia-digital': 'servicios-presencia-fondo.avif', 'tienda-online-bagisto': 'servicios-tienda-fondo.avif', 'automatizacion-ia': 'servicios-ia-fondo.avif'}
+    slug = url.rsplit('/', 1)[-1].replace('.html', '')
+    hero_class = 'page-hero has-bg page-hero--' + slug if slug in hero_bg else 'page-hero'
     rel_cards = []
     for href, rtitle, rdesc in related:
         rel_cards.append(f'''                <a href="{href}" class="svc-related-card reveal">
@@ -176,7 +181,7 @@ def service_page(badge, title_hl, sub, desc_long, incluye, price, weeks, wa_text
     <!-- SERVICIO -->
     <!-- ===================== -->
 
-    <section class="page-hero">
+    <section class="{hero_class}">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <span>{badge}</span>
