@@ -1,3 +1,10 @@
+## 2026-09-25 — Fondos de héroe en casos
+
+### Arreglado
+
+- Héroes de los 2 casos con su foto + velo (spec `fondos-casos`), mismo patrón que fichas.
+- `?v=30` ×8 + generador + minificado.
+
 ## 2026-09-25 — Logos y fondos rotos en subpáginas
 
 ### Arreglado

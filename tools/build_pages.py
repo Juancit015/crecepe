@@ -73,7 +73,7 @@ HEAD = '''<!DOCTYPE html>
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=29">
+    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=30">
 
     <!-- PWA -->
     <link rel="manifest" href="{p}manifest.json">
@@ -105,7 +105,7 @@ HEAD = '''<!DOCTYPE html>
 
 {footer}
 
-    <script src="{p}assets/js/main.js?v=29" defer></script>
+    <script src="{p}assets/js/main.js?v=30" defer></script>
 
 </body>
 
@@ -347,7 +347,7 @@ pages['casos/az-consulting.html'] = dict(
     schemas=[
         crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("AZ Consulting", "https://crecepe.com/casos/az-consulting.html")]),
     ],
-    content='''    <section class="page-hero">
+    content='''    <section class="page-hero has-bg page-hero--az-consulting">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <a href="../index.html#casos">Casos</a> <span aria-hidden="true">/</span> <span>AZ Consulting</span>
@@ -396,7 +396,7 @@ pages['casos/novedades-chavez.html'] = dict(
     schemas=[
         crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("Novedades Chavez", "https://crecepe.com/casos/novedades-chavez.html")]),
     ],
-    content='''    <section class="page-hero">
+    content='''    <section class="page-hero has-bg page-hero--novedades-chavez">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <a href="../index.html#casos">Casos</a> <span aria-hidden="true">/</span> <span>Novedades Chavez</span>
