@@ -5,5 +5,5 @@
 
 ## 2. Lanzamiento y documentación
 
-- [ ] 2.1 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py`, registrar en `CHANGELOG.md` y commitear
+- [x] 2.1 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py`, registrar en `CHANGELOG.md` y commitear
 - [ ] 2.2 Sync del delta a `drawer-velo`, archivar el change y reportar
