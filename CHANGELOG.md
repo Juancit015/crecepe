@@ -1,3 +1,11 @@
+## 2026-09-25 — Preview Planes + breakpoint tablet
+
+### Arreglado
+
+- Preview del acordeón calibrado a 3 items exactos (99px medidos) + aire bajo el fade: sin medios items ni CTA tocando texto.
+- Nuevo breakpoint 900px: opiniones a 2 col en tablet (era el único grid en 3 col hasta 768px).
+- `?v=34` ×8 + generador + minificado.
+
 ## 2026-09-25 — Umbral sticky medido
 
 ### Arreglado

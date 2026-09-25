@@ -2265,6 +2265,12 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* Tablet intermedia (769–900px): opiniones es el único grid que seguía en
+   3 columnas (~230px por card a 800px). A 2 col respira; bajo 768 manda 1 col. */
+@media (max-width: 900px) {
+    .opiniones-grid { grid-template-columns: 1fr 1fr; }
+}
+
 @media (max-width: 768px) {
     section { padding: 64px 0; }
     /* Hero compacto en móvil: título + CTAs visibles sin scroll */
@@ -2860,10 +2866,13 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         transition: max-height 0.3s ease, opacity 0.25s ease, margin-bottom 0.3s ease;
     }
     .pricing-card .pricing-features {
-        max-height: 122px;
+        /* Preview de 3 items exactos (medidos 33px c/u): sin medios items.
+           Máscara tardía + aire para que el CTA no toque el fade. */
+        max-height: 99px;
+        margin-bottom: 14px;
         opacity: 1;
-        -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
-        mask-image: linear-gradient(to bottom, #000 55%, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+        mask-image: linear-gradient(to bottom, #000 70%, transparent);
     }
     .process-detail {
         max-height: 0;
