@@ -13,10 +13,10 @@ Ver `proposal.md` (Why). Referencia: `.process-timeline::before` (línea 2px, ab
 
 ## Decisions
 
-- **Riel en la lista, no en los ítems**: `.svc-steps, .qa-check { position: relative; padding-left }` + `::before` vertical como Proceso (los `li::before` ya están ocupados por números; no se tocan).
-- **Aire vía `padding-bottom`/gap en `li`**: separar sin romper el alineamiento del riel; medir contra Proceso móvil (52px entre pasos) y adaptar.
-- **Respetar `.active`**: el riel es decorativo (`aria-hidden` innecesario en `::before`); números e iconos conservan sus estilos de activo.
-- **Modo oscuro**: riel con el mismo tono tenue que Proceso (`rgba(255,255,255,.18)` en oscuro).
+- **Segmentos por ítem, no riel continuo (revisión 2026-09-24)**: el riel `::before` en la lista traspasaba insignias/iconos y se descentraba (en QA el `margin: -8px` del `li` invalida el cálculo desde el UL). Cada `li:not(:last-child)::after` dibuja su conector solo en el hueco, centrado medido (pasos 13px = mitad del badge 26px; QA 11px = mitad del icono 22px desde el borde del UL). El segmento viaja con el `li` en hover/active: siempre alineado.
+- **Aire vía `padding-bottom`/gap en `li`**: separar sin romper el alineamiento; medir contra Proceso móvil (52px entre pasos) y adaptar.
+- **Respetar `.active`**: los conectores son decorativos; números e iconos conservan sus estilos de activo.
+- **Modo oscuro**: conectores con el mismo tono tenue que Proceso (`rgba(255,255,255,.18)` en oscuro).
 
 ## Risks / Trade-offs
 

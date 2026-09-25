@@ -1,3 +1,13 @@
+## 2026-09-24 — Timeline por segmentos (timeline-fichas rev)
+
+### Arreglado
+
+- Conectores por ítem solo en huecos
+  (nunca atraviesan insignias/iconos),
+  centrados y con oscuro. Viajan con el
+  `li` en hover/active.
+- `?v=24` ×8 + generador + minificado.
+
 ## 2026-09-24 — Timeline en pasos y QA (timeline-fichas)
 
 ### Cambiado

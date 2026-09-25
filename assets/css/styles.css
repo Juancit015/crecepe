@@ -901,21 +901,21 @@ body.dark-mode .qa-check li > svg { color: var(--accent-light); }
 body.dark-mode .qa-check li:hover > svg, body.dark-mode .qa-check li.active > svg { color: #fff; }
 
 /* Timeline conector en pasos y QA de fichas (espejo de Proceso):
-   riel en la lista alineado a números/iconos; el badge tapa el riel al pasar */
-.svc-steps, .qa-check { position: relative; }
-.svc-steps::before, .qa-check::before {
+   cada ítem dibuja su segmento solo en el hueco (nunca atraviesa
+   insignias/iconos) y viaja con el li en hover/active */
+.svc-steps li, .qa-check li { position: relative; }
+.svc-steps li:not(:last-child)::after, .qa-check li:not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 14px; bottom: 14px;
     width: 2px;
     border-radius: 2px;
     background: rgba(10, 31, 68, 0.12);
 }
-.svc-steps::before { left: 13px; }
-.qa-check::before { left: 19px; }
+.svc-steps li:not(:last-child)::after { left: 13px; top: 31px; bottom: -5px; }
+.qa-check li:not(:last-child)::after { left: 19px; top: 28px; bottom: -10px; }
 .svc-steps li { padding-bottom: 16px; }
 .qa-check li { margin-bottom: 10px; }
-body.dark-mode .svc-steps::before, body.dark-mode .qa-check::before { background: rgba(255, 255, 255, 0.18); }
+body.dark-mode .svc-steps li:not(:last-child)::after, body.dark-mode .qa-check li:not(:last-child)::after { background: rgba(255, 255, 255, 0.18); }
 
 /* Contadores animados (números reales) */
 .count { font-variant-numeric: tabular-nums; }
