@@ -1744,6 +1744,14 @@ body.dark-mode .contact-card small a:hover { color: var(--accent-light); }
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 .consent-banner.consent-visible { opacity: 1; visibility: visible; transform: none; }
+/* Con el drawer abierto el banner se atenúa como el fondo y deja de ser
+   interactivo (está sobre el velo por orden DOM, así que se simula con
+   brightness + pointer-events). Al cerrar vuelve solo. */
+body:has(.nav-links.open) .consent-banner {
+    filter: brightness(0.4);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, filter 0.3s ease;
+}
 .consent-banner p { margin: 0; font-size: 0.85rem; line-height: 1.55; }
 .consent-banner a { color: var(--primary); }
 .consent-actions { display: flex; gap: 10px; }

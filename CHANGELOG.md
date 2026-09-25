@@ -1,3 +1,10 @@
+## 2026-09-24 — Banner atenuado e inerte con drawer abierto
+
+### Arreglado
+
+- Con la hamburguesa abierta el banner se oscurece (`brightness(0.4)`, como el velo) y sus botones dejan de responder; al cerrar vuelve solo. Sin JS, con `:has` como el logo atenuado.
+- `?v=27` ×8 + generador + minificado.
+
 ## 2026-09-24 — Banner de cookies detrás del drawer
 
 ### Arreglado
