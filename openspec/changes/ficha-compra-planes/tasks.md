@@ -7,4 +7,4 @@
 ## 2. Mini-barra móvil
 
 - [x] 2.1 Compactar la barra móvil a ≤92px en una fila (precio + CTA, sin badge/nota) conservando `scrolled-past`, `buybar-down` y `buybar-hidden`, y verificar que no tapa contenido al hacer scroll
-- [ ] 2.2 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py`, regenerar `styles.min.css`, registrar en `CHANGELOG.md` y commitear
+- [x] 2.2 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py`, regenerar `styles.min.css`, registrar en `CHANGELOG.md` y commitear

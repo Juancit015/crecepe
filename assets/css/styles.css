@@ -29,7 +29,9 @@
     animation: none !important;
 }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+/* overflow-x: clip recorta igual que hidden (marquesinas) pero no crea
+   contenedor de scroll, así el sticky del aside funciona. hidden queda de fallback. */
+html { scroll-behavior: smooth; overflow-x: hidden; overflow-x: clip; }
 
 body {
     background: var(--light);
@@ -37,6 +39,7 @@ body {
     font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    overflow-x: clip;
 }
 
 img { max-width: 100%; height: auto; }

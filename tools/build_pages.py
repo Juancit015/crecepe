@@ -71,7 +71,7 @@ HEAD = '''<!DOCTYPE html>
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=12">
+    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=13">
 
     <!-- PWA -->
     <link rel="manifest" href="{p}manifest.json">
@@ -103,7 +103,7 @@ HEAD = '''<!DOCTYPE html>
 
 {footer}
 
-    <script src="{p}assets/js/main.js?v=12" defer></script>
+    <script src="{p}assets/js/main.js?v=13" defer></script>
 
 </body>
 

@@ -1,3 +1,13 @@
+## 2026-09-24 — Sticky real del aside (aside-sticky-servicios)
+
+### Arreglado
+
+- El aside no seguía el scroll: `overflow-x:
+  hidden` en `html`/`body` mataba todo sticky.
+  Cascada `hidden` + `clip`: recorta igual las
+  marquesinas y revive el sticky existente.
+- `?v=13` ×8 + generador + minificado.
+
 ## 2026-09-24 — Aside espejo de Planes + mini-barra (ficha-compra)
 
 ### Cambiado
