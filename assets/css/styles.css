@@ -1869,7 +1869,6 @@ body.dark-mode .consent-actions [data-consent="rejected"] {
     bottom: 26px; right: 26px;
     z-index: 999;
     width: 58px; height: 58px;
-    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .contact-dial__main {
@@ -2592,9 +2591,6 @@ body.dark-mode .svc-related-link { color: var(--accent-light); }
 .legal a { color: var(--accent-dark); font-weight: 600; }
 body.dark-mode .legal a { color: var(--accent-light); }
 
-/* Mini-barra post-card (híbrido Airbnb): solo móvil, oculta sin JS.
-   Aparece cuando la card real sale del viewport (body.buybar-on). */
-.buybar { display: none; }
 @media (max-width: 992px) {
     .svc-layout { grid-template-columns: 1fr; gap: 0; }
     /* Card completa quieta tras Prueba: .svc-main se disuelve; lo posterior
@@ -2610,32 +2606,6 @@ body.dark-mode .legal a { color: var(--accent-light); }
     .svc-mini svg { flex-shrink: 0; margin-top: 4px; }
     .svc-aside .svc-wa { display: flex; align-items: center; justify-content: center; padding: 14px; border-radius: 14px; font-size: 1rem; }
     .svc-related-grid { grid-template-columns: 1fr; }
-    .buybar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 14px;
-        position: fixed;
-        left: 10px; right: 10px; bottom: 10px;
-        z-index: 900;
-        padding: 8px 8px 8px 16px;
-        background: var(--primary);
-        border-radius: var(--radius);
-        box-shadow: 0 16px 40px rgba(10, 31, 68, 0.35);
-        transform: translateY(140%);
-        visibility: hidden;
-        transition: transform 0.4s cubic-bezier(0.22, 0.9, 0.28, 1), visibility 0.4s;
-    }
-    body.buybar-on .buybar { transform: none; visibility: visible; }
-    .buybar-price { color: #fff; font-size: 1.05rem; font-weight: 800; white-space: nowrap; }
-    .buybar-cta { margin: 0; padding: 10px 20px; font-size: 0.88rem; background: rgba(0, 194, 255, 0.65); border-color: transparent; color: #fff; }
-    /* Con la barra visible el dial se oculta (la barra ya lleva el CTA de
-       WhatsApp) y la flecha queda intacta: cero superposiciones, cero saltos */
-    body.buybar-on .contact-dial { opacity: 0; visibility: hidden; pointer-events: none; }
-    body.dark-mode .buybar { background: #16294F; }
-}
-@media (prefers-reduced-motion: reduce) {
-    .buybar, .contact-dial { transition: none; }
 }
 
 @media (max-width: 768px) {

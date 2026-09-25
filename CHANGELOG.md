@@ -1,3 +1,12 @@
+## 2026-09-24 — Fuera la mini-barra (quitar-buybar-movil)
+
+### Quitado
+
+- `.buybar` eliminada: markup ×3, CSS,
+  observer y transición del dial. Solo
+  queda la card fija. Simple y sin bordes.
+- `?v=21` ×8 + generador + minificado.
+
 ## 2026-09-24 — Barra afinada: slim + flotantes quietos
 
 ### Arreglado
