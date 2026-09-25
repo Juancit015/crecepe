@@ -454,17 +454,28 @@
         var spy = null;
 
         function onEntries(entries) {
+            // Ganador determinista: de los que tocan la franja, gana el más
+            // cercano al centro (un scroll rápido ya no salta por orden de lote)
+            var center = window.innerHeight / 2;
+            var best = null;
+            var bestDist = Infinity;
             entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    if (current && current !== entry.target) current.classList.remove('active');
-                    current = entry.target;
-                    current.classList.add('active');
-                } else if (entry.target === current) {
-                    // Salió de la franja central: suelta el resaltado, no se queda pegado
-                    entry.target.classList.remove('active');
-                    current = null;
+                if (!entry.isIntersecting) {
+                    if (entry.target === current) {
+                        // Salió de la franja central: suelta el resaltado, no se queda pegado
+                        entry.target.classList.remove('active');
+                        current = null;
+                    }
+                    return;
                 }
+                var dist = Math.abs(entry.boundingClientRect.top - center);
+                if (dist < bestDist) { bestDist = dist; best = entry.target; }
             });
+            if (best && best !== current) {
+                if (current) current.classList.remove('active');
+                current = best;
+                current.classList.add('active');
+            }
         }
 
         function clearActive() {
@@ -508,16 +519,27 @@
         var spy = null;
 
         function onEntries(entries) {
+            // Ganador determinista: de los que tocan la franja, gana el más
+            // cercano al centro (un scroll rápido ya no salta por orden de lote)
+            var center = window.innerHeight / 2;
+            var best = null;
+            var bestDist = Infinity;
             entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    if (current && current !== entry.target) current.classList.remove('active');
-                    current = entry.target;
-                    current.classList.add('active');
-                } else if (entry.target === current) {
-                    entry.target.classList.remove('active');
-                    current = null;
+                if (!entry.isIntersecting) {
+                    if (entry.target === current) {
+                        entry.target.classList.remove('active');
+                        current = null;
+                    }
+                    return;
                 }
+                var dist = Math.abs(entry.boundingClientRect.top - center);
+                if (dist < bestDist) { bestDist = dist; best = entry.target; }
             });
+            if (best && best !== current) {
+                if (current) current.classList.remove('active');
+                current = best;
+                current.classList.add('active');
+            }
         }
 
         function clearActive() {

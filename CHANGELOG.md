@@ -1,3 +1,12 @@
+## 2026-09-24 — Spy secuencial sin saltos (spy-secuencial-movil)
+
+### Arreglado
+
+- Pasos y QA ya no saltan de 1 a 4: el
+  ganador es el más cercano al centro,
+  no el último del lote. Ambos spies.
+- `?v=22` ×8 + generador + minificado.
+
 ## 2026-09-24 — Fuera la mini-barra (quitar-buybar-movil)
 
 ### Quitado
