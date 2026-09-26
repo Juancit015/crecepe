@@ -6,9 +6,6 @@
 (function () {
     'use strict';
 
-    /* Sin esta clase el detalle de servicios queda expandido (no-JS visible) */
-    document.documentElement.classList.add('js');
-
     /* ---------- Quitar bloqueo de transiciones tras la carga ---------- */
     function unpreload() {
         document.body.classList.remove('preload');
@@ -334,24 +331,6 @@
             if (textNode && textNode.nodeType === 3) {
                 textNode.nodeValue = isOpen ? 'Ver qué incluye ' : 'Ocultar detalles ';
             }
-        });
-    });
-
-    /* ---------- Servicios: menú + expansión exclusiva en móvil/tablet ---------- */
-    // Reutiliza el patrón del acordeón de Planes. Sin JS el detalle queda visible.
-    document.querySelectorAll('.service-toggle').forEach(function (btn) {
-        var card = btn.closest('.service-card');
-        if (!card) return;
-        btn.addEventListener('click', function () {
-            var isOpen = card.classList.contains('is-open');
-            document.querySelectorAll('.service-card.is-open').forEach(function (other) {
-                other.classList.remove('is-open');
-                var ob = other.querySelector('.service-toggle');
-                if (ob) { ob.setAttribute('aria-expanded', 'false'); ob.querySelector('span').textContent = '+'; }
-            });
-            card.classList.toggle('is-open', !isOpen);
-            btn.setAttribute('aria-expanded', String(!isOpen));
-            btn.querySelector('span').textContent = isOpen ? '+' : '−';
         });
     });
 

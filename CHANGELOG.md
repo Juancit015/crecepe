@@ -1,3 +1,10 @@
+## 2026-09-26 — Reversión de servicios-menu-expansion
+
+### Quitado
+
+- Vuelta a cards en móvil/tablet (fuera menú +/−, toggles, envoltorios y acordeón JS); spec `servicios-menu` retirado. Vuelve `?v=38`.
+- El change queda archivado como historial.
+
 ## 2026-09-26 — Servicios como menú expandible
 
 ### Agregado

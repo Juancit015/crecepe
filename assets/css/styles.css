@@ -857,10 +857,6 @@ body.dark-mode .service-card:hover .service-icon { background: #fff; color: #0A1
     padding: 5px 0;
 }
 
-/* Menú de servicios (móvil/tablet): toggle oculto y detalle pasante en desktop */
-.service-toggle { display: none; }
-.service-detail { display: contents; }
-
 /* Pasos numerados en fichas (lenguaje de Proceso, sin JS) */
 .svc-steps { counter-reset: svcstep; }
 .svc-steps li > svg { display: none; }
@@ -2265,43 +2261,6 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     .hero-actions, .hero-trust { justify-content: center; }
     .hero-ceo-card { max-width: 350px; margin: 0 auto; }
     .services-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
-    /* Servicios como menú + expansión (números, sin cards): 1 columna,
-       filas con divisor; el detalle colapsa solo con JS (sin JS, visible). */
-    .services-grid { grid-template-columns: 1fr; counter-reset: svcnum; gap: 0; }
-    .service-card {
-        counter-increment: svcnum;
-        background: none; border: none; border-radius: 0; box-shadow: none;
-        padding: 20px 56px 20px 64px;
-        border-bottom: 1px solid rgba(10, 31, 68, 0.12);
-    }
-    .service-card:hover { transform: none; box-shadow: none; }
-    .service-card::before {
-        content: "0" counter(svcnum);
-        position: absolute; left: 0; top: 18px;
-        font-size: 1.9rem; font-weight: 800; color: var(--accent-dark);
-    }
-    .service-photo, .service-card .service-icon { display: none; }
-    .service-card h3 { font-size: 1.15rem; margin-bottom: 0; padding-right: 8px; }
-    .service-toggle {
-        display: flex; align-items: center; justify-content: center;
-        position: absolute; right: 0; top: 14px;
-        width: 44px; height: 44px;
-        background: none; border: none; cursor: pointer;
-        font-size: 1.6rem; font-weight: 400; color: var(--accent-dark);
-        font-family: inherit;
-    }
-    .js .service-detail {
-        display: block;
-        overflow: hidden; max-height: 0; opacity: 0;
-        transition: max-height 0.35s ease, opacity 0.3s ease;
-    }
-    .js .service-card.is-open .service-detail { max-height: 900px; opacity: 1; }
-    .service-toggle span { display: inline-block; line-height: 1; }
-    .service-detail .service-list { margin-bottom: 16px; }
-    body.dark-mode .service-card { border-bottom-color: rgba(255, 255, 255, 0.14); }
-    body.dark-mode .service-card::before { color: var(--accent-light); }
-    body.dark-mode .service-card h3 { color: #fff; }
-    body.dark-mode .service-toggle { color: #fff; }
     .contact-grid { grid-template-columns: 1fr; gap: 36px; }
     .footer-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
     .footer .logo { justify-content: center; }
@@ -2476,7 +2435,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     section { padding: 48px 0; }
     .section-header { margin-bottom: 36px; }
     .services-grid, .pricing-grid, .cases-grid, .opiniones-grid, .geo-grid { gap: 20px; }
-    .service-card { padding: 20px 56px 22px 64px; }
+    .service-card { padding: 24px 20px; }
     .service-photo { margin: -24px -20px 18px; height: 140px; }
     .service-icon { width: 52px; height: 52px; margin-bottom: 16px; }
     .service-card h3 { font-size: 1.15rem; }
@@ -2952,7 +2911,6 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         .pricing-features,
         .pricing-desc,
         .pricing-toggle svg { transition: none; }
-        .js .service-detail { transition: none; }
     }
     .pricing-price { padding: 10px 0; margin-bottom: 12px; }
     .pricing-price .amount { font-size: 1.6rem; }
@@ -3064,13 +3022,6 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         align-self: end;
         font-size: 0.88rem;
     }
-    /* Menú + expansión: reemplaza la fila compacta en todo ≤992px.
-       Mismo markup; el detalle colapsa solo con JS. */
-    .service-card { display: block; padding: 20px 56px 22px 64px; }
-    .service-photo { display: none; }
-    .service-card .service-list li:nth-child(n+4) { display: flex; }
-    .service-card h3 { font-size: 1.15rem; margin-bottom: 0; }
-    .service-card p { display: block; font-size: 0.97rem; margin-bottom: 18px; }
     /* Anclas desde la hamburguesa: aterriza justo al inicio de la sección */
     section[id] { scroll-margin-top: 76px; }
 }
