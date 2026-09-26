@@ -82,7 +82,7 @@ HEAD = '''<!DOCTYPE html>
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=54">
+    <link rel="stylesheet" href="{p}assets/css/styles.min.css?v=56">
 
     <!-- PWA -->
     <link rel="manifest" href="{p}manifest.json">
@@ -114,7 +114,7 @@ HEAD = '''<!DOCTYPE html>
 
 {footer}
 
-    <script src="{p}assets/js/main.js?v=54" defer></script>
+    <script src="{p}assets/js/main.js?v=56" defer></script>
 
 </body>
 
@@ -175,7 +175,7 @@ def bullets(items):
     svg = '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>'
     return '\n'.join(f'                        <li>{svg}{i}</li>' for i in items)
 
-def service_page(badge, title_hl, sub, desc_long, incluye, price, weeks, wa_text, related, faqs, name, url):
+def service_page(badge, title_hl, sub, desc_long, incluye, price, weeks, wa_text, related, faqs, name, url, fondo=None):
     rel_cards = []
     for href, rtitle, rdesc in related:
         rel_cards.append(f'''                <a href="{href}" class="svc-related-card reveal">
@@ -183,11 +183,18 @@ def service_page(badge, title_hl, sub, desc_long, incluye, price, weeks, wa_text
                     <p>{rdesc}</p>
                     <span class="svc-related-link">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
                 </a>''')
+    if fondo:
+        hero_cls = 'page-hero has-bg parallax-fondo'
+        hero_style = (f' style="background: linear-gradient(to bottom, rgba(10,25,48,0.70) 0%, '
+                      f'rgba(10,25,48,0.30) 50%, rgba(10,25,48,0.85) 100%), '
+                      f'url(\'{fondo}\') center/cover no-repeat fixed;"')
+    else:
+        hero_cls, hero_style = 'page-hero', ''
     return f'''    <!-- ===================== -->
     <!-- SERVICIO -->
     <!-- ===================== -->
 
-    <section class="page-hero">
+    <section class="{hero_cls}"{hero_style}>
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <span>{badge}</span>
@@ -273,7 +280,8 @@ pages['servicios/presencia-digital.html'] = dict(
         [("tienda-online-bagisto.html", "Tienda Online Bagisto + IA", "Vende 24/7 con catálogo, Yape/Plin y pedidos por WhatsApp."),
          ("automatizacion-ia.html", "Automatización con IA", "Chatbot 24/7 y agentes de IA trabajando para tu negocio.")],
         faqs_p,
-        "Presencia Digital Inteligente", "https://crecepe.com/servicios/presencia-digital.html"),
+        "Presencia Digital Inteligente", "https://crecepe.com/servicios/presencia-digital.html",
+        fondo="../assets/img/servicios-presencia-fondo.avif"),
 )
 
 # ---------- 2. Tienda Bagisto ----------
@@ -308,7 +316,8 @@ pages['servicios/tienda-online-bagisto.html'] = dict(
         [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 500."),
          ("automatizacion-ia.html", "Automatización con IA", "Chatbot 24/7 y carga masiva de productos con agentes.")],
         faqs_t,
-        "Tienda Online Bagisto + IA", "https://crecepe.com/servicios/tienda-online-bagisto.html"),
+        "Tienda Online Bagisto + IA", "https://crecepe.com/servicios/tienda-online-bagisto.html",
+        fondo="../assets/img/servicios-tienda-fondo.avif"),
 )
 
 # ---------- 3. Automatización IA ----------
@@ -342,7 +351,8 @@ pages['servicios/automatizacion-ia.html'] = dict(
         [("presencia-digital.html", "Presencia Digital Inteligente", "Tu primera web profesional visible en Google desde S/ 500."),
          ("tienda-online-bagisto.html", "Tienda Online Bagisto + IA", "Vende 24/7 con catálogo, Yape/Plin y pedidos por WhatsApp.")],
         faqs_a,
-        "Automatización con IA", "https://crecepe.com/servicios/automatizacion-ia.html"),
+        "Automatización con IA", "https://crecepe.com/servicios/automatizacion-ia.html",
+        fondo="../assets/img/servicios-ia-fondo.avif"),
 )
 
 # ---------- 4. Caso AZ Consulting ----------
@@ -353,7 +363,7 @@ pages['casos/az-consulting.html'] = dict(
     schemas=[
         crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("AZ Consulting", "https://crecepe.com/casos/az-consulting.html")]),
     ],
-    content='''    <section class="page-hero">
+    content='''    <section class="page-hero has-bg parallax-fondo" style="background: linear-gradient(to bottom, rgba(10,25,48,0.70) 0%, rgba(10,25,48,0.30) 50%, rgba(10,25,48,0.85) 100%), url('../assets/img/casos-az-consulting-fondo.avif') center/cover no-repeat fixed;">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <a href="../index.html#casos">Casos</a> <span aria-hidden="true">/</span> <span>AZ Consulting</span>
@@ -402,7 +412,7 @@ pages['casos/novedades-chavez.html'] = dict(
     schemas=[
         crumbs([("Inicio", "https://crecepe.com/"), ("Casos", "https://crecepe.com/index.html#casos"), ("Novedades Chavez", "https://crecepe.com/casos/novedades-chavez.html")]),
     ],
-    content='''    <section class="page-hero">
+    content='''    <section class="page-hero has-bg parallax-fondo" style="background: linear-gradient(to bottom, rgba(10,25,48,0.70) 0%, rgba(10,25,48,0.30) 50%, rgba(10,25,48,0.85) 100%), url('../assets/img/casos-novedades-chavez-fondo.avif') center/cover no-repeat fixed;">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> <a href="../index.html#casos">Casos</a> <span aria-hidden="true">/</span> <span>Novedades Chavez</span>
@@ -449,7 +459,7 @@ pages['privacidad.html'] = dict(
     desc="Política de privacidad de CrecePE: qué datos recopilamos, para qué los usamos y cómo ejercer tus derechos.",
     canonical="https://crecepe.com/privacidad.html",
     schemas=[crumbs([("Inicio", "https://crecepe.com/"), ("Privacidad", "https://crecepe.com/privacidad.html")])],
-    content='''    <section class="page-hero">
+    content='''    <section class="page-hero has-bg parallax-fondo" style="background: linear-gradient(to bottom, rgba(10,25,48,0.70) 0%, rgba(10,25,48,0.30) 50%, rgba(10,25,48,0.85) 100%), url('assets/img/privacidad-fondo.avif') center/cover no-repeat fixed;">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="index.html">Inicio</a> <span aria-hidden="true">/</span> <span>Privacidad</span>
@@ -492,7 +502,7 @@ pages['terminos.html'] = dict(
     desc="Términos del servicio de CrecePE: alcance de los paquetes, pagos, plazos, propiedad del sitio y soporte.",
     canonical="https://crecepe.com/terminos.html",
     schemas=[crumbs([("Inicio", "https://crecepe.com/"), ("Términos", "https://crecepe.com/terminos.html")])],
-    content='''    <section class="page-hero">
+    content='''    <section class="page-hero has-bg parallax-fondo" style="background: linear-gradient(to bottom, rgba(10,25,48,0.70) 0%, rgba(10,25,48,0.30) 50%, rgba(10,25,48,0.85) 100%), url('assets/img/terminos-fondo.avif') center/cover no-repeat fixed;">
         <div class="container">
             <nav class="breadcrumbs" aria-label="Migajas de pan">
                 <a href="index.html">Inicio</a> <span aria-hidden="true">/</span> <span>Términos</span>

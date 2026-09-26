@@ -2065,7 +2065,7 @@ body:has(.contact-dial.is-open) #to-top,
 body:has(.contact-dial:focus-within) #to-top { bottom: 184px; }
 
 /* Foto superior full-bleed en cards de servicios */
-.service-photo { position: relative; margin: -36px -30px 24px; height: 200px; overflow: hidden; }
+.service-photo { position: relative; margin: -36px -30px 24px; height: 210px; overflow: hidden; }
 .service-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.4s ease, transform 0.4s ease; }
 .service-card:hover .service-photo img,
 .service-photo:focus-within img { filter: brightness(0.7); transform: scale(1.04); }
@@ -2988,7 +2988,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         grid-column: 1;
         grid-row: 1;
         width: auto;
-        height: 180px;
+        height: 156px;
         margin: -14px -14px 14px;
         border-radius: 12px 12px 0 0;
         align-self: auto;
@@ -3055,7 +3055,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
 /* --- Servicios: variante tablet compacta con caption permanente (openspec: servicios-compactas-ipad-texto-visible) --- */
 @media (min-width: 481px) and (max-width: 1024px) {
     .service-card { padding: 22px 18px; }
-    .service-photo { height: 140px; margin: -22px -18px 14px; }
+    .service-photo { height: 156px; margin: -22px -18px 14px; }
     .service-icon { width: 52px; height: 52px; margin-bottom: 14px; }
     .service-card h3 { font-size: 1.12rem; margin-bottom: 8px; }
     .service-card p { display: block; font-size: 0.9rem; margin-bottom: 12px; }
@@ -3074,6 +3074,11 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         text-align: left;
     }
     .service-photo .service-overlay p { font-size: 0.78rem; font-weight: 600; margin: 0; }
+}
+
+/* Tablet apaisada 769–1024: foto a la par de Casos (210px), Ño 156px del rango 481–768 (openspec: fix-servicios-image-height) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .service-photo { height: 210px; }
 }
 
 /* --- Proceso: variante compacta en tablet-portrait (openspec: proceso-compacto-tablet) --- */
@@ -3147,8 +3152,10 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     /* Mantener el logo visible en tablets sin cambiar la navegación ni crear
        otro breakpoint: el espacio entre enlaces se adapta al ancho disponible. */
     .navbar-inner .logo { flex: 0 0 auto; }
-    .nav-links { gap: clamp(8px, 1vw, 14px); }
-    .nav-links .nav-cta { padding-left: 12px; padding-right: 12px; }
+    .nav-links { gap: clamp(14px, 2vw, 22px); }
+    .nav-links a:not(.nav-cta) { font-size: 0.88rem; }
+    .nav-links .nav-cta { padding-left: 10px; padding-right: 10px; }
+    .navbar-inner .logo-img { height: 34px; }
 
     .services-grid { align-items: start; }
     .service-card { align-self: start; }
@@ -3226,7 +3233,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .pricing-grid { max-width: none; }
 
     .service-card { align-self: stretch; padding: 20px 18px; }
-    .service-card .service-photo { height: 128px; }
+    .service-card .service-photo { height: 210px; }
     .service-card .service-icon { width: 46px; height: 46px; margin-bottom: 12px; }
     .service-card h3 { font-size: 1.08rem; line-height: 1.25; margin-bottom: 8px; }
     .service-card p { font-size: 0.84rem; line-height: 1.45; margin-bottom: 10px; }
@@ -3259,7 +3266,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .scroll-mouse { bottom: 24px; }
 
     .service-card .service-photo {
-        height: 160px;
+        height: 210px;
         margin: -20px -18px 16px;
     }
 }
@@ -3312,7 +3319,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .services-grid, .pricing-grid, .opiniones-grid, .geo-grid, .cases-grid { gap: 20px; }
 
     .service-card { padding: 26px 22px; }
-    .service-photo { height: 160px; margin: -26px -22px 18px; }
+    .service-photo { height: 180px; margin: -26px -22px 18px; }
     .service-icon { width: 52px; height: 52px; margin-bottom: 14px; }
     .service-card h3 { font-size: 1.18rem; margin-bottom: 9px; }
     .service-card p { font-size: 0.9rem; margin-bottom: 12px; }
