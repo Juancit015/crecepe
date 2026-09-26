@@ -6,4 +6,4 @@
 ## 2. Cierre
 
 - [x] 2.1 Regenerar `styles.min.css` y verificar que el diff solo toca la imagen (+ `?v=54` ya aplicado)
-- [ ] 2.2 Agregar entrada en `CHANGELOG.md`, commitear y pushear
+- [x] 2.2 Agregar entrada en `CHANGELOG.md`, commitear y pushear
