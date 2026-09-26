@@ -1,3 +1,10 @@
+## 2026-09-26 — Servicios con foto arriba en móvil
+
+### Arreglado
+
+- Cards apiladas en ≤768px (foto 180px arriba, contenido debajo) en vez de fila lateral; mismo DOM e imágenes.
+- `?v=39` ×8 + generador + minificado.
+
 ## 2026-09-26 — Reversión de servicios-menu-expansion
 
 ### Quitado
