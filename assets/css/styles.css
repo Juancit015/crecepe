@@ -229,6 +229,12 @@ body.dark-mode .logo-img { filter: brightness(0) invert(1); }
     position: relative;
 }
 
+.nav-links a:not(.nav-cta) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -244,6 +250,9 @@ body.dark-mode .logo-img { filter: brightness(0) invert(1); }
 body.dark-mode .nav-links a:hover { color: var(--accent-light); }
 
 .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     background: var(--accent);
     color: #fff !important;
     padding: 10px 22px;
@@ -1970,7 +1979,7 @@ body.dark-mode .consent-actions [data-consent="rejected"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px; height: 42px;
+    width: 44px; height: 44px;
     border-radius: 50%;
     color: #fff;
     text-decoration: none;
@@ -2252,6 +2261,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
         scroll-behavior: auto !important;
     }
     .reveal { opacity: 1; transform: none; }
+    .pricing-grid > .pricing-card.reveal { transform: none !important; }
 }
 
 /* ============ Responsive ============ */
@@ -2326,7 +2336,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
         align-items: center;
         justify-content: center;
         align-self: flex-start;
-        width: 42px; height: 42px;
+        width: 44px; height: 44px;
         margin-bottom: 8px;
         background: none;
         border: none;
@@ -2408,6 +2418,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
         font-weight: 600;
         font-size: 1.1rem;
     }
+    .theme-toggle { width: 44px; height: 44px; }
     .services-grid, .pricing-grid, .cases-grid, .opiniones-grid, .geo-grid { grid-template-columns: 1fr; }
     /* Cards de una columna centradas con tope (tablet retrato ~768px):
        respiran con aire lateral; en teléfono (<600px) el tope no aplica. */
@@ -2419,7 +2430,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
     .contact-dial { width: 52px; height: 52px; bottom: 18px; right: 18px; }
     .contact-dial__main { width: 52px; height: 52px; }
     .contact-dial__main svg { width: 28px; height: 28px; }
-    .contact-dial__btn { width: 38px; height: 38px; }
+    .contact-dial__btn { width: 44px; height: 44px; }
     .contact-dial__btn:nth-child(1) { --x: -64px; --y: -7px; }
     .contact-dial__btn:nth-child(2) { --x: -46px; --y: -46px; }
     .contact-dial__btn:nth-child(3) { --x: -9px; --y: -70px; }
@@ -2466,7 +2477,7 @@ body.dark-mode .opinion-card { border-color: rgba(255, 255, 255, 0.08); }
 
 /* ============ Botón tema claro/oscuro ============ */
 .theme-toggle {
-    width: 42px; height: 42px;
+    width: 44px; height: 44px;
     background: none;
     border: none;
     color: inherit;
@@ -2925,9 +2936,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         border-radius: 16px;
         box-shadow: none;
     }
-    .case-link--secondary { display: none; }
-    .case-role,
-    .case-stack { display: none; }
+    .case-link--secondary { display: inline-flex; }
     /* Overlay como barra-caption siempre visible al pie de la foto */
     .case-preview .case-overlay {
         transform: none;
@@ -2942,17 +2951,13 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .case-preview .case-overlay p {
         font-size: 0.78rem;
         font-weight: 500;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        display: block;
+        overflow: visible;
     }
-    /* Descripción de caso: máximo 3 líneas */
+    /* Mantener completa la descripción del caso en móvil. */
     .case-body > p {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        display: block;
+        overflow: visible;
         margin-bottom: 12px;
     }
     .case-body { padding: 16px; }
@@ -2988,8 +2993,18 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         border-radius: 12px 12px 0 0;
         align-self: auto;
     }
-    /* Sin texto sobre la foto en móvil (reversión a pedido) */
-    .service-photo .service-overlay { display: none; }
+    /* Caption completa en el borde inferior, como en tablet. */
+    .service-photo .service-overlay {
+        display: flex;
+        transform: none;
+        inset: auto 0 0 0;
+        padding: 18px 12px 8px;
+        background: linear-gradient(transparent, rgba(6, 13, 31, 0.82));
+        align-items: flex-end;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .service-photo .service-overlay p { font-size: 0.78rem; font-weight: 600; margin: 0; }
     .service-icon { display: none; }
     .service-card .service-list {
         display: block;
@@ -2997,7 +3012,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
         margin-bottom: 8px;
     }
     .service-card .service-list li { font-size: 0.82rem; padding: 3px 0; }
-    .service-card .service-list li:nth-child(n+4) { display: none; }
+    .service-card .service-list li:nth-child(n+4) { display: flex; }
     .service-card h3 {
         grid-column: 1;
         font-size: 1.02rem;
@@ -3006,10 +3021,8 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     }
     .service-card p {
         grid-column: 1;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        display: block;
+        overflow: visible;
         flex-grow: 0;
         font-size: 0.88rem;
         line-height: 1.45;
@@ -3018,6 +3031,7 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .service-link {
         grid-column: 1;
         align-self: end;
+        min-height: 44px;
         font-size: 0.88rem;
     }
     /* Anclas desde la hamburguesa: aterriza justo al inicio de la sección */
@@ -3033,9 +3047,9 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
 
 /* --- Planes: entradas alternadas en móvil (openspec: planes-entrada-laterales) --- */
 @media (max-width: 768px) {
-    .pricing-grid > .pricing-card:nth-child(1).reveal:not(.visible) { transform: translateX(60px); }
-    .pricing-grid > .pricing-card:nth-child(2).reveal:not(.visible) { transform: translateX(-60px); }
-    .pricing-grid > .pricing-card:nth-child(3).reveal:not(.visible) { transform: translateX(60px); }
+    .pricing-grid > .pricing-card:nth-child(1).reveal:not(.visible),
+    .pricing-grid > .pricing-card:nth-child(2).reveal:not(.visible),
+    .pricing-grid > .pricing-card:nth-child(3).reveal:not(.visible) { transform: translateY(24px); }
 }
 
 /* --- Servicios: variante tablet compacta con caption permanente (openspec: servicios-compactas-ipad-texto-visible) --- */
@@ -3095,3 +3109,229 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
    En desktop multicolumna la card es más angosta que el tope y no aplica. */
 .opinion-text { max-width: 62ch; }
 
+/* Ajustes fluidos para anchos intermedios y redimensionado del navegador. */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .services-grid, .opiniones-grid, .geo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .service-card, .pricing-card, .opinion-card, .geo-card, .case-card { min-width: 0; }
+    .services-grid, .opiniones-grid, .geo-grid { gap: clamp(16px, 2.4vw, 26px); }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .hero { padding-top: 120px; }
+    .hero-content { max-width: 760px; }
+    .hero-actions { justify-content: center; }
+    .hero-actions .btn { white-space: normal; text-align: center; }
+    .section-subtitle { max-width: 58ch; }
+}
+
+@media (max-width: 768px) {
+    .container { padding-left: clamp(16px, 4vw, 24px); padding-right: clamp(16px, 4vw, 24px); }
+    .footer-links li { padding: 0; }
+    .footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+    .hero h1 { font-size: clamp(1.9rem, 7vw, 2.45rem); }
+    .hero-description { font-size: clamp(1rem, 4vw, 1.15rem); }
+    .hero-actions { align-items: stretch; }
+    .hero-actions .btn { justify-content: center; max-width: 100%; white-space: normal; text-align: center; }
+    .section-subtitle { font-size: clamp(0.98rem, 3.8vw, 1.08rem); }
+    .pricing-cta { min-height: 48px; padding: 12px; text-align: center; overflow-wrap: anywhere; }
+}
+
+@media (max-width: 380px) {
+    .hero-actions { flex-direction: column; }
+    .hero-actions .btn { width: 100%; }
+    .service-card, .pricing-card, .opinion-card, .geo-card { padding-left: 18px; padding-right: 18px; }
+}
+
+/* Mantener las cards a escala útil en tablet horizontal y ventanas medianas. */
+@media (min-width: 769px) and (max-width: 1100px) {
+    /* Mantener el logo visible en tablets sin cambiar la navegación ni crear
+       otro breakpoint: el espacio entre enlaces se adapta al ancho disponible. */
+    .navbar-inner .logo { flex: 0 0 auto; }
+    .nav-links { gap: clamp(8px, 1vw, 14px); }
+    .nav-links .nav-cta { padding-left: 12px; padding-right: 12px; }
+
+    .services-grid { align-items: start; }
+    .service-card { align-self: start; }
+    .services-grid > .service-card:nth-child(3),
+    .opiniones-grid > .opinion-card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 13px);
+    }
+    .service-card p { flex-grow: 0; }
+    .service-link { margin-top: 4px; }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: start;
+    }
+    .pricing-card { align-self: start; padding: 30px 24px; }
+    .pricing-grid > .pricing-card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 13px);
+    }
+    .pricing-features { margin-bottom: 18px; }
+
+    .cases-grid { align-items: start; }
+    .case-card { align-self: start; }
+    .case-body { padding: 22px; }
+    .case-actions {
+        margin-top: 4px;
+        padding-top: 14px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+    .case-link {
+        min-width: 0;
+        min-height: 46px;
+        justify-content: center;
+        gap: 6px;
+        padding: 9px 8px;
+        font-size: 0.82rem;
+        line-height: 1.25;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+    .case-link svg { flex: 0 0 14px; width: 14px; height: 14px; }
+}
+
+/* Igualar alturas dentro de cada fila sin perder el ancho controlado. */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .services-grid, .opiniones-grid, .pricing-grid, .cases-grid { align-items: stretch; }
+    .service-card, .opinion-card, .pricing-card, .case-card { align-self: stretch; }
+    .service-card p { flex-grow: 1; }
+    .case-body { flex: 1; }
+    .case-actions { margin-top: auto; }
+}
+
+/* A 1032px caben tres cards compactas: evitar que la tercera salte de fila. */
+@media (min-width: 993px) and (max-width: 1100px) {
+    .services-grid, .opiniones-grid, .pricing-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 18px;
+    }
+    .services-grid > .service-card:nth-child(3),
+    .opiniones-grid > .opinion-card:nth-child(3),
+    .pricing-grid > .pricing-card:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: auto;
+    }
+    .pricing-grid { max-width: none; }
+
+    .service-card { align-self: stretch; padding: 20px 18px; }
+    .service-card .service-photo { height: 128px; }
+    .service-card .service-icon { width: 46px; height: 46px; margin-bottom: 12px; }
+    .service-card h3 { font-size: 1.08rem; line-height: 1.25; margin-bottom: 8px; }
+    .service-card p { font-size: 0.84rem; line-height: 1.45; margin-bottom: 10px; }
+    .service-card .service-list { margin-bottom: 12px; }
+    .service-card .service-list li { gap: 7px; padding: 3px 0; font-size: 0.79rem; line-height: 1.35; }
+    .service-link { font-size: 0.84rem; }
+
+    .pricing-card { align-self: stretch; padding: 22px 18px; }
+    .pricing-card h3 { font-size: 1.08rem; line-height: 1.25; }
+    .pricing-desc { font-size: 0.82rem; line-height: 1.45; margin-bottom: 12px; }
+    .pricing-price { padding: 10px 0; margin-bottom: 12px; }
+    .pricing-price .amount { font-size: 1.65rem; }
+    .pricing-features { margin-bottom: 14px; }
+    .pricing-features li { gap: 7px; padding: 4px 0; font-size: 0.79rem; line-height: 1.35; }
+    .pricing-cta { padding: 10px 8px; gap: 6px; font-size: 0.82rem; text-align: center; }
+
+    .opinion-card { align-self: stretch; padding: 22px 18px; gap: 12px; }
+    .opinion-text { font-size: 0.84rem; line-height: 1.55; }
+    .opinion-author { gap: 10px; padding-top: 10px; }
+    .opinion-info strong { font-size: 0.86rem; }
+    .opinion-info span { font-size: 0.75rem; }
+}
+
+@media (min-width: 993px) and (max-width: 1100px) and (min-height: 900px) {
+    .hero {
+        min-height: 0;
+        padding-top: 140px;
+        padding-bottom: 104px;
+    }
+    .scroll-mouse { bottom: 24px; }
+
+    .service-card .service-photo {
+        height: 160px;
+        margin: -20px -18px 16px;
+    }
+}
+
+/* Tablet vertical amplio (p. ej. 960 × 1440): columnas según el contenido. */
+@media (min-width: 769px) and (max-width: 992px) {
+    .services-grid, .pricing-grid {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .services-grid > .service-card:nth-child(3),
+    .pricing-grid > .pricing-card:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: auto;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 992px) {
+    .opiniones-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        max-width: none;
+    }
+    .opiniones-grid > .opinion-card:nth-child(3) {
+        grid-column: auto;
+        justify-self: stretch;
+        width: auto;
+    }
+    .opinion-card { padding: 22px 18px; gap: 12px; }
+    .opinion-text { font-size: 0.84rem; line-height: 1.55; }
+    .opinion-author { gap: 10px; padding-top: 10px; }
+    .opinion-info strong { font-size: 0.86rem; }
+    .opinion-info span { font-size: 0.75rem; }
+}
+
+@media (min-width: 769px) and (max-width: 992px) and (min-height: 900px) {
+    .hero {
+        min-height: 0;
+        padding-top: 120px;
+        padding-bottom: 96px;
+    }
+    .scroll-mouse { bottom: 24px; }
+}
+
+/* Desktop con poca altura visible: reducir densidad sin alterar las columnas. */
+@media (min-width: 1201px) and (max-width: 1440px) and (max-height: 800px) {
+    .services-grid, .pricing-grid, .opiniones-grid, .geo-grid, .cases-grid { gap: 20px; }
+
+    .service-card { padding: 26px 22px; }
+    .service-photo { height: 160px; margin: -26px -22px 18px; }
+    .service-icon { width: 52px; height: 52px; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1.18rem; margin-bottom: 9px; }
+    .service-card p { font-size: 0.9rem; margin-bottom: 12px; }
+    .service-list { margin-bottom: 14px; }
+    .service-list li { padding: 4px 0; font-size: 0.84rem; }
+
+    .pricing-card, .geo-card { padding: 26px 22px; }
+    .pricing-desc { margin-bottom: 14px; }
+    .pricing-price { padding: 12px 0; margin-bottom: 16px; }
+    .pricing-features { margin-bottom: 18px; }
+    .pricing-features li { padding: 5px 0; font-size: 0.86rem; }
+
+    .case-preview { height: 180px; }
+    .case-body { padding: 22px; }
+    .case-actions { padding-top: 12px; gap: 8px; }
+    .case-link { padding: 10px 16px; font-size: 0.88rem; }
+
+    .opinion-card { padding: 24px 22px; gap: 12px; }
+    .opinion-text { font-size: 0.9rem; line-height: 1.55; }
+    .opinion-author { padding-top: 10px; }
+    .contact-card { padding: 30px 26px; }
+}

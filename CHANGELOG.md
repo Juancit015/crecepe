@@ -1,3 +1,21 @@
+## 2026-09-26 — Integración responsive del agente + bandas medias (responsive-cierre-agente)
+
+### Agregado
+
+- Bandas del agente: 769–1100 (2 col + huérfana centrada), 993–1100 (3 col
+  compactas), hero por altura (cubre 960×1440), desktop-bajo con densidad
+  reducida, botones de Casos lado a lado en ventana media.
+- Toques mínimos de 44px en nav, footer, theme-toggle, dial y CTAs;
+  reveals de Planes sin desplazamiento con movimiento reducido.
+- Móvil con contenido completo (sin podas): descripciones, listas,
+  metadatos y 2° enlace de Casos visibles, compactando altura.
+- `?v=53` unificado en las 8 páginas + generador.
+
+### Deuda documentada
+
+- Viewports 320–412px sin validación en navegador real (límite del agente).
+- Detector mecánico aún marca curvas/transiciones viejas del CSS.
+
 ## 2026-09-26 — Responsive intermedio: rangos 601–992 (responsive-intermedio)
 
 ### Agregado
