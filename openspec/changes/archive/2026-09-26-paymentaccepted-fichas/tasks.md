@@ -9,5 +9,5 @@
 
 ## 3. Cierre
 
-- [ ] 3.1 Sincronizar el spec principal `seo-contenido` vía archive del change y verificar `openspec status` en verde
-- [ ] 3.2 Agregar entrada en `CHANGELOG.md`, commitear y pushear, verificando que el diff solo toca schemas, generador y docs
+- [x] 3.1 Sincronizar el spec principal `seo-contenido` vía archive del change y verificar `openspec status` en verde
+- [x] 3.2 Agregar entrada en `CHANGELOG.md`, commitear y pushear, verificando que el diff solo toca schemas, generador y docs
