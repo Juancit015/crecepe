@@ -1,3 +1,14 @@
+## 2026-09-26 — Recrop focal del Diferenciador en táctil (fix-geo-image-mobile)
+
+### Corregido
+
+- `geo-fondo-movil.avif` regenerado con ventana focal (x 850–1450 del
+  original, ~60%): la mujer sonriente entra en encuadre en tablet y móvil
+  en vez de solo su hombro. Mismo peso (~10 KB) y dimensiones (600×800).
+- Sin cambios CSS: con el sujeto dentro del archivo, el `cover + center`
+  existente lo encuadra solo. Desktop intacto (panorama original).
+- `?v=54` unificado en las 8 páginas + generador.
+
 ## 2026-09-26 — Integración responsive del agente + bandas medias (responsive-cierre-agente)
 
 ### Agregado
