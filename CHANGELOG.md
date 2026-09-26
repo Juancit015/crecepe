@@ -1,3 +1,19 @@
+## 2026-09-26 — Responsive intermedio: rangos 601–992 (responsive-intermedio)
+
+### Agregado
+
+- Banda 769–992px: Casos y Planes a 1 columna con tope 600px (adiós cards
+  estiradas y huérfana de Planes); Contacto y FAQ con tope 600px. Con 1 col
+  los botones de Casos caben lado a lado en vez de apilarse.
+- Banda 601–768px: tope 560px (el de 600 quedaba borde a borde), `case-body`
+  y `contact-card` compactados, testimonios con renglón contenido (62ch).
+- `?v=42` ×9 + generador + minificado (el min estaba stale del 25: por eso
+  Ño se veía ningún cambio).
+
+### Intacto
+
+- Teléfono ≤600px, desktop >992px, GEO/Opiniones en 2 col, drawer y temas.
+
 ## 2026-09-26 — paymentAccepted en fichas (paymentaccepted-fichas)
 
 ### Agregado

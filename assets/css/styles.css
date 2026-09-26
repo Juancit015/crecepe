@@ -3073,3 +3073,25 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     #proceso .pricing-toggle { width: auto; justify-content: flex-start; }
 }
 
+/* --- Responsive intermedio: ventana media 769–992px (openspec: responsive-intermedio) --- */
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Casos a 1 columna con tope: 2 cards estiradas con fotos gigantes → apiladas centradas */
+    .cases-grid { grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto; }
+    /* Planes a 1 columna con tope: 2 col apretadas + huérfana a media card → apiladas comparables */
+    .pricing-grid { grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto; }
+    /* Contacto y FAQ con aire lateral (mismo tope que ya existe en ≤768px) */
+    .contact-grid, .faq-list { max-width: 600px; margin-left: auto; margin-right: auto; }
+}
+
+/* --- Responsive intermedio: subrango 601–768px (openspec: responsive-intermedio) --- */
+@media (min-width: 601px) and (max-width: 768px) {
+    /* Tope más contenido: a 670px el cap de 600px queda de borde a borde */
+    .opiniones-grid, .geo-grid, .services-grid, .contact-grid, .pricing-grid, .cases-grid, .faq-list { max-width: 560px; }
+    .case-body { padding: 20px 16px; }
+    .contact-card { padding: 30px 22px; }
+}
+
+/* Testimonios con renglón contenido: a 1 columna las líneas cruzaban de borde a borde.
+   En desktop multicolumna la card es más angosta que el tope y no aplica. */
+.opinion-text { max-width: 62ch; }
+
