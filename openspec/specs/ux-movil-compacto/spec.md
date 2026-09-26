@@ -35,19 +35,19 @@ El sistema SHALL mostrar las cards de Servicios en versión compacta en tablet (
 - **THEN** se aplican sus layouts actuales sin cambios (hover-overlay en desktop, apilada foto-arriba 180px en teléfono)
 
 ### Requirement: Secciones compactas en móvil
-El sistema SHALL mostrar Servicios en filas con foto fija de 118px de alto y sus 3 primeros bullets visibles, Casos podados (2° link solo desktop) y Opiniones compactas, solo en móvil.
+El sistema SHALL mostrar en móvil las cards de Servicios, Casos y Opiniones con contenido completo (descripciones sin recorte, listas íntegras, metadatos y segundo enlace de Casos visibles, caption en foto de Servicios), compactando solo altura: foto contenida, paddings y tipografías reducidos. Nada se poda ni se oculta por ser móvil.
 
 #### Scenario: Servicios fila
 - **WHEN** el visitante ve Servicios en móvil
-- **THEN** cada card es una fila con foto de 92px por 118px, título, descripción a 2 líneas, los 3 primeros bullets de su lista y link, sin overlay ni icono
+- **THEN** cada card apilada muestra prestaciones, descripción y leyenda completas (sin poda a 3 bullets ni recorte a 2 líneas), con foto contenida y aire reducido
 
 #### Scenario: Casos podados
 - **WHEN** el visitante ve Casos en móvil
-- **THEN** ve foto, título, descripción a 3 líneas y un solo botón full-width, sin overlay, rol ni stack
+- **THEN** ve foto, descripción completa, metadatos y los dos botones (ver caso + ver sitio), compactados en altura sin ocultar nada
 
 #### Scenario: Opiniones compactas
 - **WHEN** el visitante ve Opiniones en móvil
-- **THEN** las cards tienen menos padding y texto reducido
+- **THEN** las cards tienen menos padding y texto completo con renglón contenido
 
 ### Requirement: Cards apiladas compactas en rango medio
 El sistema SHALL mostrar las cards apiladas de Casos, Opiniones y Contacto en versión compacta en el subrango 600–768px (foto contenida ~140–150px, paddings y tipografías reducidos frente a desktop), espejo del tratamiento que Servicios ya tiene en 481–1024px. El contenido queda completo y legible en claro y oscuro; teléfonos (≤600px) y desktop intactos.

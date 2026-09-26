@@ -6,6 +6,6 @@
 
 ## 2. Cierre
 
-- [ ] 2.1 Agregar entrada en `CHANGELOG.md` (incluye deuda 320–412px y deals del agente), commitear solo archivos del sitio y pushear, verificando que `.agents/` queda fuera
+- [x] 2.1 Agregar entrada en `CHANGELOG.md` (incluye deuda 320–412px y deals del agente), commitear solo archivos del sitio y pushear, verificando que `.agents/` queda fuera
 - [x] 2.2 Archivar `responsive-intermedio` con deltas ajustados a lo publicado y verificar specs en verde
-- [ ] 2.3 Archivar este change con sync de `ux-movil-compacto` y `cards-centradas` y verificar `openspec status` en verde
+- [x] 2.3 Archivar este change con sync de `ux-movil-compacto` y `cards-centradas` y verificar `openspec status` en verde

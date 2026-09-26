@@ -6,7 +6,7 @@ Que las cards de una columna respiren con aire lateral en tablet retrato y venta
 
 ### Requirement: Cards de una columna centradas con tope
 
-En viewports ≤992px los grids de una columna (`cases-grid` desde 769px; `opiniones-grid`, `geo-grid`, `services-grid`, `contact-grid`, `pricing-grid` y `cases-grid` en ≤768px) y la lista de FAQ (`faq-list`, `contact-grid` con tope desde 769px) MUST centrarse con un ancho máximo (~600px, 560px en el subrango 601–768px donde 600px queda de borde a borde): las cards respiran con aire lateral en tablet retrato y ventanas medias, y ocupan el 100% en teléfono, donde el tope no aplica. `cases-grid` colapsa a 1 columna en 769–992px en vez de mantener 2 cards estiradas.
+En viewports ≤992px los grids de una columna MUST centrarse con un ancho máximo: ~600px en ≤768px y 769–992px (Casos, Planes, Contacto, FAQ, Servicios), 560px en el subrango 601–768px donde 600px queda de borde a borde; en teléfono (<600px) el tope no aplica y todo ocupa el 100%. Las bandas 769–1100 del agente (2 col con huérfana centrada, 3 col compactas en 993–1100) conviven sin contradecirlo: donde hay 1 columna, hay tope.
 
 #### Scenario: iPad mini retrato con aire
 
@@ -23,12 +23,17 @@ En viewports ≤992px los grids de una columna (`cases-grid` desde 769px; `opini
 - **WHEN** el visitante abre las mismas secciones a 360px
 - **THEN** todo se ve igual que antes (el tope no aplica bajo 600px de grid)
 
-#### Scenario: Casos apilados en ventana media
-
-- **WHEN** el visitante abre Casos entre 769 y 992px
-- **THEN** ve 1 columna centrada con tope (~600px) en vez de 2 cards estiradas de borde a borde
-
 #### Scenario: Contacto y FAQ con aire en ventana media
 
 - **WHEN** el visitante abre Contacto o FAQ entre 769 y 992px
 - **THEN** la tarjeta y las filas se ven centradas con margen lateral, Ño a ancho completo
+
+#### Scenario: Casos y Planes apilados en ventana media
+
+- **WHEN** el visitante abre Casos o Planes entre 769 y 992px
+- **THEN** ve 1 columna centrada con tope (~600px) en vez de cards estiradas o huérfana a media card
+
+#### Scenario: Tope vigente tras bandas del agente
+
+- **WHEN** se inspeccionan los grids de 1 columna entre 601 y 992px
+- **THEN** cada uno tiene tope centrado (560 o 600px según subrango) y ninguno estira de borde a borde
