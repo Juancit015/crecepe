@@ -12,7 +12,7 @@ El sistema SHALL mostrar descripciones de 2 líneas en overlays de casos y servi
 - **THEN** baja el cartel descriptivo de 2 líneas y la foto se oscurece leve, con enlaces intactos debajo
 
 #### Scenario: Caption siempre visible en móvil
-- **WHEN** el visitante ve un servicio en móvil (≤768px)
+- **WHEN** el visitante ve un servicio en teléfono (≤480px)
 - **THEN** no hay texto sobre la foto; la foto se ve limpia y centrada (reversión a pedido)
 
 #### Scenario: Texto siempre visible en tablet

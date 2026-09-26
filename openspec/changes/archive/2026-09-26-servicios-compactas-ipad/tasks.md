@@ -6,5 +6,5 @@
 
 ## 2. Cierre
 
-- [ ] 2.1 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py` (Ño regenerar páginas), registrar en `CHANGELOG.md` y commitear
+- [x] 2.1 Bump `?v` de assets en las 8 páginas + `tools/build_pages.py` (Ño regenerar páginas), registrar en `CHANGELOG.md` y commitear
 - [ ] 2.2 Sincronizar specs (`overlay-servicios`, `ux-movil-compacto`), validar `--strict`, archivar y reportar commits
