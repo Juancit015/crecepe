@@ -152,7 +152,7 @@ def service_schema(name, desc, price, url):
         "name": name,
         "description": desc,
         "url": url,
-        "provider": {"@type": "ProfessionalService", "name": "CrecePE", "url": "https://crecepe.com/"},
+        "provider": {"@type": "ProfessionalService", "name": "CrecePE", "url": "https://crecepe.com/", "paymentAccepted": ["Yape", "Plin", "Transferencia bancaria"]},
         "areaServed": "Perú",
         "offers": {"@type": "Offer", "price": price, "priceCurrency": "PEN"}
     }

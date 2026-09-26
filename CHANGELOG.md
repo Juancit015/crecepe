@@ -1,3 +1,14 @@
+## 2026-09-26 — paymentAccepted en fichas (paymentaccepted-fichas)
+
+### Agregado
+
+- `"paymentAccepted": ["Yape", "Plin", "Transferencia bancaria"]` en el
+  `provider` de los schemas `Service` de las 3 fichas (home ya lo tenía;
+  casos y legales fuera por decisión de alcance). JSON validado.
+- Campo incluido en `service_schema()` del generador para futuras
+  regeneraciones. Spec `seo-contenido` actualizado al alcance real.
+- Sin cambios visibles ni de layout.
+
 ## 2026-09-26 — Sincronización pre-arranque (sync-pre-arranque)
 
 ### Arreglado
