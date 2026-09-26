@@ -3038,3 +3038,27 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .pricing-grid > .pricing-card:nth-child(3).reveal:not(.visible) { transform: translateX(60px); }
 }
 
+/* --- Servicios: variante tablet compacta con caption permanente (openspec: servicios-compactas-ipad-texto-visible) --- */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .service-card { padding: 22px 18px; }
+    .service-photo { height: 140px; margin: -22px -18px 14px; }
+    .service-icon { width: 52px; height: 52px; margin-bottom: 14px; }
+    .service-card h3 { font-size: 1.12rem; margin-bottom: 8px; }
+    .service-card p { display: block; font-size: 0.9rem; margin-bottom: 12px; }
+    .service-list { margin-bottom: 14px; }
+    /* Contenido completo en tablet (sin poda móvil) */
+    .service-card .service-list li:nth-child(n+4) { display: flex; }
+    /* Overlay como barra-caption siempre visible al pie de la foto (patrón Casos) */
+    .service-photo .service-overlay {
+        display: flex;
+        transform: none;
+        inset: auto 0 0 0;
+        padding: 18px 12px 8px;
+        background: linear-gradient(transparent, rgba(6, 13, 31, 0.82));
+        align-items: flex-end;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .service-photo .service-overlay p { font-size: 0.78rem; font-weight: 600; margin: 0; }
+}
+

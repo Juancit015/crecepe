@@ -1,4 +1,10 @@
-## 2026-09-26 — Servicios con foto arriba en móvil
+## 2026-09-26 — Servicios compactos con caption permanente en tablet
+
+### Agregado
+
+- Variante tablet 481–1024px: cards compactas (foto 140px, aire reducido) con texto del hover siempre visible como barra-caption al pie de la foto (patrón Casos), contenido completo sin poda.
+- Desktop (>1024px) intacto con hover; teléfonos (≤480px) intactos sin texto sobre foto.
+- `?v=40` ×8 + generador + minificado.
 
 ### Arreglado
 
