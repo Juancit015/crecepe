@@ -39,7 +39,7 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <!-- CSS (bloqueante a propósito: evita FOUC; ?v=3 invalida caché vieja) -->
-    <link rel="stylesheet" href="assets/css/styles.min.css?v=38">
+    <link rel="stylesheet" href="assets/css/styles.min.css?v=39">
 
     <!-- Preload imagen hero (LCP): versión móvil para ahorrar bytes en 4G lenta -->
     <link rel="preload" as="image"
@@ -485,6 +485,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><circle cx="11.5" cy="14.5" r="2.5"/><path d="M13.3 16.3 15 18"/></svg>
                     </div>
                     <h3>Presencia Digital Inteligente</h3>
+                    <button class="service-toggle" aria-expanded="false" aria-controls="sd-presencia" aria-label="Ver detalle"><span aria-hidden="true">+</span></button>
+                    <div class="service-detail" id="sd-presencia">
                     <p>Para negocios que parten de cero o tienen una web invisible. Un sitio profesional, rápido y preparado para buscadores e IA desde el primer día.</p>
                     <ul class="service-list">
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Web de hasta 7 secciones, responsive y veloz</li>
@@ -492,6 +494,7 @@
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp, Analytics y Search Console</li>
                     </ul>
                     <a href="servicios/presencia-digital.html" class="service-link">Ver plan Presencia <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                    </div>
                 </div>
 
                 <div class="service-card reveal">
@@ -500,6 +503,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="m16 9-5.5 5.5L8 12"/></svg>
                     </div>
                     <h3>Tienda Virtual + IA</h3>
+                    <button class="service-toggle" aria-expanded="false" aria-controls="sd-tienda" aria-label="Ver detalle"><span aria-hidden="true">+</span></button>
+                    <div class="service-detail" id="sd-tienda">
                     <p>Para tiendas físicas y emprendimientos que quieren vender 24/7. Tu catálogo online con pagos y envíos coordinados, cargado con ayuda de IA.</p>
                     <ul class="service-list">
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tu tienda virtual: catálogo, categorías y colecciones</li>
@@ -507,6 +512,7 @@
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Carga de productos automatizada con IA</li>
                     </ul>
                     <a href="servicios/tienda-online-bagisto.html" class="service-link">Ver plan Tienda <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                    </div>
                 </div>
 
                 <div class="service-card reveal">
@@ -515,6 +521,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
                     </div>
                     <h3>Automatización con IA</h3>
+                    <button class="service-toggle" aria-expanded="false" aria-controls="sd-automatizacion" aria-label="Ver detalle"><span aria-hidden="true">+</span></button>
+                    <div class="service-detail" id="sd-automatizacion">
                     <p>Para negocios que ya tienen web o tienda y quieren escalar sin contratar más personal. Agentes de IA trabajando para ti las 24 horas.</p>
                     <ul class="service-list">
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Chatbot de atención y ventas 24/7</li>
@@ -522,6 +530,7 @@
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Auditoría SEO + GEO de tu sitio actual</li>
                     </ul>
                     <a href="servicios/automatizacion-ia.html" class="service-link">Ver plan Automatiza <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                    </div>
                 </div>
 
             </div>
@@ -1245,7 +1254,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js?v=38" defer></script>
+    <script src="assets/js/main.js?v=39" defer></script>
 
 </body>
 

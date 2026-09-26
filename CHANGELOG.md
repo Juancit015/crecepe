@@ -1,3 +1,10 @@
+## 2026-09-26 — Servicios como menú expandible
+
+### Agregado
+
+- Sección Servicios en ≤992px: lista numerada + expansión exclusiva (mismo DOM, h3 y links intactos para SEO); desktop con cards intacto.
+- `?v=39` ×8 + generador + minificado.
+
 ## 2026-09-25 — Footer listado y centrado
 
 ### Arreglado
