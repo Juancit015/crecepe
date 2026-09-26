@@ -1,3 +1,17 @@
+## 2026-09-26 — Sincronización pre-arranque (sync-pre-arranque)
+
+### Arreglado
+
+- FAQ 1:1 en visible, schema FAQPage y `llms.txt` (13/13 preguntas y respuestas
+  idénticas; 9 respuestas del schema alineadas al texto visible, fuente de verdad).
+- `priceRange` confirmado en `"S/ 500 - S/ 900"` (decisión de Juan: 500/700/900);
+  spec `seo-contenido` actualizado al mismo valor (estaba en 149-2990).
+- Sitemap con `lastmod` al 2026-09-26 en las 8 URLs.
+- README: 13 FAQs (era 11) y opiniones sin estrellas.
+- `tools/build_pages.py` con candado documentado (bloques en riesgo + protocolo
+  `git diff` obligatorio); marcador QA corregido a "Nos tomamos en serio".
+- Sin cambios visuales ni de layout.
+
 ## 2026-09-26 — Proceso compacto en tablet-portrait
 
 ### Arreglado

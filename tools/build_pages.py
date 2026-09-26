@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 """Genera las subpaginas de CrecePE reutilizando navbar, dial, to-top y footer del index.
-AVISO: las páginas publicadas recibieron ediciones manuales (fichas, FAQs extra,
-copy) que el generador NO reproduce. No correr sin verificar `git diff` antes."""
+
+CANDADO (change sync-pre-arranque): las páginas publicadas recibieron ediciones
+manuales que el generador NO reproduce. NO correr sobre páginas publicadas hasta
+sincronizar su plantilla. Bloques en riesgo: Prueba real, Cómo lo hacemos,
+¿Es para ti?, checklist "Nos tomamos en serio", héroes con foto (has-bg), contadores animados
+y Ficha del proyecto en casos (ya se perdió contenido una vez, ver commit 3932539).
+Protocolo obligatorio si se corre: revisar `git diff` ANTES de commitear y
+descartar con `git checkout --` cualquier pérdida. Spec: generador-seguro."""
+
 import re, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

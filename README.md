@@ -53,11 +53,12 @@ post-lanzamiento de 30 días.
     carga de productos automatizada con agentes de IA.
 - **Opiniones:** tres testimonios alineados a los servicios (María García — web
   profesional, Dayron Chavez — Novedades Chávez, Ana López — IA),
-  con foto, cargo y calificación de 5 estrellas.
-- **FAQ:** 11 preguntas frecuentes (costos, tiempos, GEO, cobertura, pagos,
-  diagnóstico y 5 long-tail locales): se muestran 6 y el botón "Ver todas
-  las preguntas" revela las 5 restantes (viaja al final y alterna a
-  "Ver menos preguntas").
+  con foto y cargo, como citas de texto sin formato de reseña con estrellas.
+- **FAQ:** 13 preguntas frecuentes (costos, tiempos, GEO, cobertura, pagos,
+  diagnóstico, administración, tarjeta, marketplace y 4 long-tail locales):
+  se muestran 6 y el botón "Ver todas las preguntas" revela las 7 restantes
+  (viaja al final y alterna a "Ver menos preguntas"). Pregunta y respuesta
+  idénticas en visible, schema FAQPage y `llms.txt`.
 - **Contacto:** datos directos y tarjeta de diagnóstico gratuito por videollamada
   de 30 minutos, con propuesta personalizada en menos de 24 horas.
 - **Elementos flotantes:** dial de contacto en abanico (WhatsApp, llamar, email,

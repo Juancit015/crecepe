@@ -33,21 +33,21 @@
 
 - Testimonios alineados a los servicios (web profesional, tienda 24/7, IA que atiende): María García (Cliente — Sitio web profesional), Dayron Chavez (Fundador — Novedades Chávez) y Ana López (Cliente — Automatización con IA). Se muestran como citas de texto, sin formato de reseña con estrellas.
 
-## Preguntas frecuentes (long-tail local)
+## Preguntas frecuentes
 
-- ¿Cuánto cuesta una página web para mi negocio en Trujillo? Presencia Digital desde S/ 500, diagnóstico gratuito por videollamada.
-- ¿Cómo vender por internet con tienda física en Trujillo? Tienda Bagisto desde S/ 700 con Yape/Plin, pedidos por WhatsApp y envíos por Shalom.
-- ¿Por qué mi negocio no aparece en ChatGPT o Gemini? Las IA citan negocios con presencia estructurada (Schema.org, reseñas, contenido claro); el servicio GEO lo corrige.
-- ¿Mi bodega o restaurante puede aparecer en Google Maps? Sí, con perfil de empresa, reseñas y web con geo-tags de Trujillo.
-- ¿Marketplace o tienda propia? Marketplace cobra comisión por venta; la tienda Bagisto propia no tiene comisiones y la IA atiende 24/7.
-- ¿El dominio y el hosting están incluidos? No: se contratan a tu nombre (tú eres el dueño); se recomienda Hostinger y se deja configurado con SSL y correo corporativo. Costo típico S/ 100-150 al año.
-- ¿Por qué contratar a un independiente y no a una agencia de diseño web? Trato directo sin intermediarios, con diseño web profesional, SEO + GEO, capacitación y soporte a precio de independiente.
-- ¿En qué consiste el diseño de tiendas online? Tienda virtual sobre Bagisto adaptada a tu marca: catálogo, Yape/Plin, pedidos por WhatsApp y envíos coordinados, con productos cargados y optimizados para Google e IA.
-- ¿Qué es un chatbot y cómo ayuda a mi negocio? Asistente con IA que responde sobre productos, precios y horarios y toma pedidos 24/7; deriva a WhatsApp lo que necesita atención humana.
-- ¿El chatbot funciona en WhatsApp? Atiende en la web 24/7 y deriva clientes a tu WhatsApp; la respuesta directa dentro de WhatsApp se evalúa en el diagnóstico según volumen de mensajes.
-- ¿En cuánto tiempo está lista mi web? Presencia Digital en 2-3 semanas desde que el cliente entrega logo, fotos e información.
-- ¿La tienda puede cobrar con tarjeta? El plan base cobra con Yape, Plin y transferencia sin comisiones; la pasarela con tarjeta se cotiza como adicional.
-- ¿Puedo administrar mi web o tienda yo mismo? Sí, con capacitación en video incluida; el mantenimiento desde S/ 149 lo cubre si se prefiere delegar.
+- **¿Cuánto cuesta una página web o tienda online en Perú?** La Presencia Digital empieza desde S/ 500, la Tienda Virtual + IA desde S/ 700 y la Automatización con IA desde S/ 900. El alcance final se define en el diagnóstico gratuito según las necesidades de tu negocio, sin costos ocultos.
+- **¿Qué es GEO y por qué lo necesita mi negocio?** GEO (Generative Engine Optimization) optimiza tu presencia para que sistemas de IA como ChatGPT, Gemini y Perplexity entiendan, citen y recomienden tu negocio. Mientras el SEO te posiciona en la lista de Google, el GEO te convierte en la respuesta que la IA recomienda.
+- **¿Cuánto tiempo toma desarrollar mi web o tienda?** Un sitio web de Presencia Digital toma de 2 a 3 semanas, una Tienda Virtual de 4 a 6 semanas y un proyecto de Automatización con IA de 2 a 4 semanas. Recibes un cronograma detallado después del diagnóstico gratuito.
+- **¿Trabajas con negocios fuera de Trujillo?** Sí. Trabajo de forma remota con negocios de todo el Perú. El diagnóstico inicial es una videollamada gratuita y todo el seguimiento del proyecto se hace por WhatsApp y reuniones virtuales.
+- **¿Cómo es el proceso de pago?** Los proyectos se pagan 50% al inicio y 50% contra entrega. Acepto Yape, Plin y transferencia bancaria. También ofrezco planes de mantenimiento mensual desde S/ 149 que incluyen actualizaciones, backups y mejoras continuas.
+- **¿Qué incluye el diagnóstico gratuito?** Una videollamada de 30 minutos donde revisamos tu presencia digital actual, detecto 3 oportunidades concretas de mejora en Google e IA, y te recomiendo el paquete que mejor se ajusta a tu negocio. Sin ningún compromiso.
+- **¿Cuánto cuesta una página web para mi negocio en Trujillo?** En CrecePE la Presencia Digital para negocios en Trujillo empieza desde S/ 500: sitio profesional, responsive y optimizado para Google. Trabajo desde Trujillo y atiendo de forma remota a todo el Perú; el diagnóstico inicial por videollamada es gratuito y sin compromiso.
+- **¿Cómo puedo vender por internet si tengo una tienda física en Trujillo?** Con la Tienda Virtual + IA desde S/ 700: tu catálogo en internet, pedidos por WhatsApp, pagos con Yape y Plin, y envíos a todo el Perú coordinados con Shalom u otro courier. Tu tienda física sigue operando mientras vendes online las 24 horas.
+- **¿Por qué mi negocio no aparece cuando preguntan a ChatGPT o Gemini?** Las IA recomiendan negocios con presencia clara: sitio web que entienden, reseñas de clientes y contenido directo. Si tu negocio no tiene eso, es invisible para ellas. El servicio GEO de CrecePE corrige exactamente eso: ordena tu información para que ChatGPT, Gemini y Perplexity te entiendan y te citen.
+- **¿Mi bodega o restaurante puede aparecer en Google Maps?** Sí. Con un perfil de empresa en Google bien configurado, reseñas de tus clientes y una web optimizada con geo-tags de Trujillo, tu bodega o restaurante puede aparecer cuando alguien busque cerca de ti. En el diagnóstico gratuito revisamos tu situación actual y te digo los pasos exactos.
+- **¿Puedo administrar mi web o tienda yo mismo?** Sí. Recibes capacitación en video para actualizar textos, fotos y productos sin depender de nadie. Y si prefieres delegarlo, el mantenimiento mensual desde S/ 149 lo cubre.
+- **¿Mi tienda puede cobrar con tarjeta?** El plan base cobra con Yape, Plin y transferencia directo a ti, sin comisiones. La pasarela con tarjeta (MercadoPago u otra) se cotiza como adicional según tu volumen de ventas.
+- **¿Me conviene vender en un marketplace o tener mi propia tienda online?** El marketplace te da visibilidad inmediata pero te cobra comisión por cada venta y controla al cliente. Tu propia tienda virtual no paga comisiones, tu marca es la protagonista y la IA puede atender a tus clientes por WhatsApp 24/7. La estrategia ideal suele ser combinar ambos: marketplace para captar y tienda propia para fidelizar.
 
 ## Pagos
 
