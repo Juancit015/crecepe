@@ -1,4 +1,10 @@
-## 2026-09-26 — Servicios compactos con caption permanente en tablet
+## 2026-09-26 — Proceso compacto en tablet-portrait
+
+### Arreglado
+
+- Variante 481–768px: pasos con aire reducido (28px), timeline ajustado y "Ver detalle" con flecha pegada a la etiqueta; uniforme con Servicios/Planes/Casos.
+- Teléfono (≤480px) y desktop intactos; Planes sin cambios.
+- `?v=41` ×8 + generador + minificado.
 
 ### Agregado
 

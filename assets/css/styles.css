@@ -3062,3 +3062,14 @@ body.dark-mode .hero h1 .hl { color: var(--accent-light); }
     .service-photo .service-overlay p { font-size: 0.78rem; font-weight: 600; margin: 0; }
 }
 
+/* --- Proceso: variante compacta en tablet-portrait (openspec: proceso-compacto-tablet) --- */
+@media (min-width: 481px) and (max-width: 768px) {
+    #proceso .section-header { margin-bottom: 24px; }
+    #proceso .process-timeline { padding-left: 48px; }
+    #proceso .process-timeline::before { left: 26px; }
+    #proceso .process-step { padding-bottom: 28px; }
+    #proceso .process-dot { left: -38px; }
+    /* Flecha pegada a la etiqueta (sin space-between a ancho completo) */
+    #proceso .pricing-toggle { width: auto; justify-content: flex-start; }
+}
+
