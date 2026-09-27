@@ -11,12 +11,10 @@
         document.body.classList.remove('preload');
     }
 
-    if (document.readyState === 'complete') {
-        unpreload();
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', unpreload, { once: true });
     } else {
-        window.addEventListener('load', unpreload);
-        // Respaldo por si 'load' tarda (fuentes externas)
-        setTimeout(unpreload, 2500);
+        requestAnimationFrame(unpreload);
     }
 
     /* ---------- Tema claro / oscuro ---------- */
@@ -46,15 +44,10 @@
     /* ---------- Navbar: fondo al hacer scroll ---------- */
     var navbar = document.getElementById('navbar');
 
-    // Lee UNA vez por frame y luego escribe: leer después de mutar
-    // el DOM fuerza reflow (lo marcaba Lighthouse: 119ms).
+    // Lee UNA vez por frame y luego escribe para evitar reflows forzados.
     function onScroll(y) {
         navbar.classList.toggle('scrolled', y > 40);
     }
-
-    window.addEventListener('scroll', onScrollY, { passive: true });
-    // Difiere la lectura inicial de scrollY fuera del parsing para evitar reflow
-    requestAnimationFrame(onScrollY);
 
     /* ---------- Botón volver arriba (desvanecido) ---------- */
     var toTop = document.getElementById('to-top');
@@ -73,7 +66,7 @@
         }
     }
     function onScrollFrame() {
-        var y = window.pageYOffset || document.documentElement.scrollTop;
+        var y = window.pageYOffset;
         onScroll(y);
         syncToTop(y);
         scrollTicking = false;
@@ -81,7 +74,7 @@
 
     window.addEventListener('scroll', onScrollY, { passive: true });
     requestAnimationFrame(function () {
-        var y = window.pageYOffset || document.documentElement.scrollTop;
+        var y = window.pageYOffset;
         onScroll(y);
         syncToTop(y);
     });

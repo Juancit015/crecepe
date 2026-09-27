@@ -1763,16 +1763,17 @@ body.dark-mode .contact-card small a:hover { color: var(--accent-light); }
     opacity: 0;
     visibility: hidden;
     transform: translateY(16px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.consent-banner.consent-visible { opacity: 1; visibility: visible; transform: none; }
+.consent-banner.consent-visible { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
 /* Con el drawer abierto el banner se atenúa como el fondo y deja de ser
    interactivo (está sobre el velo por orden DOM, así que se simula con
    brightness + pointer-events). Al cerrar vuelve solo. */
 body:has(.nav-links.open) .consent-banner {
     filter: brightness(0.4);
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, filter 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 .consent-banner p { margin: 0; font-size: 0.85rem; line-height: 1.55; }
 .consent-banner a { color: var(--primary); }
@@ -2676,12 +2677,12 @@ body:not(.dark-mode) .hero-trust div { color: rgba(255, 255, 255, 0.85); text-sh
 body:not(.dark-mode) .hero-trust svg { color: var(--accent-light); }
 /* Hero: sistema glass réplica AZ (claro: ambos iguales; oscuro: Agendar cyan, Ver blanquecino) */
 body:not(.dark-mode) .hero-actions .btn-primary,
-body:not(.dark-mode) .hero-actions .btn-outline { background: rgba(10, 31, 68, 0.08); border: 2px solid rgba(10, 31, 68, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(10, 31, 68, 0.1); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+body:not(.dark-mode) .hero-actions .btn-outline { background: rgba(10, 31, 68, 0.08); border: 2px solid rgba(10, 31, 68, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(10, 31, 68, 0.1); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, backdrop-filter 0.4s ease; }
 body:not(.dark-mode) .hero-actions .btn-primary:hover,
 body:not(.dark-mode) .hero-actions .btn-outline:hover { background: var(--primary); border-color: var(--primary); color: #fff; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(10, 31, 68, 0.25); }
-body.dark-mode .hero-actions .btn-primary { background: rgba(0, 194, 255, 0.12); border: 2px solid rgba(0, 194, 255, 0.4); color: var(--accent-light); box-shadow: 0 8px 25px rgba(0, 194, 255, 0.1); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+body.dark-mode .hero-actions .btn-primary { background: rgba(0, 194, 255, 0.12); border: 2px solid rgba(0, 194, 255, 0.4); color: var(--accent-light); box-shadow: 0 8px 25px rgba(0, 194, 255, 0.1); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, backdrop-filter 0.4s ease; }
 body.dark-mode .hero-actions .btn-primary:hover { background: var(--accent-light); border-color: var(--accent-light); color: #fff; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 194, 255, 0.25); }
-body.dark-mode .hero-actions .btn-outline { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 255, 255, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+body.dark-mode .hero-actions .btn-outline { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 255, 255, 0.3); color: #fff; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease, backdrop-filter 0.4s ease; }
 body.dark-mode .hero-actions .btn-outline:hover { background: #fff; border-color: #fff; color: #0A1F44; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2); }
 body:not(.dark-mode) .geo-section .section-badge { color: #fff; background: rgba(8, 15, 35, 0.55); }
 body:not(.dark-mode) .geo-section .section-title span:not(.w-mask):not(.w-word) { color: var(--accent-light); }
